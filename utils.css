@@ -1,0 +1,14 @@
+.flex-all-centre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    padding: 5px 20px;
+    background: var(--main-bg-color);
+    color: aquamarine;
+    border: 2px solod rgb(251, 255, 0);
+    border-radius: 7px;
+    cursor: pointer;
+
+}
