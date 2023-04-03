@@ -10,8 +10,14 @@
     .search{
         justify-content: center;
     }
-    .items{
+/*     .items{
         height: auto;
         width: 400px;
-    }
+    } */
+     .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }  
+}
 }
