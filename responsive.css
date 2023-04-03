@@ -1,23 +1,19 @@
-@media screen and (max-width:542px) {
+@media screen and (max-width:550px) {
     nav ul{
         flex-direction: column;
         justify-content: center;
         height: 100px;
     }
+
     ul li{
         margin: 1px 0 ;
     }
     .search{
         justify-content: center;
     }
-/*     .items{
-        height: auto;
-        width: 400px;
-    } */
-     .container{
+    .container{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }  
-}
 }
