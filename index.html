@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utils.css">
     <link rel="stylesheet" href="responsive.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -16,11 +17,11 @@
         <nav>
             <ul>
                 <li><a href="home.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="#about">ABOUT</a></li>
                 <li><a href="location.html">STORE LOCATION</a></li>
                 <li>
                     <div class="search">
-                        <input type="text" name="" id="" placeholder="SEARCH HERE">
+                        <input type="text" name="" id="search-box" placeholder="SEARCH PRODUCTS" onkeyup="search()">
                         <button class="btn">SEARCH</button>
                     </div>
                 </li>
@@ -120,6 +121,13 @@
             
         </div>
     </main>
+    
+        <div class="aboutat" id="about">
+        <h3>ABOUT</h3>
+        <p>This "LILA STORE" website is to show the products available in the store.This store opens every day except thursday.To buy any product of your liking we are inviting you to come to our store.</p>
+    </div>
+    
+    
     <footer class="flex-all-center">
         <p>Thank you for your visit &copy; lilastore</p>
     </footer>
