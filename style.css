@@ -44,6 +44,20 @@ nav ul li a:hover{
     margin: 0 15px 0 50px;
     padding: 0 10px;
 }
+
+.no-results{
+
+    font-size: large;
+    font-weight: bold;
+    display: none;
+    padding-top: 10px;
+}
+.no_results{
+    
+    width: 300px;
+    padding-bottom: 50%;
+}
+
 .slider{
     width: 80vw;
     margin: 12px auto;
