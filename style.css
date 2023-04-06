@@ -70,12 +70,18 @@ nav ul li a:hover{
     color: black;
 }
 .container{
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     /* min-height: calc(100vh-45px-12vh); */
 }
-
+.aboutat{
+    background-color: rgb(129, 127, 127);
+    padding: 50px 5px 50px;
+    text-align: center;
+}
 footer p{
     display: flex;
     align-items: center;
