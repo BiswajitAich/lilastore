@@ -10,5 +10,20 @@
     border: 2px solod rgb(251, 255, 0);
     border-radius: 7px;
     cursor: pointer;
-
+}
+html{
+    scroll-behavior:smooth;  
+}
+.container{
+    animation: transitionin 0.90s;
+}
+@keyframes transitionin{
+    from{
+        opacity: 0;
+        transform: rotateY(50deg);
+    }
+    to{
+        opacity: 50;
+        transform: rotateY(0)
+    }
 }
