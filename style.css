@@ -46,14 +46,12 @@ nav ul li a:hover{
 }
 
 .no-results{
-
     font-size: large;
     font-weight: bold;
     display: none;
     padding-top: 10px;
 }
 .no_results{
-    
     width: 300px;
     padding-bottom: 50%;
 }
