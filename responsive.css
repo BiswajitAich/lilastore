@@ -1,10 +1,25 @@
-@media screen and (max-width:987px) {
+@media screen and (max-width:375px){
+    .items img{
+        width: 300px;
+    }
+}
+@media screen and (max-width:1384px){
+    nav ul li{
+        list-style: none;
+        padding: 0 10px;
+    }
+}
+
+
+@media screen and (max-width:987px ) {
     nav ul{
         flex-direction: column;
         justify-content: center;
         height: 100px;
     }
-
+    nav ul li{
+        list-style: none;
+    }
     ul li{
         margin: 1px 0 ;
     }
@@ -16,4 +31,14 @@
         flex-wrap: wrap;
         justify-content: center;
     }  
+    .card{
+        padding-bottom: 10px;
+        
+    }
+    .items{
+        box-shadow: 5px 0px;
+    }
+    .store_logo{
+        display: none;
+    }
 }
