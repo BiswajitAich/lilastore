@@ -5,8 +5,11 @@
     padding: 0;
     margin: 0;
 }
+body
+{
+    background: rgb(204, 255, 153);
+}
 header{
-    
     background-color: var(--main-bg-color);
 }
 .h3{
@@ -22,8 +25,7 @@ header{
     padding-top: 20px;
 }
 nav ul{
-    height: 45PX;
-    
+    height: 100PX;
     display: flex;
     justify-content: flex-start;
     align-items: center;
