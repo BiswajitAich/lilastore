@@ -14,6 +14,13 @@ header{
     display: flex;
     justify-content: center;
 }
+.store_logo{
+    position: relative;
+    float: left; 
+    height: 120px;
+    width: 200px;
+    padding-top: 20px;
+}
 nav ul{
     height: 45PX;
     
