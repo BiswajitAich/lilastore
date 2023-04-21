@@ -6,17 +6,21 @@
     margin: 0;
 }
 body
-{
+{  
     background: rgb(204, 255, 153);
+    
 }
+
 header{
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color);  
+    
 }
-.h3{
+.h{
     color: beige;
     display: flex;
     justify-content: center;
 }
+
 .store_logo{
     position: relative;
     float: left; 
@@ -24,8 +28,19 @@ header{
     width: 200px;
     padding-top: 20px;
 }
+
+
+hr{
+    background: blueviolet;
+    padding-bottom: 5px;
+}
+
+
+
+
+
 nav ul{
-    height: 100PX;
+    height: 100px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -40,7 +55,7 @@ nav ul li a{
 }
 nav ul li a:hover{
     color: rgb(255, 153, 0);
-    /* font-weight: bold; */
+    
 }
 .search{
     display: flex;
@@ -53,24 +68,21 @@ nav ul li a:hover{
     margin: 0 15px 0 50px;
     padding: 0 10px;
 }
-
 .no-results{
+
     font-size: large;
     font-weight: bold;
     display: none;
     padding-top: 10px;
 }
 .no_results{
+    
     width: 300px;
     padding-bottom: 50%;
 }
 
-.slider{
-    width: 80vw;
-    margin: 12px auto;
-}
 .card{
-    /* background-color: rgb(255, 174, 174); */
+    
     display: inline-flex;
     justify-content: center;
     flex-direction: column;
@@ -83,6 +95,7 @@ nav ul li a:hover{
 .items a:hover{
     background-image: -moz-element(10px);
 }
+
 .lines{
     padding: 5px;
     border-style:double;
@@ -96,12 +109,13 @@ nav ul li a:hover{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* min-height: calc(100vh-45px-12vh); */
+    min-height: 1000px;
 }
 .aboutat{
     background-color: rgb(129, 127, 127);
     padding: 50px 5px 50px;
     text-align: center;
+
 }
 footer p{
     display: flex;
