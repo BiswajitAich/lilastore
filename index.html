@@ -5,24 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lila Store Website</title>
-    <meta name="author" content="Biswajit Aich"/>
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/BiswajitAich/lilastore/main/logo.png"/>
-    <meta property="og:url" content="https://biswajitaich.github.io/lilastore/"/>
-    <meta property="og:site_name" content="Lila Store"/>
-
+    <title>Store main page</title>
+    <meta name="author" content="Biswajit Aich">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/BiswajitAich/lilastore/main/logo.png">
+    <meta property="og:site_name" content="Lila Store">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utils.css">
     <link rel="stylesheet" href="responsive.css">
-    <script src="script.js"></script>
+
+
+
+
 </head>
 
 <body>
     <header>
         <nav>
             <ul>
-                <li><img src="logo.png" class="store_logo"></li>
+                <li><img src="cover/logo.png" class="store_logo"></li>
                 <li><a href="home.html">&#x1F3E0;</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="location.html">STORE LOCATION</a></li>
@@ -31,59 +32,59 @@
                         <input type="text" name="" id="search-box" placeholder="SEARCH PRODUCTS" onkeyup="search()">
                         <button class="btn">SEARCH</button>
                     </div>
+                    <div id="no-results" class="no-results">
+                        <p>Sorry, no results found.</p>
+                        <img src="cover/no_results.jpeg" alt="Sorry" class="no_results">
+                    </div>
                 </li>
             </ul>
         </nav>
-    </header>
-    <header class="h3">
-        
-            <ul>
-               <h3>
-                    WELCOME TO LILAs STORE COLLECTION!
-               </h3>
-            </ul>
-        
-    </header>
-    
-    
-    <div id="no-results" class="no-results">
-        <p>Sorry, no results found.</p>
-        <img src="no_results.jpeg" alt="Sorry" class="no_results">
 
-    </div>   
+    </header>
+    <header class="h">
+
+        <ul>
+            <h3>
+                WELCOME TO LILAs STORE COLLECTION!
+            </h3>
+        </ul>
+
+    </header>
     
-    
-    <main>
+      <main>
         <div class="container">
             <div class="card">
 
                 <div class="index_items">
                     <a href="necklace.html" target="_main">
-                        <img src="necklace.jpeg" alt="necklace" height="380px">
+                        <img src="cover/necklace.jpeg" alt="necklace" height="375px">
+                    </a>
                 </div>
                 <div class="lines">
                     <p><b>NECKLACE</b></p>
                 </div>
-            </a>
+                </a>
 
             </div>
             <div class="card">
 
                 <div class="index_items">
                     <a href="earring.html" target="_main">
-                    <img src="earring.jpeg" alt="earring" height="380px">
+                        <img src="cover/earring.jpeg" alt="earring" height="375px">
+                    </a>
                 </div>
                 <div class="lines">
                     <p><b>EARRING</b></p>
                 </div>
-            </a>
+                </a>
 
             </div>
             <div class="card">
 
                 <div class="index_items">
                     <a href="rings.html" target="_main">
-                    <img src="rings.jpeg" alt="ring" height="380px">
+                        <img src="cover/rings.jpeg" alt="ring" height="375px">
+                    </a>
                 </div>
                 <div class="lines">
                     <p><b>RINGS</b></p>
@@ -94,7 +95,8 @@
 
                 <div class="index_items">
                     <a href="terracotta_jewellery.html" target="_main">
-                        <img src="teracota.jpeg" alt="teracota" height="380px" width="380px">
+                        <img src="cover/teracota.jpeg" alt="teracota" height="375px" width="375px">
+                    </a>
                 </div>
                 <div class="lines">
                     <p><b>TERRACOTTA JEWELLERY</b></p>
@@ -105,62 +107,70 @@
 
                 <div class="index_items">
                     <a href="terracotta_earring.html" target="_main">
-                        <img src="Terracotta-Earring.jpeg" alt="teracota" height="380px" width="380px">
+                        <img src="cover/Terracotta-Earring.jpeg" alt="teracota" height="375px" width="375px">
+                    </a>
                 </div>
                 <div class="lines">
                     <p><b>TERRACOTTA EARRINGS</b></p>
                 </div>
                 </a>
             </div>
+
             <div class="card">
 
                 <div class="index_items">
                     <a href="chemical_beads_jewellery.html" target="_main">
-                        <img src="chemical_beads.jpg" alt="teracota" height="380px" width="380px">
+                        <img src="cover/chemical_beads.jpg" alt="teracota" height="375px" width="375px">
+                    </a>
                 </div>
                 <div class="lines">
                     <p><b>CHEMICAL BEADS JEWELLERY</b></p>
                 </div>
                 </a>
             </div>
+
             <div class="card">
 
                 <div class="index_items">
                     <a href="choker.html" target="_main">
-                    <img src="Choker.jpeg" alt="choker" height="380px" width="380">
+                        <img src="cover/Choker.jpeg" alt="choker" height="375px" width="375px">
+                    </a>
                 </div>
                 <div class="lines">
                     <p><b>CHOKER</b></p>
                 </div>
-            </a>
+                </a>
             </div>
             <div class="card">
 
                 <div class="index_items">
                     <a href="bangles.html" target="_main">
-                    <img src="bangles.jpeg" alt="bangles" height="380px" width="380">
+                        <img src="cover/bangles.jpeg" alt="bangles" height="375px" width="375px">
+                    </a>
                 </div>
                 <div class="lines">
                     <p><b>BANGLES</b></p>
                 </div>
-            </a>
+                </a>
             </div>
             <div class="card">
 
                 <div class="index_items">
                     <a href="kamarband.html" target="_main">
-                    <img src="kamarband.jpeg" alt="kamarband" height="380px" width="380">
+                        <img src="cover/kamarband.jpeg" alt="kamarband" height="375px" width="375px">
+                    </a>
                 </div>
                 <div class="lines">
                     <p><b>KAMARBAND</b></p>
                 </div>
-            </a>
+                </a>
             </div>
             <div class="card">
 
                 <div class="index_items">
                     <a href="chain.html" target="_main">
-                        <img src="chain.jpeg" alt="kamarband" height="380px" width="380px">
+                        <img src="cover/chain.jpeg" alt="kamarband" height="375px" width="375px">
+                    </a>
                 </div>
                 <div class="lines">
                     <p><b>CHAIN</b></p>
@@ -170,15 +180,17 @@
 
         </div>
     </main>
-    
-        <div class="aboutat" id="about">
+
+    <div class="aboutat" id="about">
         <h3>ABOUT</h3>
-        <p>This "LILA STORE" website is to show the products available in the store.This store opens every day except thursday.To buy any product of your liking we are inviting you to come to our store.</p>
+        <p>This "LILA STORE" website is to show the products available in the store.This store opens every day except
+            thursday.To buy any product of your liking we are inviting you to come to our store.</p>
     </div>
-    
-    
     <footer class="flex-all-center">
         <p>Thank you for your visit &copy; lilastore</p>
     </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
+
