@@ -35,6 +35,15 @@
 .product-container::-webkit-scrollbar{
     display: none;
 }
+.p_container{
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 1000px;
+}
 .product-card{
     flex: 0 0 auto;
     width: 250px;
