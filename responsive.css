@@ -42,3 +42,8 @@
         display: none;
     }
 }
+@media screen and (max-width:299px){
+    body{
+        display: none;
+    }
+}
