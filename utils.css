@@ -162,7 +162,7 @@
 html{
     scroll-behavior:smooth;  
 }
-.container{
+.container , .p_container{
     animation: transitionin 0.90s;
 }
 @keyframes transitionin{
