@@ -68,19 +68,24 @@ nav ul li a:hover{
     margin: 0 15px 0 50px;
     padding: 0 10px;
 }
+.btn:hover{
+    color: rgb(0, 174, 255);
+}
+.noresult{
+    display: flex;
+    justify-content: center;
+    
+}
 .no-results{
-
     font-size: large;
     font-weight: bold;
     display: none;
     padding-top: 10px;
 }
-.no_results{
-    
+.no-results img{
+    padding-top: 10px;
     width: 300px;
-    padding-bottom: 50%;
 }
-
 .card{
     
     display: inline-flex;
@@ -124,6 +129,12 @@ footer p{
     height: 12vh;
     background-color: black;
     color: aqua;
+}
+.facebook_link img{
+
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
 }
 a{
     text-decoration: none;
