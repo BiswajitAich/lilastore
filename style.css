@@ -125,6 +125,7 @@ nav ul li a:hover{
 footer p{
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 12vh;
     background-color: black;
     color: aqua;
