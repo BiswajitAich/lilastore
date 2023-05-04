@@ -10,7 +10,7 @@
     border: 2px solod rgb(251, 255, 0);
     border-radius: 7px;
     cursor: pointer;
-}
+} 
 
 
 
@@ -61,70 +61,7 @@
     height: 100%;
     object-fit: cover;
 }
-.card-btn{
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px;
-    width: 90%;
-    text-decoration: none;
-    border: none;
-    background: #fff;
-    border-radius: 5px;
-    transition: 0.5s;
-    cursor: pointer;
-    opacity: 0;
-}
-.product-card:hover .card-btn{
-    opacity: 1;
-}
-.card-btn:hover{
-    background: #009688;
-    color: #fff;
-}
-.product-brand{
-    text-transform: uppercase;
-}
-.product-short-discription{
-    width: 100%;
-    height: 20px;
-    line-height: 20px;
-    overflow: hidden;
-    opacity: 0.5;
-    text-transform: capitalize;
-    margin: 5px 0;
-}
-.price{
-    font-weight: 900;
-    font-size: 20px;
-}
-.pre-btn,.nxt-btn{
-    border: none;
-    width: 10vw;
-    height: 100%; 
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(90deg,rgba(255,255,255,0) 0%, #fff 100%);
-    cursor: pointer;
-    z-index: 9;
-}
-.pre-btn{
-    left: 0;
-    transform: rotate(180deg);
-}
-.nxt-btn{
-    right: 0;
-}
-.pre-btn img,.nxt-btn img{
-    opacity:0.2;
-}
-.pre-btn:hover img,.nxt-btn:hover img{
-    opacity: 1;
-}
+
 .collection-container{
     width: 100%;
     display: grid;
@@ -159,19 +96,129 @@
 
 
 
-html{
-    scroll-behavior:smooth;  
+html {
+    scroll-behavior: smooth;
 }
-.container , .p_container{
+
+.container,
+.p_container {
     animation: transitionin 0.90s;
 }
-@keyframes transitionin{
-    from{
+
+@keyframes transitionin {
+    from {
         opacity: 0;
         transform: rotateY(50deg);
     }
-    to{
+
+    to {
         opacity: 50;
         transform: rotateY(0)
     }
+}
+
+
+
+
+.slider {
+    background: black;
+    width: 100%;
+    min-height: 400px;
+    background-position: cover;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.pre-btn,
+.nxt-btn {
+    height: 100%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgb(163, 255, 180);
+    border: 1px solid rgb(65, 233, 255);
+    color: beige;
+    padding: 1px;
+    opacity: 1;
+    background: none;
+    z-index: 1;
+}
+
+.pre-btn {
+    left: 0;
+    transform: translate(-50%,50);
+    cursor: pointer;
+}
+
+.nxt-btn {
+    right: 0;
+    transform: translate(50,-50%);
+    cursor: pointer;
+}
+
+.btn_img_l,
+.btn_img_r {
+    height: 30px;
+}
+.pre-btn:hover ,.nxt-btn:hover {
+    opacity: 50%;
+}
+.btn_img_l {
+    transform: rotate(180deg);
+}
+.product-card_slider{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 10%;
+    cursor: pointer;
+    text-decoration: none;
+}
+.product-container_slider{
+    padding: 0 30vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.product-container_slider::-webkit-scrollbar{
+    display: none;
+}
+.product-image_slider {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+}
+.product-thumb_slider {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product-info_slider{
+    background: grey;
+    display: grid;
+}
+.product-short-discription_slider{
+    color: white;
+   
+}
+.product-short-discription_slider:hover{
+    font-weight: 900;
+    font-size: large;
+}
+.price_slider{
+    color: antiquewhite;
+    justify-self: center;
+}
+.price_slider:hover{
+    font-size: larger;
+    font-weight: bold;
 }
