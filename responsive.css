@@ -1,6 +1,11 @@
-@media screen and (max-width:375px){
+@media screen and (max-width:444px){
     .index_items img{
-        width: 300px;
+        width: 310px;
+    }
+}
+@media screen and (max-width:398px){
+    .index_items img{
+        width: 280px;
     }
 }
 @media screen and (max-width:1384px){
@@ -47,3 +52,4 @@
         display: none;
     }
 }
+
