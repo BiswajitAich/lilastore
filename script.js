@@ -29,8 +29,6 @@ function search() {
 
 
 
-
-
 // Get references to the buttons and product container
 const preBtn = document.querySelector('.pre-btn');
 const nxtBtn = document.querySelector('.nxt-btn');
