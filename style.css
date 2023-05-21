@@ -64,7 +64,37 @@ nav ul li a:hover{
 }
 .btn:hover{
     color: rgb(0, 174, 255);
+    box-shadow: 5px 5px 5px black;
 }
+
+.new{
+    top: 5px;
+    right: 5px;
+    position: fixed;
+    padding: 10px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 50%;
+    text-decoration: none;
+    animation: new 2s linear infinite;
+}
+@keyframes new{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+.new:hover{
+    color: black;
+    background-color: antiquewhite;
+    box-shadow: 5px 5px black;
+    cursor: pointer;
+    animation: none;
+}
+
+
 .search input{
     width: 30vw;
     height: 20px;
