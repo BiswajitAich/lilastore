@@ -154,6 +154,84 @@ nav ul li a:hover{
     justify-content: center;
     min-height: 1000px;
 }
+
+.new-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 1000px; 
+    gap: 10%;
+  }
+  
+.new-card {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+.new-product-box {
+    height: 20rem;
+    width: 15rem;   
+    padding-bottom: 60px;
+}
+
+.new-items {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
+}
+.new-items::-webkit-scrollbar{
+    display: none;
+}
+.new-items a{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.new-items input{
+    opacity: 0;
+}
+.new-items img{
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.new-items img:hover{
+    scale: 1.1;
+}  
+.radio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+  
+.radio label {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    border: 5px solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+  
+.radio label:hover {
+    background: rgb(131, 236, 46);
+    border: 5px solid black;
+}
+
 .aboutat{
     background-color: rgb(129, 127, 127);
     padding: 50px 5px 50px;
