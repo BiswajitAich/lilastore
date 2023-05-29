@@ -67,6 +67,7 @@ body
     100%{
         opacity: 1;
         transform: scale(200);
+        display: none;
     }
 }
 header{
