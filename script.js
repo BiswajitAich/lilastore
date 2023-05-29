@@ -69,4 +69,14 @@ nxtBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
-
+// Wait for the page to load
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get the animation element
+    var animationElement = document.querySelector(".starting-animation");
+    
+    // Listen for the end of the animation
+    animationElement.addEventListener("animationend", function() {
+      // Remove the animation element from the DOM
+      animationElement.parentNode.removeChild(animationElement);
+    });
+  });
