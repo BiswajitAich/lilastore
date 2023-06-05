@@ -1,5 +1,5 @@
 :root{
-    --main-bg-color: rgb(218 20 104);
+    --main-bg-color: rgb(39 0 255);
 }
 *{
     padding: 0;
@@ -8,7 +8,9 @@
 }
 body
 {  
-    background: rgb(104, 255, 255);
+    background-image: url('https://raw.githubusercontent.com/BiswajitAich/lilastore/main/pillarofcreation.png');
+    background-size: contain;
+    background-position: center;
 }
 .starting-animation{
     position: fixed;
@@ -129,7 +131,7 @@ nav ul li a:hover{
 .heart {
     width: 100px;
     height: 100px;
-    background-color: rgb(255, 93, 93);
+    background-color: rgb(255 0 0);
     position: fixed;
     right: -70px;
     top: -60px;
@@ -144,7 +146,7 @@ nav ul li a:hover{
     position: absolute;
     width: 100px;
     height: 100px;
-    background: rgb(255, 93, 93);
+    background: rgb(255 0 0);
     border-radius: 50%;
   }
 
