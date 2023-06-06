@@ -8,6 +8,10 @@
    .product-card_slider{
       scroll-snap-align: center;
    }
+    .body{
+        position: relative;
+        background-attachment: scroll;
+    }
 }
 @media screen and (max-width:411px){
     .index_items img{
