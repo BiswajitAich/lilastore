@@ -260,18 +260,6 @@ nav ul li a:hover{
     justify-content: center;
     min-height: 1000px;
 }
-
-.new-container {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    min-height: 1000px; 
-    gap: 10%;
-  }
-  
-
 .img-slider_container {
     height: 384px;
     width: 250px;
