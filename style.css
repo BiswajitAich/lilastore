@@ -271,72 +271,64 @@ nav ul li a:hover{
     gap: 10%;
   }
   
-.new-card {
+
+.img-slider_container {
+    height: 384px;
+    width: 250px;
+    padding-right: 40px;
     display: flex;
-    height: 100%;
-    justify-content: center;
     flex-direction: column;
-    width: 100%;
-  }
-  
-.new-product-box {
-    height: 20rem;
-    width: 15rem;   
     padding-bottom: 60px;
 }
 
-.new-items {
+.sliding-image {
     position: relative;
+    overflow: hidden;
+
+}
+
+.sliding-image img {
+    height: 100%;
     width: 100%;
-    height: 100%;
-    background-color: black;
-    display: flex;
-    overflow-x: scroll;
-    gap: 10px;
-    scroll-snap-type: x proximity;
-    scroll-behavior: smooth;
+    animation: scale 0.5s ease-in-out;
 }
-.new-items::-webkit-scrollbar{
-    display: none;
+
+@keyframes scale {
+    0% {
+        transform: scale(.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
-.new-items a{
+
+.sliding-image img:hover {
+    transform: scale(1.1);
+}
+
+.sliding-image_btn {
+    background: none;
+    height: 20px;
     display: flex;
+    padding: 5px;
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 8%;
+   
 }
-.new-items input{
-    opacity: 0;
-}
-.new-items img{
-    height: 100%;
-    object-fit: cover;
-    scroll-snap-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.new-items img:hover{
-    scale: 1.1;
-}  
-.radio {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10%;
-}
-  
-.radio label {
+
+.sliding-image_btn button {
     height: 20px;
     width: 20px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50%;
-    border: 5px solid rgb(0, 0, 0);
+    border-radius: 50px;
+    border: none;
+}
+
+.sliding-image_btn button:hover {
+    transform: scale(1.2);
     cursor: pointer;
 }
   
-.radio label:hover {
-    background: rgb(131, 236, 46);
-    border: 5px solid black;
-}
 
 .aboutat{
     background-color: rgb(129, 127, 127);
