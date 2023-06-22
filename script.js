@@ -91,3 +91,33 @@ $(window).scroll(function() {
   var scrollTop = $(this).scrollTop();
   $('body').css('background-position', 'center ' + (-scrollTop / 2) + 'px');
 });
+
+
+
+
+
+
+// Get all the images on the page
+const images = document.querySelectorAll('img');
+
+// Create an Intersection Observer instance
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    // If the image is intersecting or near the viewport, load the image
+    if (entry.isIntersecting || entry.intersectionRatio > 0) {
+      const image = entry.target;
+      const src = image.getAttribute('data-src');
+
+      // Set the actual source of the image
+      image.setAttribute('src', src);
+
+      // Stop observing the image once it's loaded
+      observer.unobserve(image);
+    }
+  });
+});
+
+// Observe each image
+images.forEach((image) => {
+  observer.observe(image);
+});
