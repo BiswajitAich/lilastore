@@ -318,7 +318,11 @@ nav ul li a:hover{
     transform: scale(1.2);
     cursor: pointer;
 }
-  
+.index_items img{
+    height:370px;
+    width:300px;
+    object-fit:cover;
+}
 
 .aboutat{
     background-color: rgb(129, 127, 127);
