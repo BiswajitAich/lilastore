@@ -80,38 +80,11 @@ nxtBtn.addEventListener('click', () => {
       animationElement.parentNode.removeChild(animationElement);
     });
   });
-/*
-//background image
+
 $(window).scroll(function() {
   var scrollTop = $(this).scrollTop();
-  $('body').css('background-position-y', -(scrollTop / 2) + 'px');
-});
-*/
-$(window).scroll(function() {
-  var scrollTop = $(this).scrollTop();
-  $('body').css('background-position', 'center ' + (-scrollTop / 2) + 'px');
+  $('body').css('background-position', 'center ' + (-scrollTop / 4) + 'px');
 });
 
 
 
-
-
-
-// Get all the images on the page
-const images = document.querySelectorAll('img');
-
-// Create an Intersection Observer instance
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      // When an image enters the viewport, load its source
-      entry.target.src = entry.target.dataset.src;
-      observer.unobserve(entry.target);
-    }
-  });
-});
-
-// Loop through each image and observe it
-images.forEach(image => {
-  observer.observe(image);
-});
