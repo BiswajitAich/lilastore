@@ -102,22 +102,16 @@ const images = document.querySelectorAll('img');
 
 // Create an Intersection Observer instance
 const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    // If the image is intersecting or near the viewport, load the image
-    if (entry.isIntersecting || entry.intersectionRatio > 0) {
-      const image = entry.target;
-      const src = image.getAttribute('data-src');
-
-      // Set the actual source of the image
-      image.setAttribute('src', src);
-
-      // Stop observing the image once it's loaded
-      observer.unobserve(image);
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // When an image enters the viewport, load its source
+      entry.target.src = entry.target.dataset.src;
+      observer.unobserve(entry.target);
     }
   });
 });
 
-// Observe each image
-images.forEach((image) => {
+// Loop through each image and observe it
+images.forEach(image => {
   observer.observe(image);
 });
