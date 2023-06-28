@@ -11,10 +11,6 @@
     border-radius: 7px;
     cursor: pointer;
 } 
-
-
-
-
 .product{
     position: relative;
     overflow: hidden;
@@ -36,19 +32,19 @@
     display: none;
 }
 .p_container{
-    padding-left: 40px;
+    bottom: 0;
+    min-height: 1000px;
+    width: 100%;
     padding-top: 10px;
-    padding-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    min-height: 1000px;
 }
 .product-card{
     flex: 0 0 auto;
-    width: 250px;
-    height: 450px;
-    margin-right: 40px;
+    width: 300px;
+    height: 435px;
+    margin: 0px 20px;
 }
 .product-image{
     position: relative;
