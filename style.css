@@ -1,26 +1,26 @@
-:root{
+:root {
     --main-bg-color: rgb(39 0 255);
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
-    
+
 }
 
-body
-{  
+body {
     margin: 0;
     padding: 0;
-
     position: relative;
     width: 100%;
-    height: 100vh; /* Adjust the height as needed */
-    background-image:  url('pillarofcreation.png');
+    height: 100vh;
+    background-image: url('pillarofcreation.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-  }
-.starting-animation{
+}
+
+.starting-animation {
     position: fixed;
     top: 0;
     left: 0;
@@ -35,103 +35,122 @@ body
     animation: LS-fadeout 2s ease 1s forwards;
     pointer-events: none;
 }
-.starting-animation h1{
+
+.starting-animation h1 {
     color: yellow;
     text-shadow: -3px 0px 0px rgb(0, 140, 255),
-                  3px 0px 0px rgb(253, 60, 205);
+        3px 0px 0px rgb(253, 60, 205);
     font-size: 5rem;
     animation: LS-fadein 2s ease 0.5s forwards;
 }
-.starting-animation h2{
+
+.starting-animation h2 {
     padding-top: 4.7rem;
     font-size: 5rem;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: yellow;
     animation: LS-fadein 2s ease 0.5s forwards;
 }
+
 @keyframes LS-fadeout {
-    0%{
+    0% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0;
         display: none;
     }
 }
+
 @keyframes LS-fadein {
-    0%{
+    0% {
         opacity: 1;
         transform: scale(0);
     }
-    40%{
+
+    40% {
         opacity: 1;
         transform: scale(1);
     }
-    50%{
+
+    50% {
         opacity: 1;
         transform: scale(10);
     }
-    70%{
+
+    70% {
         opacity: 1;
         transform: scale(30);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: scale(200);
 
     }
 }
-header{
-    background-color: var(--main-bg-color);  
-    
+header {
+    background: var(--main-bg-color);
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: pink;
 }
+
 .h{
     color: beige;
     display: flex;
+    min-height: 30px;
+    width: 100%;
     justify-content: center;
+    align-items: center;
 }
 
-.store_logo{
+.store_logo {
     position: relative;
-    float: left; 
+    float: left;
     height: 120px;
     width: 120px;
     padding-top: 20px;
 }
 
 
-hr{
+hr {
     background: blueviolet;
     padding-bottom: 5px;
 }
 
 
 
-
-
-nav ul{
+nav ul {
     height: 100px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-nav ul li{
+
+nav ul li {
     list-style: none;
     padding: 0 40px;
 }
-nav ul li a{
+
+nav ul li a {
     color: rgb(177 255 156);
     text-decoration: none;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     font-size: larger;
     transition: 1s linear;
 }
-.search{
+
+.search {
     display: flex;
     align-items: center;
 }
-.btn:hover{
+.btn:hover {
     color: rgb(0, 174, 255);
     box-shadow: 5px 5px 5px black;
 }
@@ -146,53 +165,58 @@ nav ul li a:hover{
     transform: rotate(-45deg);
     margin: 50px;
     animation: heart 2s ease infinite;
-  }
+}
 
-  .heart:before,
-  .heart:after {
+.heart:before,
+.heart:after {
     content: "";
     position: absolute;
     width: 100px;
     height: 100px;
     background: rgb(255 0 0);
     border-radius: 50%;
-  }
+}
 
-  .heart:before {
+.heart:before {
     top: -50px;
     left: 0;
-  }
+}
 
-  .heart:after {
+.heart:after {
     content: "NEW";
     color: #ffffff;
     font-weight: bold;
     text-shadow: 3px 0px 0px black,
-                 0px -3px 0px black,
-                 -3px 0px 0px black,
-                 0px 3px 0px black;
+        0px -3px 0px black,
+        -3px 0px 0px black,
+        0px 3px 0px black;
     font-size: 35px;
     line-height: 150px;
     transform: rotate(45deg);
     top: 0;
     left: 50px;
-    
-  }
-@keyframes heart{
-    0%{
+
+}
+
+@keyframes heart {
+    0% {
         scale: .2;
     }
-    25%{
+
+    25% {
         scale: .3;
     }
-    50%{
+
+    50% {
         scale: .4;
     }
-    100%{
+
+    100% {
         scale: .2;
     }
 }
-.new:hover{
+
+.new:hover {
     color: black;
     background-color: antiquewhite;
     box-shadow: 5px 5px black;
@@ -201,31 +225,41 @@ nav ul li a:hover{
 }
 
 
-.search input{
+.search input {
     width: 30vw;
     height: 20px;
     border-radius: 5px;
     margin: 0 15px 0 50px;
     padding: 0 10px;
 }
-.noresult{
+
+.noresult {
     display: flex;
     justify-content: center;
-    
+
 }
-.no-results{
+
+.no-results {
     font-size: large;
     font-weight: bold;
     display: none;
     padding-top: 10px;
+
 }
-.no-results img{
+
+.no-results p {
+    padding: 10px;
+    background-color: black;
+    color: rgb(206, 255, 255);
+}
+
+.no-results img {
     padding-top: 10px;
     width: 300px;
 }
 
 
-.card{
+.card {
     padding: 50px;
     display: inline-flex;
     justify-content: center;
@@ -234,25 +268,27 @@ nav ul li a:hover{
     margin: 0 5px;
 }
 
-.items{
+.items {
     padding-bottom: 0;
 }
 
-.lines :hover{
+.lines :hover {
     color: rgb(46, 165, 42);
 }
-.items a:hover{
+
+.items a:hover {
     background-image: -moz-element(10px);
 }
 
-.lines{
+.lines {
     padding: 5px;
-    border-style:double;
+    border-style: double;
     background-color: rgb(255, 117, 117);
     text-align: center;
     color: black;
 }
-.container{
+
+.container {
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
@@ -260,15 +296,14 @@ nav ul li a:hover{
     justify-content: center;
     min-height: 1000px;
 }
+
 .img-slider_container {
-    height: 384px;
-    width: 250px;
-    padding-right: 40px;
+    height: 385px;
+    width: 300px;
+    padding: 0px 40px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 60px;
 }
-
 .sliding-image {
     position: relative;
     overflow: hidden;
@@ -304,7 +339,7 @@ nav ul li a:hover{
     padding: 5px;
     justify-content: center;
     gap: 8%;
-   
+
 }
 
 .sliding-image_btn button {
@@ -318,36 +353,40 @@ nav ul li a:hover{
     transform: scale(1.2);
     cursor: pointer;
 }
-.index_items img{
-    height:370px;
-    width:300px;
-    object-fit:cover;
+
+.index_items img {
+    height: 370px;
+    width: 300px;
+    object-fit: cover;
 }
 
-.aboutat{
+.aboutat {
     background-color: rgb(129, 127, 127);
     padding: 50px 5px 50px;
     text-align: center;
 }
-footer p{
+footer{
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: center;
     height: 12vh;
-    background-color: black;
+    background: linear-gradient(90deg,rgb(39 0 255),pink,rgb(39 0 255));
     color: aqua;
 }
-.facebook_link img{
+
+
+.facebook_link img {
     width: 40px;
     height: 40px;
     border-radius: 15px;
 }
-.facebook_link img:hover{
+
+.facebook_link img:hover {
     transform: rotateZ(360deg);
     transition: 2s linear;
 }
-a{
+
+a {
     text-decoration: none;
-} 
-
-
+}
