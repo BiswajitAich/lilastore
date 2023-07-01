@@ -26,12 +26,42 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
+    <link rel="manifest" href="manifest.json">
+
+
 </head>
 <body>
     <div class="starting-animation">
         <h1>L</h1>
         <h2>S</h2>
     </div>
+
+
+
+<div class="options">
+        <div>
+            <button class="menu" onclick="menu()"><img src="icons/menu-icon.png" /></button>
+        </div>
+    
+        <div class="menuDiv">
+            <dl id="share">
+                <dt><button>SHARE</button></dt>
+                <dd>
+                    <button onclick="shareViaFacebook()"><img src="icons/facebook-icon.png" /></button>
+                    <button onclick="shareViaWhatsApp()"><img src="icons/whatsapp-icon.png" /></button>
+                    <button onclick="shareViaInstagram()"><img src="icons/instagram-icon.png" /></button>
+                    <button id="copy" onclick="copyLink()"><img src="icons/link-icon.png" /></button>
+                </dd>
+                <dt><button>FOLLOW US</button></dt>
+                <dd><a href="https://www.facebook.com/profile.php?id=100091896976745"><img
+                            src="icons/facebook-icon.png"></a></dd>
+                <dt><button>ADD TO HOME SCREEN</button></dt>
+            </dl>
+        </div>
+    </div>
+
+
+    
     <header>
         <nav>
             <ul>
@@ -401,7 +431,20 @@
     <footer class="copy">
         <p>Thank you for your visit &copy; lilastore</p>
     </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('service-worker.js')
+            .then(registration => {
+              console.log('Service Worker registered:', registration);
+            })
+            .catch(error => {
+              console.error('Service Worker registration failed:', error);
+            });
+        }
+      </script>
+      
     <script src="script.js"></script>
+    <script src="service-worker.js"></script>
 </body>
 
 </html>
