@@ -218,3 +218,154 @@ html {
     font-size: larger;
     font-weight: bold;
 }
+
+
+
+
+
+.options{
+    height: auto;
+    width: auto;
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    z-index: 99;
+}
+.notice {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 100;
+  }
+  
+  
+  
+.options div:nth-child(1){
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 5px 5px;
+}
+.options div:nth-child(1) button {
+    height: 100%;
+    width: 100%;
+    background: whitesmoke;
+    border: 0;  
+    border-radius: 5px;
+    cursor: pointer;
+}
+.options div:nth-child(1) button:hover{
+    box-shadow: 5px 5px 5px rgb(0, 247, 255),
+                -5px -5px 5px rgb(255, 0, 221);
+    border: 2px solid var(--main-bg-color);
+}
+.options div:nth-child(1) button img{
+    height: 100%;
+    width: 100%;  
+}
+
+.options div:nth-child(2){
+    min-width: 100px;
+    min-height: 200px;
+    background: rgba(0, 0, 0, 0.5);
+}
+#share{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#share dt,#share dd{
+    padding: 10px;
+}
+#share dt button{
+    border: 2px solid cyan;
+    background: cyan;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+#share dt button:hover{
+    border: 2px solid cyan;
+    background: black;
+    color: white;
+}
+#share dt button:hover{
+    border: 2px solid cyan;
+    background: black;
+    color: white;
+}
+#share dd:nth-child(2){color: bisque;}
+#share dd:nth-child(2) button{
+    height: 50px;
+    width: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 0;
+    border-radius: 40px;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+#share dd:nth-child(2) button:nth-child(4){background-color: bisque;}
+#share dd:nth-child(2) button:hover{scale: 1.2;}
+#share dd:nth-child(2) button img{
+    height: 100%;
+    width: 100%;
+    /* mix-blend-mode: multiply; */
+}
+#share dd:nth-child(4) a img{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+#share dd:nth-child(4) a img:hover{scale: 1.2; box-shadow: 0px 2px 0px greenyellow;}
+
+
+
+
+
+.menuDiv{
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes barItemsSlideIn {
+    from {
+      transform: translateX(0);
+        opacity: 0;
+    }
+    to {
+      transform: translateX(100%);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes barItemsSlideOut {
+    from {
+      transform: translateX(100%);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 0;
+    }
+  }
+  
+  .slide-in {
+    animation-name: barItemsSlideIn;
+  }
+  
+  .slide-out {
+    animation-name: barItemsSlideOut;
+  }
+  
+  
