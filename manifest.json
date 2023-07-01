@@ -1,0 +1,21 @@
+{
+    "name": "LILA's STORE",
+    "short_name": "LS",
+    "icons": [
+      {
+        "src": "LS.jpg",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "LS.jpg",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "https://biswajitaich.github.io/lilastore/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff"
+  }
+  
