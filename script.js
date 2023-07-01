@@ -88,3 +88,136 @@ $(window).scroll(function() {
 
 
 
+
+
+
+
+
+
+
+
+const menuBtn = document.querySelector('.menu');
+const menuDiv = document.querySelector('.menuDiv');
+const shareDivBtn = menuDiv.querySelector('dt:nth-child(1) button');
+const shareDiv = menuDiv.querySelector('dd:nth-child(2)');
+const followUsDivBtn = menuDiv.querySelector('dt:nth-child(3)');
+const followUsDiv = menuDiv.querySelector('dd:nth-child(4)');
+const btnAdd = menuDiv.querySelector('dt:nth-child(5)');
+
+
+
+
+
+
+menuDiv.style.display = "none"
+function menu() {
+  if (menuDiv.style.display === "none") {
+    menuDiv.style.display = "flex";
+    menuBtn.style.transform = "rotateZ(90deg)";
+    menuDiv.classList.remove("slide-out");
+    menuDiv.classList.add("slide-in");
+  } else {
+    menuDiv.classList.remove("slide-in");
+    menuDiv.classList.add("slide-out");
+    setTimeout(() => {
+      menuDiv.style.display = "none";
+    }, 200); 
+    menuBtn.style.transform = "rotateZ(0deg)";
+  }
+  menuBtn.style.transition = 'transform 0.5s ease';
+
+}
+
+shareDiv.style.display="none" ;
+shareDivBtn.addEventListener("click", ()=>{
+if(shareDiv.style.display==="none"){
+  shareDiv.style.display="block" ;
+}else  {
+      shareDiv.style.display="none" ;
+}
+});
+
+
+followUsDiv.style.display="none";
+followUsDivBtn.addEventListener("click",()=>{
+if(followUsDiv.style.display==="none")
+  followUsDiv.style.display="block" ;
+else followUsDiv.style.display="none";
+});
+
+
+function shareViaFacebook() {
+  var websiteUrl = encodeURIComponent("https://biswajitaich.github.io/lilastore/");
+  var fbShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" + websiteUrl;
+
+  window.open(fbShareUrl, "_blank");
+}
+
+function shareViaWhatsApp() {
+      var message = "Check out this website: https://biswajitaich.github.io/lilastore/";
+      var encodedMessage = encodeURIComponent(message);
+      var whatsappURL = "https://wa.me/?text=" + encodedMessage;
+      window.open(whatsappURL);
+}
+
+function shareViaInstagram() {
+  var websiteUrl = "https://biswajitaich.github.io/lilastore/";
+  // Create a temporary input element
+  var tempInput = document.createElement("input");
+  tempInput.value = websiteUrl;
+  document.body.appendChild(tempInput);
+  // Select and copy the website URL
+  tempInput.select();
+  tempInput.setSelectionRange(0, 1000);
+  document.execCommand("copy");
+  // Remove the temporary input element
+  document.body.removeChild(tempInput);
+  // Open Instagram website
+  var instagramUrl = "https://www.instagram.com/";
+  window.open(instagramUrl, "_blank");
+}
+
+function copyLink() {
+  var websiteUrl = "https://biswajitaich.github.io/lilastore/";
+  var tempInput = document.createElement("input");
+  tempInput.value = websiteUrl;
+  document.body.appendChild(tempInput);
+  // Select and copy the website URL
+  tempInput.select();
+  tempInput.setSelectionRange(0, 1000);
+  document.execCommand("copy");
+  // Remove the temporary input element
+  document.body.removeChild(tempInput);
+
+  var noticeDiv = document.createElement("div");
+  noticeDiv.innerText = "Link copied";
+  noticeDiv.classList.add("notice");
+  shareDiv.appendChild(noticeDiv);
+
+  setTimeout(() => {
+    shareDiv.removeChild(noticeDiv);
+  }, 2000);
+}
+
+
+
+let deferredPrompt;
+window.addEventListener("beforeinstallprompt",(e)=>{
+  e.preventDefault();
+  deferredPrompt=e;
+  btnAdd.style.display="block"
+});
+btnAdd.addEventListener('click', (e) => {
+  btnAdd.style.border = "5px solid green";
+  setTimeout(() => {
+    btnAdd.style.border = "none";
+  }, 500);
+
+  deferredPrompt.prompt();
+  deferredPrompt.userChoice.then((choiceResult) => {
+    deferredPrompt = null;
+  });
+});
+
+
+
