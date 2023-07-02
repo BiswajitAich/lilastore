@@ -220,7 +220,10 @@ btnAdd.addEventListener('click', (e) => {
 });
 
 //stop zooming effect 
-document.addEventListener('gesturestart', function (e) {
-  e.preventDefault();
-});
+document.addEventListener('touchmove', function (event) {
+  if (event.touches.length > 1) {
+    event.preventDefault();
+  }
+}, { passive: false });
+
 
