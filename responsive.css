@@ -12,6 +12,10 @@
         position: relative;
         background-attachment: scroll;
     }
+    .no-internet {
+        height: 100%;
+        width: 100%;
+    }
 }
 @media screen and (max-width:411px){
     .index_items img{
