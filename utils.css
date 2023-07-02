@@ -368,4 +368,70 @@ html {
     animation-name: barItemsSlideOut;
   }
   
+
+
+
+.no-internet-body{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: black;
+    z-index: 100;
+    display: none;
+}
+.no-internet {
+    max-height: 600px;
+    max-width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
   
+  .no-internet div:nth-child(1) {
+    min-height: 60px;
+    width: 100%;
+    background: black;
+    color: lightcyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .no-internet img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .no-internet div:nth-child(3) {
+    min-height: 80px;
+    width: 100%;
+    background: black;
+    color: cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .no-internet div:nth-child(3) p {
+    display: inline-block;
+    opacity: 0;
+    animation:letterAnimation 5s forwards infinite;
+  }
+  
+  @keyframes letterAnimation {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px) scale(0.2);
+    }
+    50%{
+      opacity: 1; 
+      transform:scale(1.1);
+  }
+    100% {
+      opacity: 0;
+      transform: translateX(100px) scale(0.2);
+    }
+  }
