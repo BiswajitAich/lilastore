@@ -219,5 +219,8 @@ btnAdd.addEventListener('click', (e) => {
   });
 });
 
-
+//stop zooming effect 
+document.addEventListener('gesturestart', function (e) {
+  e.preventDefault();
+});
 
