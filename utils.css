@@ -372,7 +372,7 @@ html {
 
 
 .no-internet-body{
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     position: fixed;
     top: 0;
@@ -383,6 +383,7 @@ html {
 .no-internet {
     max-height: 600px;
     max-width: 400px;
+    margin: 0;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -406,7 +407,7 @@ html {
   }
   
   .no-internet div:nth-child(3) {
-    min-height: 80px;
+    min-height: 100px;
     width: 100%;
     background: black;
     color: cyan;
