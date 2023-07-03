@@ -4,6 +4,7 @@ self.addEventListener('install', event => {
     caches.open('lilastore').then(cache => {
       return cache.addAll([
         'https://biswajitaich.github.io/lilastore/',
+        'index.html',
         'offline.css',
         'allPageScript.js',
         'icons/no-internet-icon.png'
