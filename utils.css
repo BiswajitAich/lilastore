@@ -385,9 +385,9 @@ html {
     max-width: 400px;
     margin: 0;
     position: fixed;
-    top: 50%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translateX(-50%);
   }
   
   .no-internet div:nth-child(1) {
@@ -413,7 +413,7 @@ html {
     color: cyan;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
   }
   
   .no-internet div:nth-child(3) p {
