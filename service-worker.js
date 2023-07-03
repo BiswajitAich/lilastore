@@ -6,7 +6,10 @@ self.addEventListener('install', event => {
         'https://biswajitaich.github.io/lilastore/',
         'index.html',
         'style.css',
-        'utils.css'
+        'utils.css',
+        'script.js',
+        'allPageScript.js',
+        'icons/no-internet-icon.png'
       ]);
     })
   );
