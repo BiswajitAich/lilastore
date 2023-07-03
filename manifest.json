@@ -1,7 +1,17 @@
 {
-    "name": "LILA's STORE",
+    "name": "LILA STORES",
     "short_name": "LS",
     "icons": [
+      {
+        "src": "LS.jpg",
+        "sizes": "18x18",
+        "type": "image/png"
+      },
+      {
+        "src": "LS.jpg",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
       {
         "src": "LS.jpg",
         "sizes": "192x192",
