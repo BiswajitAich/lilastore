@@ -7,6 +7,7 @@ self.addEventListener('install', event => {
         'index.html',
         'offline.css',
         'allPageScript.js',
+        'responsive.js',
         'icons/no-internet-icon.png'
       ]);
     })
