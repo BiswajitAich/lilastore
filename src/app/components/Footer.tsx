@@ -8,15 +8,15 @@ const Footer: React.FC = () => {
                 <h4>CONTACT US ON :</h4>
                 <div>
                     <a href='https://wa.me/9038810186' target="_blank" rel="noopener noreferrer">
-                        <img src='/images/logos/whatsapp-icon.webp' alt='ContactWhatsApp' /><p>WhatsApp</p>
+                        <img src='./images/logos/whatsapp-icon.webp' alt='ContactWhatsApp' /><p>WhatsApp</p>
                     </a>
                     <div style={{ minHeight: '50px', width: '5px', backgroundColor: 'white' }} />
                     <a href='https://www.facebook.com/profile.php?id=100091896976745' target="_blank" rel="noopener noreferrer" >
-                        <img src='/images/logos/facebook-icon.webp' alt='ContactFacebook' /><p>Facebook</p>
+                        <img src='./images/logos/facebook-icon.webp' alt='ContactFacebook' /><p>Facebook</p>
                     </a>
                     <div style={{ minHeight: '50px', width: '5px', backgroundColor: 'white' }} />
                     <a href='https://instagram.com/suraviai?igshid=YWYwM2|1ZDdmOQ==' target="_blank" rel="noopener noreferrer">
-                        <img src='/images/logos/instagram-icon.webp' alt='ContactInsta' /><p>Instagram</p>
+                        <img src='./images/logos/instagram-icon.webp' alt='ContactInsta' /><p>Instagram</p>
                     </a>
                 </div>
             </div>
@@ -25,11 +25,11 @@ const Footer: React.FC = () => {
                 <h4>Follow US ON :</h4>
                 <div>
                     <a href='https://www.facebook.com/profile.php?id=100091896976745' target="_blank" rel="noopener noreferrer" >
-                        <img src='/images/logos/facebook-icon.webp' alt='FollowFacebook' /><p>Facebook</p>
+                        <img src='./images/logos/facebook-icon.webp' alt='FollowFacebook' /><p>Facebook</p>
                     </a>
                     <div style={{ minHeight: '50px', width: '5px', backgroundColor: 'white' }} />
                     <a href='https://instagram.com/suraviai?igshid=YWYwM2|1ZDdmOQ==' target="_blank" rel="noopener noreferrer">
-                        <img src='/images/logos/instagram-icon.webp' alt='FollowInsta' /><p>Instagram</p>
+                        <img src='./images/logos/instagram-icon.webp' alt='FollowInsta' /><p>Instagram</p>
                     </a>
                 </div>
             </div>
