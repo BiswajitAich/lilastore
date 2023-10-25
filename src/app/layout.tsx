@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Lila Store App',
   description: 'Jewelry website',
-  manifest: '/manifest.json',
+  manifest: '/lilastore/manifest.json',
   themeColor: '#3498db',
   verification: {
     google: '8AO-KxssBnO3-PTBnbw4TXV-vTiJt7WDb8Y4K_4qxVo',
