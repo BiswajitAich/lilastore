@@ -1,5 +1,4 @@
 "use client"
-// import Image from 'next/image'
 import Head from 'next/head'
 import { useEffect, Suspense } from 'react';
 import styles from './page.module.css'
