@@ -1,5 +1,4 @@
 "use client"
-import Head from 'next/head'
 import { useEffect, Suspense } from 'react';
 import styles from './page.module.css'
 import { Header } from './components';
@@ -13,11 +12,11 @@ import { Marquee } from './components/Marquee'
 
 export default function Home() {
 
-  useEffect(() => {
-    document.addEventListener('contextmenu', function (event) {
-      event.preventDefault();
-    });
-  }, [])
+  // useEffect(() => {
+  //   document.addEventListener('contextmenu', function (event) {
+  //     event.preventDefault();
+  //   });
+  // }, [])
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -48,11 +47,6 @@ export default function Home() {
 
   return (
     <div>
-      <Head >
-        <title>Lila Store</title>
-        <link rel="manifest" href="/manifest.json" />
-        <meta name='theme-color' content='#3498db' />
-      </Head>
       <main className={styles.main}>
         <Suspense fallback={<div>Loading...</div>} >
           <Header />
