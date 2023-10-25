@@ -9,5 +9,7 @@ const withPWA = require('next-pwa')({
 })
 
 module.exports = withPWA({
-    
+  env: {
+    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: "di3zlyh9o"
+  },
 })
