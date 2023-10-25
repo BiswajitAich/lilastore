@@ -13,12 +13,12 @@ import { Marquee } from './components/Marquee'
 
 export default function Home() {
 
-  useEffect(() => {
-    document.addEventListener('contextmenu', function (event) {
-      event.preventDefault();
-    });
-  }, [])
-  
+  // useEffect(() => {
+  //   document.addEventListener('contextmenu', function (event) {
+  //     event.preventDefault();
+  //   });
+  // }, [])
+
   useEffect(() => {
     window.scrollTo(0, 0);
 
