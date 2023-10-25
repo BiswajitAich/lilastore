@@ -18,7 +18,7 @@ const Beacelet: React.FC = () => {
                                         <CldImage
                                             itemType='img'
                                             src={material.url}
-                                            alt={`Bracelet ${idx + 1}`}
+                                            alt={`Bracelet ${material.id}`}
                                             width={400}
                                             height={600}
                                             loading='lazy'

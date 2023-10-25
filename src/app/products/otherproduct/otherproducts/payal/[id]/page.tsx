@@ -3,6 +3,13 @@ import ProductData from '../../../../../../../public/data/otherproduct/payal.jso
 import { PageDesign } from '@/app/products/PageDesign';
 import OtherProduct from '../../../OtherProduct';
 
+export async function generateStaticParams() {
+  return ProductData.map(product => ({
+    id: product.id.toString()
+  }));
+}
+
+
 const Payal = ({ params }: { params: { id: string } }) => {
   const productId = parseInt(params.id, 10);
 

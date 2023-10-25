@@ -3,6 +3,13 @@ import ProductData from '../../../../../../../public/data/otherproduct/ring.json
 import { PageDesign } from '@/app/products/PageDesign';
 import OtherProduct from '../../../OtherProduct';
 
+export async function generateStaticParams() {
+  return ProductData.map(product => ({
+    id: product.id.toString()
+  }));
+}
+
+
 const Ring = ({ params }: { params: { id: string } }) => {
   const productId = parseInt(params.id, 10);
 

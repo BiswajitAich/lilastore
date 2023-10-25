@@ -3,6 +3,13 @@ import ProductData from '../../../../../../../public/data/necklace/choker.json';
 import { PageDesign } from '@/app/products/PageDesign';
 import Necklaces from '../../../Necklaces';
 
+export async function generateStaticParams() {
+  return ProductData.map(product => ({
+    id: product.id.toString()
+  }));
+}
+
+
 const ChokerNecklacesPage = ({ params }: { params: { id: string } }) => {
   const productId = parseInt(params.id, 10);
 

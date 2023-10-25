@@ -3,6 +3,12 @@ import ProductData from '../../../../../../../public/data/bangle/golden-bangle.j
 import { PageDesign } from '@/app/products/PageDesign';
 import Bangles from '../../../Bangles';
 
+export async function generateStaticParams() {
+  return ProductData.map(product => ({
+    id: product.id.toString()
+  }));
+}
+
 const GoldenBanglePage = ({ params }: { params: { id: string } }) => {
   const productId = parseInt(params.id, 10);
 

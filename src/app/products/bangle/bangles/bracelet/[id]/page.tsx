@@ -3,6 +3,13 @@ import ProductData from '../../../../../../../public/data/bangle/bracelet.json';
 import { PageDesign } from '@/app/products/PageDesign';
 import Bangles from '../../../Bangles';
 
+export async function generateStaticParams() {
+  return ProductData.map(product => ({
+    id: product.id.toString()
+  }));
+}
+
+
 const BraceletPage = ({ params }: { params: { id: string } }) => {
   const productId = parseInt(params.id, 10);
 
@@ -25,4 +32,4 @@ const BraceletPage = ({ params }: { params: { id: string } }) => {
   );
 };
 
-export default BraceletPage;
+export default BraceletPage

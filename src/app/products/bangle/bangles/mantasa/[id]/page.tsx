@@ -3,6 +3,12 @@ import ProductData from '../../../../../../../public/data/bangle/mantasa.json';
 import { PageDesign } from '@/app/products/PageDesign';
 import Bangles from '../../../Bangles';
 
+export async function generateStaticParams() {
+  return ProductData.map(product => ({
+    id: product.id.toString()
+  }));
+}
+
 const Mantasa = ({ params }: { params: { id: string } }) => {
   const productId = parseInt(params.id, 10);
 

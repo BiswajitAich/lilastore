@@ -3,6 +3,13 @@ import ProductData from '../../../../../../../public/data/earring/golden-earring
 import { PageDesign } from '@/app/products/PageDesign';
 import Earring from '../../../Earrings';
 
+export async function generateStaticParams() {
+  return ProductData.map(product => ({
+    id: product.id.toString()
+  }));
+}
+
+
 const GoldenEarringPage = ({ params }: { params: { id: string } }) => {
   const productId = parseInt(params.id, 10);
 

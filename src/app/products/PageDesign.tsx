@@ -188,7 +188,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
       </div>
       <button type='button' className={pageStyle.contact} onClick={() => handleOrder(selectedProduct.description, selectedProduct.price, selectedProduct.url)}>
         <img
-          src='./images/logos/whatsapp-icon.webp'
+          src='/images/logos/whatsapp-icon.webp'
           style={{
             minWidth: "40px",
             minHeight: "40px",
