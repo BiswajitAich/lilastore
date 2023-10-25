@@ -11,7 +11,7 @@ const Ring: React.FC = () => {
                 <h3>Ring Collection<div /></h3>
                 <div className={StyleScript.productContainer}>
                     {productData.map((material, idx) => (
-                        <Link href={`/products/otherproduct/otherproducts/ring/${material.id}`} key={idx}>
+                        material.url && <Link href={`/products/otherproduct/otherproducts/ring/${material.id}`} key={idx}>
                             <div className={StyleScript.productCard} >
                                 <div className={StyleScript.imageDiv}  >
                                     {
