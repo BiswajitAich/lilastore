@@ -2,7 +2,7 @@
     "theme_color": "#4a90e2",
     "background_color": "#000000",
     "display": "standalone",
-    "scope": "/",
+    "scope": "/lilastore/",
     "start_url": "/",
     "name": "Lila Store App",
     "description": "Imitation jewelry store online and offline high qyality products at affordable price...",
