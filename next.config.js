@@ -13,5 +13,5 @@ module.exports = withPWA({
     NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: "di3zlyh9o"
   },
   output: 'export',
-  basePath: '/lilastore',
+  // basePath: '/lilastore',
 })
