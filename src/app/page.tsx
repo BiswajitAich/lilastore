@@ -14,17 +14,19 @@ import { Marquee } from './components/Marquee'
 export default function Home() {
 
   useEffect(() => {
-    // document.addEventListener('contextmenu', function(event) {
-    //   event.preventDefault();
-    // });
+    document.addEventListener('contextmenu', function (event) {
+      event.preventDefault();
+    });
+  }, [])
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
 
-    window.scrollTo(0,0);
-    
     if ('beforeinstallprompt' in window) {
       window.addEventListener('beforeinstallprompt', (e) => {
         e.preventDefault();
-        const event = e as any; 
-        event.prompt(); 
+        const event = e as any;
+        event.prompt();
         event.userChoice.then((choice: { outcome: string }) => {
           if (choice.outcome === 'accepted') {
             console.log('User accepted the install prompt');
@@ -37,7 +39,7 @@ export default function Home() {
 
 
     return () => {
-      document.removeEventListener('contextmenu', function(event) {
+      document.removeEventListener('contextmenu', function (event) {
         event.preventDefault();
       });
     };
