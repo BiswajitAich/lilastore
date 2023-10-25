@@ -2,7 +2,6 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Footer from './components/Footer'
-import { Html, Head } from 'next/document'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,14 +18,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <Html lang="en">
-      <Head>
-        <meta name="google-site-verification" content="8AO-KxssBnO3-PTBnbw4TXV-vTiJt7WDb8Y4K_4qxVo" />
-      </Head>
+    <html lang="en">
       <body className={inter.className}>
         {children}
         <Footer />
       </body>
-    </Html>
+    </html>
   )
 }
