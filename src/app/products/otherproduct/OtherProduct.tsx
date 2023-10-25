@@ -1,11 +1,15 @@
 "use client"
-import React from 'react'
+import React, { useEffect } from 'react'
 import productData from '../../../../public/data/otherproduct/otherproduct.json'
 import { CldImage } from 'next-cloudinary'
 import StyleScript from '../../../app/styles/products.module.css'
 import Link from 'next/link'
 const OtherProduct: React.FC = () => {
-
+    useEffect(() => {
+        document.addEventListener('contextmenu', function (event) {
+          event.preventDefault();
+        });
+      }, [])
     return (
 
         <div className={StyleScript.productBody}>

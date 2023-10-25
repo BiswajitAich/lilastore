@@ -24,7 +24,11 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
   const [loaded, setLoaded] = useState(false);
   const imgContainerRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
-  
+  useEffect(() => {
+    document.addEventListener('contextmenu', function (event) {
+      event.preventDefault();
+    });
+  }, [])
   useEffect(() => {
     if (selectedProduct.type) {
       const totalImages = selectedProduct.type.length;
