@@ -2,29 +2,28 @@
     "theme_color": "#4a90e2",
     "background_color": "#000000",
     "display": "standalone",
-    "scope": "/lilastore/",
     "start_url": "/",
     "name": "Lila Store App",
     "description": "Imitation jewelry store online and offline high qyality products at affordable price...",
     "short_name": "LS app",
     "icons": [
         {
-            "src": "/images/logos/LS-logo-512x512.png",
+            "src": "/lilastore/images/logos/LS-logo-512x512.png",
             "sizes": "192x192",
             "type": "image/webp"
         },
         {
-            "src": "/images/logos/LS-logo-512x512.png",
+            "src": "/lilastore/images/logos/LS-logo-512x512.png",
             "sizes": "256x256",
             "type": "image/webp"
         },
         {
-            "src": "/images/logos/LS-logo-512x512.png",
+            "src": "/lilastore/images/logos/LS-logo-512x512.png",
             "sizes": "384x384",
             "type": "image/webp"
         },
         {
-            "src": "/images/logos/LS-logo-512x512.png",
+            "src": "/lilastore/images/logos/LS-logo-512x512.png",
             "sizes": "512x512",
             "type": "image/webp",
             "purpose": "maskable"
