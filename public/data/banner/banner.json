@@ -13,7 +13,7 @@
         "category": "Golden Necklace",
         "description": "| Offer Price | \n Beautiful Golden Set \n color: 3 varient. \n Earring: 1 pair. \n",
         "price": "220",
-        "goto": "http://localhost:3000/products/necklace/necklaces/golden-necklace/51"
+        "goto": "/products/necklace/necklaces/golden-necklace/51"
     },
     {
         "id":  3,
@@ -21,7 +21,7 @@
         "category": "Golden Earring",
         "description": "| Offer Price | \n Beautiful Golden Earring \n",
         "price": "120",
-        "goto": "http://localhost:3000/products/earring/earrings/golden-earring/6"
+        "goto": "/products/earring/earrings/golden-earring/6"
     },
     {
         "id":  4,
@@ -29,7 +29,7 @@
         "category": "Golden Bangle",
         "description": "| Offer Price | \n Beautiful Golden Bangle \n Type: Bangle. \n",
         "price": "120",
-        "goto": "http://localhost:3000/products/bangle/bangles/golden-bangle/18"
+        "goto": "/products/bangle/bangles/golden-bangle/18"
     },
     {
         "id":  5,
@@ -37,6 +37,6 @@
         "category": "Golden Bangle",
         "description": "| Offer Price | \n Beautiful Golden Bangle \n",
         "price": "104",
-        "goto": "http://localhost:3000/products/bangle/bangles/golden-bangle/17"
+        "goto": "/products/bangle/bangles/golden-bangle/17"
     }
 ]
