@@ -5,15 +5,9 @@ const withPWA = require('next-pwa')({
   register: true,
   // scope: '/app',
   sw: '/sw.js',
-});
+
+})
 
 module.exports = withPWA({
-  async rewrites() {
-    return [
-      {
-        source: '/',
-        destination: '/src/app/layout',
-      },
-    ];
-  },
-});
+  // next.js config
+})
