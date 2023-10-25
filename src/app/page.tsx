@@ -14,9 +14,9 @@ import { Marquee } from './components/Marquee'
 export default function Home() {
 
   useEffect(() => {
-    document.addEventListener('contextmenu', function(event) {
-      event.preventDefault();
-    });
+    // document.addEventListener('contextmenu', function(event) {
+    //   event.preventDefault();
+    // });
 
     window.scrollTo(0,0);
     
