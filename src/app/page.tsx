@@ -52,6 +52,7 @@ export default function Home() {
         <title>Lila Store</title>
         <link rel="manifest" href="/manifest.json" />
         <meta name='theme-color' content='#3498db' />
+        <meta name="google-site-verification" content="8AO-KxssBnO3-PTBnbw4TXV-vTiJt7WDb8Y4K_4qxVo" />
       </Head>
       <main className={styles.main}>
         <Suspense fallback={<div>Loading...</div>} >
