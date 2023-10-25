@@ -1,0 +1,392 @@
+[
+    {
+        "id": 1,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659525/more-products/rings/rings23.1.f7e35191dff435439afb_ctntor.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n Design: mirror at centre\n",
+        "price": "105",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659525/more-products/rings/rings23.1.f7e35191dff435439afb_ctntor.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659536/more-products/rings/rings23.2.ba5af24bae7545c2f24a_zd6aci.jpg"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659515/more-products/rings/rings21.1.01e72d68f30c23234f77_vm8ufs.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "105",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659515/more-products/rings/rings21.1.01e72d68f30c23234f77_vm8ufs.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659519/more-products/rings/rings21.2.5c28605321fef608f99a_sbo0iz.jpg"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659513/more-products/rings/rings20.1.a0eab45386affebad554_fef3mo.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "50",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659513/more-products/rings/rings20.1.a0eab45386affebad554_fef3mo.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659517/more-products/rings/rings20.2.4a677df124d862990d7b_fp2ks7.jpg"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659500/more-products/rings/rings19.1.1eb289fd6063fad041c4_jt03fn.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "50",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659500/more-products/rings/rings19.1.1eb289fd6063fad041c4_jt03fn.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659511/more-products/rings/rings19.2.d6b7d44eccad1c0be44e_vdvs1c.jpg"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659495/more-products/rings/rings18.1.f9eb065508a2cccb11ce_wbqf37.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "50",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659495/more-products/rings/rings18.1.f9eb065508a2cccb11ce_wbqf37.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659493/more-products/rings/rings18.2.87ce04c2cf8048a71d98_qmgt53.jpg"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659506/more-products/rings/rings17.1.24c1025111a580e3bce4_pyqfhq.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "50",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659506/more-products/rings/rings17.1.24c1025111a580e3bce4_pyqfhq.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659498/more-products/rings/rings17.2.9de2d62fe548426d9e1c_lxrnpg.jpg"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659502/more-products/rings/rings16.1.f20fb3685330dfd00fb9_e9czvx.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "50",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659502/more-products/rings/rings16.1.f20fb3685330dfd00fb9_e9czvx.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659508/more-products/rings/rings16.2.be3b365c90a551e288f9_zgmeeh.jpg"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659504/more-products/rings/rings15.1.d5df17c8f8277edaf4a0_daswqw.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "50",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659504/more-products/rings/rings15.1.d5df17c8f8277edaf4a0_daswqw.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659491/more-products/rings/rings15.2.164a1a31dac603fb25f6_t27b7i.jpg"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659478/more-products/rings/rings13.1.393f479a94d578f2585e_cwqzd8.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "50",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659478/more-products/rings/rings13.1.393f479a94d578f2585e_cwqzd8.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659484/more-products/rings/rings13.2.98e01b4e3f11d198390b_emuf1i.jpg"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659480/more-products/rings/rings12.1.19b96cd6fdab210ab304_vwzf08.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "50",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659480/more-products/rings/rings12.1.19b96cd6fdab210ab304_vwzf08.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659482/more-products/rings/rings12.2.22f1746e47ea1d39130d_duj2vl.jpg"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659473/more-products/rings/rings11.1.f5b6169d015a356f8b69_qymnwx.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "50",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659473/more-products/rings/rings11.1.f5b6169d015a356f8b69_qymnwx.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659476/more-products/rings/rings11.2.0835dea39c4baf59bb3c_yrqzdm.jpg"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659469/more-products/rings/rings10.1.c93b714543bb430a0c9e_vedrq3.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "50",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659469/more-products/rings/rings10.1.c93b714543bb430a0c9e_vedrq3.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659471/more-products/rings/rings10.2.69a1fd2d714ecb4b43fc_i3vob5.jpg"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659464/more-products/rings/rings9.1.27752443d90b21cf6039_slygqs.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "50",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659464/more-products/rings/rings9.1.27752443d90b21cf6039_slygqs.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659467/more-products/rings/rings9.2.905300d157c50baf780a_nqk6sp.jpg"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659458/more-products/rings/rings8.1.06be13272a4a0f706589_sjm8zw.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "50",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659458/more-products/rings/rings8.1.06be13272a4a0f706589_sjm8zw.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659462/more-products/rings/rings8.2.9bced09620dda8a5110c_zduktk.jpg"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659456/more-products/rings/rings7.1.00ca07569d60dc589682_j3na8v.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "50",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659456/more-products/rings/rings7.1.00ca07569d60dc589682_j3na8v.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659460/more-products/rings/rings7.2.27dac3b2965a8166ee86_ugdzxw.jpg"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659452/more-products/rings/rings6.1.e9e4d8cb66d95fd458b7_bbmp3z.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "50",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659452/more-products/rings/rings6.1.e9e4d8cb66d95fd458b7_bbmp3z.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659454/more-products/rings/rings6.2.af7c6b2d8a97277e3f8f_dqbcfq.jpg"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659447/more-products/rings/rings5.1.3c4ff373e437297ccf8a_kveiuu.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "50",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659447/more-products/rings/rings5.1.3c4ff373e437297ccf8a_kveiuu.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659449/more-products/rings/rings5.2.6f031cc1b94ac9254aee_tqs69t.jpg"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659443/more-products/rings/rings4.1.a9e5fe4a5034ae830edf_ex6aay.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "108",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659443/more-products/rings/rings4.1.a9e5fe4a5034ae830edf_ex6aay.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659445/more-products/rings/rings4.2.e2d431de0f78787672c5_uijqlq.jpg"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659441/more-products/rings/rings3.1.b8682eb930103e61d012_mzckmp.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "75",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659441/more-products/rings/rings3.1.b8682eb930103e61d012_mzckmp.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659439/more-products/rings/rings3.2.489d0affd6d2a28ca559_threty.jpg"
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659434/more-products/rings/rings2.1.93774edc3db208b33a88_rw6hga.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "75",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659434/more-products/rings/rings2.1.93774edc3db208b33a88_rw6hga.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659437/more-products/rings/rings2.2.bc8a68a4124162245e74_jhcyul.jpg"
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659430/more-products/rings/rings1.1.68136dd9a11e4023413c_br8bcv.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "90",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659430/more-products/rings/rings1.1.68136dd9a11e4023413c_br8bcv.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659432/more-products/rings/rings1.2.174e789e21d3ecd4861a_ydru7x.jpg"
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659539/more-products/rings/rings26.1.6a3f72bc75e3c211e549_z2rnm4.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "115",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659539/more-products/rings/rings26.1.6a3f72bc75e3c211e549_z2rnm4.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659428/more-products/rings/rings26.2.cf8ccd5e74383e2a3ad6_hbkqtt.jpg"
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659532/more-products/rings/rings25.1.540790e1d2e93ac81b05_u5ihh6.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n Color: Black. \n [OUT OF STOCK ]\n This product will be available soon...\n",
+        "price": "115",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659532/more-products/rings/rings25.1.540790e1d2e93ac81b05_u5ihh6.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659534/more-products/rings/rings25.2.4f11d9f9575a1ed423f3_ncdlby.jpg"
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659530/more-products/rings/rings24.1.01189324db875fbb2e47_qziakz.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "115",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659530/more-products/rings/rings24.1.01189324db875fbb2e47_qziakz.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659527/more-products/rings/rings24.2.87c360d70514b4badffd_e3enba.jpg"
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659521/more-products/rings/rings22.1.43e07c455c3281007b66_gmj5nt.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "115",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659521/more-products/rings/rings22.1.43e07c455c3281007b66_gmj5nt.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659523/more-products/rings/rings22.2.a71fd0d3e2d6cc45e6f0_yk0afh.jpg"
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659515/more-products/rings/rings21.1.01e72d68f30c23234f77_vm8ufs.jpg",
+        "description":  "Rings",
+        "detail": "Beautiful Rings \n",
+        "price": "105",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659515/more-products/rings/rings21.1.01e72d68f30c23234f77_vm8ufs.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659519/more-products/rings/rings21.2.5c28605321fef608f99a_sbo0iz.jpg"
+            }
+        ]
+    }
+]

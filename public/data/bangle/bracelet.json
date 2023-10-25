@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659222/bangles/bracelets/bracelet11.19325edb36444b570860_eablws.jpg",
+        "description":  "Bracelet",
+        "detail": "Beautiful Bracelet \n Type: AD stone. \n Size: Free size. \n",
+        "price": "40"
+    },
+    {
+        "id": 2,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659220/bangles/bracelets/bracelet10.d5c82c155fc70f0107da_h30j9l.jpg",
+        "description":  "Bracelet",
+        "detail": "Beautiful Bracelet \n Type: AD stone. \n Size: Free size. \n [OUT OF STOCK ]\n This product will be available soon...\n",
+        "price": "40"
+    },
+    {
+        "id": 3,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659217/bangles/bracelets/bracelet9.be1ee0141a0981ab274f_fc9wah.jpg",
+        "description":  "Bracelet",
+        "detail": "Beautiful Bracelet \n Type: AD stone. \n Size: Free size. \n",
+        "price": "180"
+    },
+    {
+        "id": 4,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659216/bangles/bracelets/bracelet8.7372d605b77f249d86b4_ov4iqf.jpg",
+        "description":  "Bracelet",
+        "detail": "Beautiful Bracelet \n Type: stone. \n Size: Free size. \n",
+        "price": "80"
+    },
+    {
+        "id": 5,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659213/bangles/bracelets/bracelet7.1787f2a6297deb615797_cidpvc.jpg",
+        "description":  "Bracelet",
+        "detail": "Beautiful Bracelet \n Size: Free size. \n",
+        "price": "80"
+    },
+    {
+        "id": 6,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659211/bangles/bracelets/bracelet6.7b1ec626d6df7932b074_o42bf9.jpg",
+        "description":  "Bracelet",
+        "detail": "Beautiful Bracelet \n Size: Free size. \n",
+        "price": "135"
+    },
+    {
+        "id": 7,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659210/bangles/bracelets/bracelet4.1800c72354675fd75338_ddmt4e.jpg",
+        "description":  "Bracelet",
+        "detail": "Beautiful Bracelet \n Size: Free size. \n",
+        "price": "135"
+    },
+    {
+        "id": 8,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659207/bangles/bracelets/bracelet5.1958642142174021329c_bz1rzl.jpg",
+        "description": "Bracelet",
+        "detail": "Beautiful Bracelet \n Size: Free size. \n",
+        "price": "135"
+    },
+    {
+        "id": 9,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659204/bangles/bracelets/bracelet2.a5f373be83ea35c22a55_jaejq0.jpg",
+        "description": "Bracelet",
+        "detail": "Beautiful Bracelet \n Size: Free size. \n",
+        "price": "135"
+    },
+    {
+        "id": 10,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659202/bangles/bracelets/bracelet1.b8b53fa502e327469734_y2p1tg.jpg",
+        "description": "Bracelet",
+        "detail": "Beautiful Bracelet \n Size: Free size. \n",
+        "price": "135"
+    },
+    {
+        "id": 11,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659199/bangles/bracelets/bracelet12.a9c529416480c569bff2_ckxofn.jpg",
+        "description": "Bracelet",
+        "detail": "Beautiful Bracelet \n Size: Free size. \n Color: Golden, Silver. \n",
+        "price": "50",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659199/bangles/bracelets/bracelet12.a9c529416480c569bff2_ckxofn.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659201/bangles/bracelets/bracelet13.64591a0ba4b1b80f9df0_u6hcst.jpg"
+            }
+        ]
+    }
+]

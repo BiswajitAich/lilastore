@@ -1,0 +1,207 @@
+/* banner */
+
+.banner {
+    position: relative;
+    width: 80%;
+    height: 300px;
+    scroll-behavior: smooth;
+    margin-bottom: 110px;
+    margin-top: 50px;
+}
+
+.gradient {
+    position: absolute;
+    bottom: -1px;
+    background: linear-gradient(0deg, #F5F5F5, transparent);
+    min-width: 100%;
+    min-height: 50px;
+}
+
+.scrolls {
+    width: 100%;
+    height: 300px;
+    /* min-width: -webkit-fill-available; */
+    background: linear-gradient(180deg,#002927,rgba(253, 128, 255, 0.1),transparent);
+    max-height: auto;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    cursor: grab;
+    white-space: nowrap;
+    transition: all 3000ms ease-in-out;
+}
+
+.scrolls .active {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+    opacity: 0;
+}
+
+.scrollDiv {
+    min-width: 100%;
+    height: 300px;
+    display: flex;
+    scroll-snap-align: center;
+}
+
+.details {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    background-color: antiquewhite;
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    word-wrap: break-word;
+}
+
+.details div,
+.details p {
+    min-width: 90%;
+    text-align: left;
+    padding: 10px;
+    border-right: 2px solid black;
+    border-left: 2px solid rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+    color: rgb(111, 0, 69);
+    white-space: normal;
+}
+
+.imgs {
+    min-height: 300px;
+    min-width: auto;
+    aspect-ratio: 3/4;
+}
+
+.imgs::-webkit-scrollbar {
+    display: none;
+}
+
+
+.leftBtn,
+.rightBtn {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 89;
+    top: 40%;
+    width: 48px;
+    height: 60px;
+    border-radius: 10%;
+    border: 0;
+}
+
+.leftBtn {
+    left: -25px;
+}
+
+.rightBtn {
+    right: -25px;
+    transform: rotate(-180deg);
+}
+
+.leftBtn:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid black;
+}
+
+.rightBtn:hover {
+    transform: scale(1.1) rotate(-180deg);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid black;
+}
+
+.goBack1 {
+    min-width: 25px;
+    height: 5px;
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: wheat;
+    top: 34px;
+    border-bottom-right-radius: 50px;
+}
+
+.goBack2 {
+    min-width: 25px;
+    height: 5px;
+    position: absolute;
+    transform: rotate(-45deg);
+    background-color: wheat;
+    top: 19px;
+    border-top-right-radius: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .banner {
+        min-width: 100%;
+    }
+    .leftBtn {
+        left: 0;
+    }
+    
+    .rightBtn {
+        right: 2px;
+        transform: rotate(-180deg);
+    }
+    .leftBtn,
+    .rightBtn {
+        display: none;
+    }
+    
+    .scrollDiv:nth-child(1){ margin-left: 20px;}
+    .scrollDiv:nth-last-child(1){ margin-right: 20px;}
+}
+
+@media screen and (max-width: 343px) {
+    .scrolls {
+        gap: 0px;
+    }
+
+    .details {
+        max-width: 98%;
+        justify-content: flex-start;
+    }
+
+    .details p:nth-child(2) {
+        display: none;
+    }
+
+    .scrollDiv {
+        margin: 0 5px;
+        min-height: 300px;
+        max-height: 300px;
+        min-width: auto;
+        flex-direction: column;
+    }
+
+    .imgs {
+        margin-right: 5px;
+        min-height: 250px;
+        max-height: 250px;
+    }
+
+    .gradient {
+        min-height: 20px;
+    }
+
+    .banner {
+        margin-bottom: 120px;
+    }
+
+}
+
+@media screen and (max-width: 225px) {
+    .banner {
+        min-width: 100%;
+        height: auto;
+    }
+
+    .scrollDiv:nth-child(1){ margin-left: 0px;}
+    .scrollDiv:nth-last-child(1){ margin-right: 0px;}
+}
+
+/* banner */

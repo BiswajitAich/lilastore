@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1696574888/necklace/golden-necklace/neck42.a5b9cf3dcc20c93a7b9a_mt9ddh.jpg",
+        "category": "Golden Necklace",
+        "goto": "/products/necklace/necklaces/golden-necklace"
+    },
+    {
+        "id": 2,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697222884/necklace/terracotta-necklace/terracotta_jewellery4.jpg",
+        "category": "Terracotta Necklace",
+        "goto": "/products/necklace/necklaces/terracotta-necklace"
+    },
+    {
+        "id": 3,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697223094/necklace/oxydized-necklace/oxidizedjewellery9.jpg",
+        "category": "Oxydized Necklace",
+        "goto": "/products/necklace/necklaces/oxydized-necklace"
+    },
+    {
+        "id": 4,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697223252/necklace/chemicalbead-necklace/chemicalbead3.jpg",
+        "category": "Chemicalbead Necklace",
+        "goto": "/products/necklace/necklaces/chemicalbead-necklace"
+    },
+    {
+        "id": 5,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697223217/necklace/kundan-necklace/kundanjewellery1.976d468d05897b0a896b_qe32vg.jpg",
+        "category": "Kundan Necklace",
+        "goto": "/products/necklace/necklaces/kundan-necklace"
+    },
+    {
+        "id": 5,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697223071/necklace/fancy-necklace/western-necklace1.110b990c5ec501df0ea8_fuirtf.jpg",
+        "category": "Fancy Necklace",
+        "goto": "/products/necklace/necklaces/fancy-necklace"
+    },
+    {
+        "id": 6,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697223098/necklace/choker/oxidizedjewellery10.ea1174f4fc2073227ad1_cpjuqe.jpg",
+        "category": "Choker",
+        "goto": "/products/necklace/necklaces/choker"
+    },
+    {
+        "id": 7,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697553638/necklace/mangalsutra/mangalsutra13_de0hcg.jpg",
+        "category": "Mangalsutra",
+        "goto": "/products/necklace/necklaces/mangalsutra"
+    }
+]

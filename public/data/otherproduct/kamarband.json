@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659576/more-products/kamarbands/kamarband5.7293558a88bba51a9835_jlpyou.jpg",
+        "description":  "Kamarband",
+        "detail": "Beautiful Kamarband \n ",
+        "price": "100"
+    },
+    {
+        "id": 2,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659573/more-products/kamarbands/kamarband3.76991c13f1250dc5868c_px5srs.jpg",
+        "description":  "Kamarband",
+        "detail": "Beautiful Kamarband \n ",
+        "price": "220"
+    },
+    {
+        "id": 3,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659571/more-products/kamarbands/kamarband4.a4a8a8dafc80223d27cb_uzycq7.jpg",
+        "description":  "Kamarband",
+        "detail": "Beautiful Kamarband \n ",
+        "price": "100"
+    },
+    {
+        "id": 4,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659569/more-products/kamarbands/kamarband2.2ffa0365e6a1a0073587_vz8mtn.jpg",
+        "description":  "Kamarband",
+        "detail": "Beautiful Kamarband \n ",
+        "price": "250"
+    },
+    {
+        "id": 5,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659567/more-products/kamarbands/kamarband1.691054ceb553c316f780_nbadav.jpg",
+        "description":  "Kamarband",
+        "detail": "Beautiful Kamarband \n ",
+        "price": "200"
+    }
+]

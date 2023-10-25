@@ -1,0 +1,28 @@
+/* marquee.module.css */
+.marqueeBody {
+  position: relative;
+  top: 50px;
+  width: 100vw;
+  height: 20px;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+.marqueeText {
+  height: 100%;
+  width: 220vw;
+  display: flex;
+  text-wrap: wrap;
+  animation: marqueeAnimation 20s linear infinite;
+}
+
+@keyframes marqueeAnimation {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(-100vw);
+  }
+}

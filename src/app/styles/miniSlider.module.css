@@ -1,0 +1,133 @@
+.miniMain {
+    width: 80%;
+    background: transparent;
+    position: absolute;
+    top: 370px;
+}
+
+.scrollDiv {
+    min-height: 100px;
+    max-height: 100px;
+    width: auto;
+    aspect-ratio: 3/4;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.scrollDiv img {
+    transform: scale(1);
+    transition: transform 500ms ease-in-out;
+}
+
+.scrollDiv img:hover {
+    transform: scale(1.2);
+}
+
+.scrollDiv:nth-child(1) {
+    margin-left: 45px;
+}
+
+.scrollDiv:nth-last-child(1) {
+    margin-right: 45px;
+}
+
+.scrollWrap {
+    overflow-y: hidden;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    white-space: nowrap;
+    gap: 5%;
+    min-height: 100px;
+    max-height: 100px;
+    scroll-behavior: smooth;
+}
+
+.leftBtn,
+.rightBtn {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.05);
+    z-index: 89;
+    top: 5%;
+    width: 48px;
+    height: 90px;
+    border-radius: 10%;
+    border: 0;
+}
+
+.leftBtn {
+    left: -25px;
+}
+
+.rightBtn {
+    right: -25px;
+    transform: rotate(-180deg);
+}
+
+.leftBtn:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid black;
+}
+
+.rightBtn:hover {
+    transform: scale(1.1) rotate(-180deg);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid black;
+}
+
+.goBack1 {
+    min-width: 15px;
+    height: 5px;
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: wheat;
+    top: 43px;
+    border-bottom-right-radius: 50px;
+}
+
+.goBack2 {
+    min-width: 15px;
+    height: 5px;
+    position: absolute;
+    transform: rotate(-45deg);
+    background-color: wheat;
+    top: 35px;
+    border-top-right-radius: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .miniMain {
+        width: 100%;
+    }
+    .leftBtn {
+        left: 0;
+    }
+    
+    .rightBtn {
+        right: 2px;
+        transform: rotate(-180deg);
+    }
+
+    .leftBtn,
+    .rightBtn {
+        display: none;
+    }
+
+    .scrollDiv:nth-child(1) {
+        margin-left: 5px;
+    }
+    
+    .scrollDiv:nth-last-child(1) {
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .miniMain {
+        top: 380px;
+    }
+
+}

@@ -1,0 +1,268 @@
+[
+    {
+        "id": 1,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659416/earring/terracotta-earrings/terracotta_earring38.18121c5dbc2c52603565_p2mjic.jpg",
+        "description": "Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "30"
+    },
+    {
+        "id": 2,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659414/earring/terracotta-earrings/terracotta_earring25.40346296e0ec9ff30002_rxfn4x.jpg",
+        "description": "Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 3,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659412/earring/terracotta-earrings/terracotta_earring40.34cae62b1d60bd283915_dieeqk.jpg",
+        "description": "Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 4,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659410/earring/terracotta-earrings/terracotta_earring27.deb1b4bb444e7b12d12c_hi0ade.jpg",
+        "description": "Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "30"
+    },
+    {
+        "id": 5,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659408/earring/terracotta-earrings/terracotta_earring26.5b7b36d6e10b8a7eb405_uitwtd.jpg",
+        "description": "Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 6,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659423/earring/terracotta-earrings/terracotta_earring3.fd6eeec97d48054f0730_dvo66j.jpg",
+        "description": "Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "110",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659423/earring/terracotta-earrings/terracotta_earring3.fd6eeec97d48054f0730_dvo66j.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659425/earring/terracotta-earrings/terracotta_earring4.3a6a76c3984d8089f208_nkn3h7.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659420/earring/terracotta-earrings/terracotta_earring2.b7d8aa9a411395b67798_occnr0.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659418/earring/terracotta-earrings/terracotta_earring1.d0195284062cf11227c9_dm05jn.jpg"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659341/earring/terracotta-earrings/terracotta_earring5.d8f774a1433c97ee9124_q1jgnx.jpg",
+        "description": "Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "60"
+    },
+    {
+        "id": 8,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659343/earring/terracotta-earrings/terracotta_earring6.262bc6c8b1ba023dd349_craebd.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "60"
+    },
+    {
+        "id": 9,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659346/earring/terracotta-earrings/terracotta_earring7.928b0970a6699f3267fb_am4q2i.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "50"
+    },
+    {
+        "id": 10,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659348/earring/terracotta-earrings/terracotta_earring8.f15adbc711e25b088cd4_j9wap2.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "50"
+    },
+    {
+        "id": 11,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659352/earring/terracotta-earrings/terracotta_earring9.024e1cae3b81d58b5a16_drxyd8.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "50"
+    },
+    {
+        "id": 13,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659354/earring/terracotta-earrings/terracotta_earring10.4f4ebd807f104db8ee50_gup0yq.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "50"
+    },
+    {
+        "id": 14,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659350/earring/terracotta-earrings/terracotta_earring30.85bf23d1dbc003a7ca8f_qbepvw.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "30"
+    },
+    {
+        "id": 15,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659386/earring/terracotta-earrings/terracotta_earring31.e0c05dd70f6105d63e5d_jfwpys.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "30"
+    },
+    {
+        "id": 16,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659391/earring/terracotta-earrings/terracotta_earring32.9563846ea6a7d7e64aa3_wl6chv.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "30"
+    },
+    {
+        "id": 17,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659401/earring/terracotta-earrings/terracotta_earring33.29e3420b9e0a934ecd54_dufs2t.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "30"
+    },
+    {
+        "id": 18,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659356/earring/terracotta-earrings/terracotta_earring11.b39f37be0710f48edcc4_t8t3e8.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "50"
+    },
+    {
+        "id": 19,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659359/earring/terracotta-earrings/terracotta_earring12.26af233a8242a0887710_pg6url.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "50"
+    },
+    {
+        "id": 20,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659361/earring/terracotta-earrings/terracotta_earring13.53c0810b85699e5ada85_bicjax.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 21,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659363/earring/terracotta-earrings/terracotta_earring15.f5b9e130cf9a90bdf430_azjclx.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 22,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659365/earring/terracotta-earrings/terracotta_earring14.65cf8df39d9dbcca1336_duolp6.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 23,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659369/earring/terracotta-earrings/terracotta_earring17.022a2dc1336017977aec_a3ctyc.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 24,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659367/earring/terracotta-earrings/terracotta_earring16.ec45db0af8bd95411777_noxhaf.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 25,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659371/earring/terracotta-earrings/terracotta_earring18.f5e79dc11225e6462789_cue84c.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 26,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659374/earring/terracotta-earrings/terracotta_earring21.438a44573bb71f05bc44_dusved.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 27,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659378/earring/terracotta-earrings/terracotta_earring20.e7ec9a2baba9b7ed03b8_tsc6es.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 28,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659376/earring/terracotta-earrings/terracotta_earring22.c3439a3312169aed782c_phksmp.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 29,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659380/earring/terracotta-earrings/terracotta_earring23.4b3b7c63eedf05dbc201_l4x32e.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 30,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659382/earring/terracotta-earrings/terracotta_earring19.91cee9989c8bfe1301b0_jtkrgt.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 31,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659384/earring/terracotta-earrings/terracotta_earring29.1d8250b3d4ebfc07a4dd_uppmgt.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "30"
+    },
+    {
+        "id": 32,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659395/earring/terracotta-earrings/terracotta_earring35.03307c2108cc16b0f182_im3o4i.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "50"
+    },
+    {
+        "id": 33,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659388/earring/terracotta-earrings/terracotta_earring24.2091591bf4cde1b74fe8_x9apue.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 34,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659393/earring/terracotta-earrings/terracotta_earring36.d0a9986e8aed480c4f64_yk1iso.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 35,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659399/earring/terracotta-earrings/terracotta_earring34.34e6608cdfd6e58633b2_exrsn4.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "30"
+    },
+    {
+        "id": 36,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659397/earring/terracotta-earrings/terracotta_earring37.9421e3c2b99d0d8c74bb_lenrrp.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    },
+    {
+        "id": 37,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659403/earring/terracotta-earrings/terracotta_earring39.fbd49e38946fff444729_ishhgz.jpg",
+        "description": "Beautiful Terracotta Earring",
+        "detail": "Beautiful Terracotta Earring \n",
+        "price": "40"
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658763/earring/golden-earrings/ear125.3f123d235a8e57803df5_dj57nf.jpg",
+        "category": "Golden Earrings",
+        "goto": "/products/earring/earrings/golden-earring"
+    },
+    {
+        "id": 2,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659414/earring/terracotta-earrings/terracotta_earring25.40346296e0ec9ff30002_rxfn4x.jpg",
+        "category": "Terracotta Earrings",
+        "goto": "/products/earring/earrings/terracotta-earring"
+    },
+    {
+        "id": 3,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658418/earring/oxydized-earrings/oxydizedearrings22.e4d2ad788dd514b087ff_ojpbo0.jpg",
+        "category": "Oxydized Earrings",
+        "goto": "/products/earring/earrings/oxydized-earring"
+    },
+    {
+        "id": 4,
+        "category": "Stone Earrings",
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658961/earring/stone-earrings/ad-stone-earring10.e68488286fe1ac8c9fa4_qgpdy5.jpg",
+        "goto": "/products/earring/earrings/adstone-earring"
+    },
+    {
+        "id": 4,
+        "category": "Funky Earrings",
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658348/earring/funky-earrings/funky-earrings5.d870944eab175245b683_fcs22w.jpg",
+        "goto": "/products/earring/earrings/funky-earring"
+    },
+    {
+        "id": 4,
+        "category": "Fancy Earrings",
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658598/earring/fancy-earrings/ear-2.190c78caebbba6dc151e_iy2wpn.jpg",
+        "goto": "/products/earring/earrings/fancy-earring"
+    }
+]

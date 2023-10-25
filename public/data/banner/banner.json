@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1698046027/necklace/terracotta-necklace/IMG_20230917_205056_1_z7agtt.webp",
+        "category": "Terracotta Necklace",
+        "description": "| Offer Price | \n Beautiful Terracotta Set \n color: red-yellow (3 type). \n Earring: 1 pair. \n Bangle: 1 pair. \n",
+        "price": "100",
+        "goto": "/products/necklace/necklaces/terracotta-necklace/41"
+    },
+    {
+        "id":  2,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1696574886/necklace/golden-necklace/neck36.2.581ab99ed8216ac30d42_jlaldj.jpg",
+        "category": "Golden Necklace",
+        "description": "| Offer Price | \n Beautiful Golden Set \n color: 3 varient. \n Earring: 1 pair. \n",
+        "price": "220",
+        "goto": "http://localhost:3000/products/necklace/necklaces/golden-necklace/51"
+    },
+    {
+        "id":  3,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658762/earring/golden-earrings/ear127.16a784ccbc71f455fefd_fnypvw.jpg",
+        "category": "Golden Earring",
+        "description": "| Offer Price | \n Beautiful Golden Earring \n",
+        "price": "120",
+        "goto": "http://localhost:3000/products/earring/earrings/golden-earring/6"
+    },
+    {
+        "id":  4,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659086/bangles/golden-bangles/bangles15.7f16f44fa5cff7c0dcc4_vaqbbh.jpg",
+        "category": "Golden Bangle",
+        "description": "| Offer Price | \n Beautiful Golden Bangle \n Type: Bangle. \n",
+        "price": "120",
+        "goto": "http://localhost:3000/products/bangle/bangles/golden-bangle/18"
+    },
+    {
+        "id":  5,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659088/bangles/golden-bangles/bangles16.01b08e100a7de9944041_va4us1.jpg",
+        "category": "Golden Bangle",
+        "description": "| Offer Price | \n Beautiful Golden Bangle \n",
+        "price": "104",
+        "goto": "http://localhost:3000/products/bangle/bangles/golden-bangle/17"
+    }
+]
