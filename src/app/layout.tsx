@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   applicationName: 'MY Lila Store',
   keywords: 'Konnagar, Imitation Jewlry, Golden Necklace ,Golden Earring ,Golden Bangle ,Oxidized Necklace,Oxidized Earring ,Oxidized Bangle ,Terracotta Necklace ,Terracotta Earring ,Chemicalbead Necklace ,Kundan Necklace ,Fancy Necklace ,Choker, Mangalsutra ,Stone Earring ,AD Stone ,Funky Earring ,Fancy Earring ,Bracelets ,Mantasa ,Chains ,Kamarband ,Rings ,Payals ',
   robots: 'follow',
-  
+  viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
 }
 
 export default function RootLayout({
