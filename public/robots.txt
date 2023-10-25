@@ -1,2 +1,9 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /uploads/
+Disallow: /downloads/
+
+Sitemap: https://biswajitaich.github.io/lilastore/sitemap.xml
