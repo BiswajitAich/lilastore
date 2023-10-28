@@ -3,7 +3,7 @@ import { CldImage } from 'next-cloudinary';
 import React, { useState, useRef, useEffect } from 'react';
 import pageStyle from '../styles/productPage.module.css';
 import { useRouter } from 'next/navigation';
-import Head from 'next/head';
+import { Metadata } from 'next';
 
 interface PageDesignProps {
   selectedProduct: {
@@ -19,7 +19,7 @@ interface PageDesignProps {
 }
 
 export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
-  
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const imgContainerRef = useRef<HTMLDivElement>(null);
@@ -33,14 +33,14 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
     if (selectedProduct.type) {
       const totalImages = selectedProduct.type.length;
       let loadedImages = 0;
-  
+
       const handleImageLoad = () => {
         loadedImages++;
         if (loadedImages === totalImages) {
           setLoaded(true);
         }
       };
-  
+
       selectedProduct.type.forEach((type: { url: string }) => {
         const img = new Image();
         img.src = type.url;
@@ -48,13 +48,13 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
       });
     }
   }, [selectedProduct.type]);
-  
+
   function handleRight() {
     if (selectedProduct.type) {
       const newIndex = (currentImageIndex + 1) % selectedProduct.type.length;
       setCurrentImageIndex(newIndex);
-      
-      
+
+
       if (imgContainerRef.current) {
         const sliderContainer = imgContainerRef.current as HTMLDivElement;
         if (window.innerWidth <= 600) {
@@ -108,13 +108,6 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
 
   return (
     <div className={pageStyle.pagebody}>
-      <Head>
-        <meta name="description" content={selectedProduct.description} />
-        <meta property="og:title" content={selectedProduct.description} />
-        <meta property="og:description" content={selectedProduct.description} />
-        <meta property="og:image" content={`${selectedProduct.url}?quality=50%&maxWidth=100&maxHeight=150`} />
-        <meta name="keywords" content={`${selectedProduct.description} ${selectedProduct.detail} ${selectedProduct.type}`} />
-      </Head>
       <div className={pageStyle.pagecontainer}>
         <div className={pageStyle.head}>
           <button type='button' onClick={() => { router.push('/') }}>Home</button>
@@ -129,7 +122,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                   src={type.url}
                   width={1000}
                   height={1000}
-                  loading='lazy'
+                  loading='eager'
                   alt={`product Image${idx}`}
                   style={{
                     opacity: 0,
@@ -147,7 +140,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                 src={selectedProduct.url}
                 width={1000}
                 height={1000}
-                loading='lazy'
+                loading='eager'
                 alt={'product Image'}
                 style={{
                   opacity: 0,
@@ -208,3 +201,15 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
     </div>
   );
 };
+
+ 
+export async function generateMetadata({ selectedProduct }: PageDesignProps ): Promise<Metadata> {
+  return {
+    title: selectedProduct.description,
+    openGraph: {
+      images: selectedProduct.url,
+      description: selectedProduct.detail,
+    },
+    keywords: `${selectedProduct.description}, ${selectedProduct.detail}`,
+  }
+}

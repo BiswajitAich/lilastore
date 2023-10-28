@@ -229,5 +229,33 @@
         "description":  "Chain",
         "detail": "Beautiful Chain Design \n",
         "price": "120"
+    },
+    {
+        "id": 34,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1698348110/more-products/chains/chain34.webp",
+        "description":  "Chain",
+        "detail": "Beautiful Chain Design \n Chain with beautiful pendant design. \n",
+        "price": "50"
+    },
+    {
+        "id": 35,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1698348110/more-products/chains/chain35.webp",
+        "description":  "Chain",
+        "detail": "Beautiful Chain Design \n Chain with beautiful pendant design. \n",
+        "price": "50"
+    },
+    {
+        "id": 36,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1698348110/more-products/chains/chain36.webp",
+        "description":  "Chain",
+        "detail": "Beautiful Chain Design \n Chain with beautiful pendant design. \n",
+        "price": "50"
+    },
+    {
+        "id": 37,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1698348110/more-products/chains/chain37.webp",
+        "description":  "Chain",
+        "detail": "Beautiful Chain Design \n Chain with beautiful pendant design. \n",
+        "price": "50"
     }
 ]
