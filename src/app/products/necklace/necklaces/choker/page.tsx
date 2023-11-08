@@ -4,14 +4,18 @@ import productData from '../../../../../../public/data/necklace/choker.json'
 import { CldImage } from 'next-cloudinary'
 import StyleScript from '../../../../styles/products.module.css'
 import Link from 'next/link'
+import UseReveal from '@/app/components/effects/UseReveal'
+
 const ChokerNecklaces: React.FC = () => {
+    const refs: React.RefObject<HTMLAnchorElement>[] = productData.map(() => UseReveal());
+
     return (
         <div className={StyleScript.body} >
             <div className={StyleScript.productBody}>
                 <h3>Coker Collection<div /></h3>
                 <div className={StyleScript.productContainer}>
                     {productData.map((material, idx) => (
-                        <Link href={`/products/necklace/necklaces/choker/${material.id}`} key={idx}>
+                        <Link href={`/products/necklace/necklaces/choker/${material.id}`} ref={refs[idx]} className={StyleScript.reveal} key={idx}>
                             <div className={StyleScript.productCard} >
                                 <div className={StyleScript.imageDiv}  >
                                     {

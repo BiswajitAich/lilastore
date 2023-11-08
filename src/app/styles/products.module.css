@@ -15,6 +15,18 @@
     margin-bottom: 20px;
 }
 
+.revealVisible{
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.9s ease, transform 0.3s ease-in-out;
+    transform-origin: top;
+}
+
+.reveal{
+    opacity: 0;
+    transform: scale(0);
+}
+
 .productBody h3 {
     padding: 20px;
     background-color: #6245ff87;

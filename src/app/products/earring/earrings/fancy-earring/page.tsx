@@ -4,14 +4,18 @@ import productData from '../../../../../../public/data/earring/fancy-earring.jso
 import { CldImage } from 'next-cloudinary'
 import StyleScript from '../../../../styles/products.module.css'
 import Link from 'next/link'
+import UseReveal from '@/app/components/effects/UseReveal'
+
 const FancyEarring: React.FC = () => {
+    const refs: React.RefObject<HTMLAnchorElement>[] = productData.map(() => UseReveal());
+
     return (
         <div className={StyleScript.body} >
             <div className={StyleScript.productBody}>
                 <h3>Fancy Earring Collection<div /></h3>
                 <div className={StyleScript.productContainer}>
                     {productData.map((material, idx) => (
-                        <Link href={`/products/earring/earrings/fancy-earring/${material.id}`} key={idx}>
+                        <Link href={`/products/earring/earrings/fancy-earring/${material.id}`} ref={refs[idx]} className={StyleScript.reveal} key={idx}>
                             <div className={StyleScript.productCard} >
                                 <div className={StyleScript.imageDiv}  >
                                     {
