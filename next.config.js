@@ -5,7 +5,6 @@ const withPWA = require('next-pwa')({
   register: true,
   // scope: '/app',
   sw: '/lilastore/public/sw.js',
-
 })
 
 module.exports = withPWA({
