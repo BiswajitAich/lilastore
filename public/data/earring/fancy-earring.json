@@ -1,6 +1,33 @@
 [
     {
         "id": 1,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1700122936/earring/fancy-earrings/Fancy1.5.webp",
+        "description": "Fancy Earring",
+        "detail": "Beautiful Fancy Earring",
+        "price": "140",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1700122936/earring/fancy-earrings/Fancy1.5.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1700122939/earring/fancy-earrings/Fancy1.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1700122939/earring/fancy-earrings/Fancy1.1.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1700122938/earring/fancy-earrings/Fancy1.2.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1700122938/earring/fancy-earrings/Fancy1.3.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1700122938/earring/fancy-earrings/Fancy1.4.webp"
+            }
+        ]
+    },
+    {
+        "id": 2,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658513/earring/fancy-earrings/ear129.418cd5efa4f8cb5c05f8_k32qt6.jpg",
         "description": "Fancy Earring",
         "detail": "Beautiful Fancy Earring",
@@ -24,7 +51,7 @@
         ]
     },
     {
-        "id": 2,
+        "id": 3,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658515/earring/fancy-earrings/ear135.9c4ca04fa19179ea2bf8_izfpqz.jpg",
         "description": "Fancy Earring",
         "detail": "Beautiful Fancy Earring",
@@ -54,7 +81,7 @@
         ]
     },
     {
-        "id": 3,
+        "id": 4,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658598/earring/fancy-earrings/ear-3.9d254095a85a5dfb8575_sjrzzi.jpg",
         "description": "Fancy Earring",
         "detail": "Beautiful Fancy Earring",
@@ -81,7 +108,7 @@
         ]
     },
     {
-        "id": 4,
+        "id": 5,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658634/earring/fancy-earrings/ear-8.3a95d3d5af9c395aed2a_rz01ru.jpg",
         "description": "Fancy Earring",
         "detail": "Beautiful Fancy Earring",
@@ -111,7 +138,7 @@
         ]
     },
     {
-        "id": 5,
+        "id": 6,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658651/earring/fancy-earrings/ear-18.2e1fb7059ab6be4b839b_jp3tan.jpg",
         "description": "Fancy Earring",
         "detail": "Beautiful Fancy Earring",
@@ -135,10 +162,10 @@
         ]
     },
     {
-        "id": 6,
+        "id": 7,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658659/earring/fancy-earrings/ear-23.83559730afb7faf4e781_cslknq.jpg",
         "description": "Fancy Earring",
-        "detail": "Beautiful Fancy Earring",
+        "detail": "Beautiful Fancy Earring \n Currently out of stock \n",
         "price": "100"
     },
     {

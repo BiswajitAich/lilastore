@@ -1,13 +1,39 @@
 "use client"
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import minisliderstyles from "@/app/styles/miniSlider.module.css";
 import { CldImage } from 'next-cloudinary';
-import productData from "../../../public/data/miniSlider/miniSlider.json";
+// import productData from "../../../public/data/miniSlider/miniSlider.json";
 import Link from 'next/link';
+
+interface Product {
+  goto: string;
+  url: string;
+}
 
 function MiniSlider() {
   const scrollWrapRef = useRef<HTMLDivElement | null>(null);
+  const [productData, setProductData] = useState< Product[] >([]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try{
+        const res = await fetch('/lilastore/data/miniSlider/miniSlider.json');
+
+        if (!res.ok) {
+          throw new Error(`HTTP error! Status: ${res.status}`);
+        }
+
+        
+        const data = await res.json();
+        console.log('Fetched Data:', data);
+        setProductData(data);
+      } catch(err) {
+        console.error('Error fetching data:', err);
+      }
+    };
+
+    fetchData();
+  }, [])
 
   const handleRightBtn = () => {
     if (scrollWrapRef.current) {

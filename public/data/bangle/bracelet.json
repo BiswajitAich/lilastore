@@ -1,5 +1,32 @@
 [
     {
+        "id": 12,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1700123622/bangles/bracelets/Bracelet1.5.webp",
+        "description": "Bracelet",
+        "detail": "Beautiful Bracelet \n Size: Free size. \n Color: Blue, Blue(light), Pink, Purple, Orange, Black. \n",
+        "price": "120",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1700123622/bangles/bracelets/Bracelet1.5.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1700123627/bangles/bracelets/Bracelet1.1.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1700123627/bangles/bracelets/Bracelet1.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1700123627/bangles/bracelets/Bracelet1.3.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1700123625/bangles/bracelets/Bracelet1.2.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1700123623/bangles/bracelets/Bracelet1.4.webp"
+            }
+        ]
+    },
+    {
         "id": 1,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659222/bangles/bracelets/bracelet11.19325edb36444b570860_eablws.jpg",
         "description":  "Bracelet",

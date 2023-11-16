@@ -1,94 +1,94 @@
 [
     {
         "name": "Golden Necklace",
-        "link": "/products/necklace/necklaces/golden-necklace"
+        "link": "/lilastore/products/necklace/necklaces/golden-necklace"
     },
     {
         "name": "Golden Earring",
-        "link": "/products/earring/earrings/golden-earring"
+        "link": "/lilastore/products/earring/earrings/golden-earring"
     },
     {
         "name": "Golden Bangle",
-        "link": "/products/bangle/bangles/golden-bangle"
+        "link": "/lilastore/products/bangle/bangles/golden-bangle"
     },
     {
         "name": "Oxidized Necklace",
-        "link": "/products/necklace/necklaces/oxydized-necklace"
+        "link": "/lilastore/products/necklace/necklaces/oxydized-necklace"
     },
     {
         "name": "Oxidized Earring",
-        "link": "/products/earring/earrings/oxydized-earring"
+        "link": "/lilastore/products/earring/earrings/oxydized-earring"
     },
     {
         "name": "Oxidized Bangle",
-        "link": "/products/bangle/bangles/oxydized-bangle"
+        "link": "/lilastore/products/bangle/bangles/oxydized-bangle"
     },
     {
         "name": "Terracotta Necklace",
-        "link": "http://localhost:3000/products/necklace/necklaces/terracotta-necklace"
+        "link": "/lilastore/products/necklace/necklaces/terracotta-necklace"
     },
     {
         "name": "Terracotta Earring",
-        "link": "http://localhost:3000/products/earring/earrings/terracotta-earring"
+        "link": "/lilastore/products/earring/earrings/terracotta-earring"
     },
     {
         "name": "Chemicalbead Necklace",
-        "link": "http://localhost:3000/products/necklace/necklaces/chemicalbead-necklace"
+        "link": "/lilastore/products/necklace/necklaces/chemicalbead-necklace"
     },
     {
         "name": "Kundan Necklace",
-        "link": "http://localhost:3000/products/necklace/necklaces/kundan-necklace"
+        "link": "/lilastore/products/necklace/necklaces/kundan-necklace"
     },
     {
         "name": "Fancy Necklace",
-        "link": "http://localhost:3000/products/necklace/necklaces/fancy-necklace"
+        "link": "/lilastore/products/necklace/necklaces/fancy-necklace"
     },
     {
         "name": "Choker",
-        "link": "http://localhost:3000/products/necklace/necklaces/choker"
+        "link": "/lilastore/products/necklace/necklaces/choker"
     },
     {
         "name": "Mangalsutra",
-        "link": "http://localhost:3000/products/necklace/necklaces/mangalsutra"
+        "link": "/lilastore/products/necklace/necklaces/mangalsutra"
     },
     {
         "name": "Stone Earring",
-        "link": "http://localhost:3000/products/earring/earrings/adstone-earring"
+        "link": "/lilastore/products/earring/earrings/adstone-earring"
     },
     {
         "name": "AD Stone Earring",
-        "link": "http://localhost:3000/products/earring/earrings/adstone-earring"
+        "link": "/lilastore/products/earring/earrings/adstone-earring"
     },
     {
         "name": "Funky Earring",
-        "link": "http://localhost:3000/products/earring/earrings/funky-earring"
+        "link": "/lilastore/products/earring/earrings/funky-earring"
     },
     {
         "name": "Fancy Earring",
-        "link": "http://localhost:3000/products/earring/earrings/fancy-earring"
+        "link": "/lilastore/products/earring/earrings/fancy-earring"
     },
     {
         "name": "Bracelets",
-        "link": "http://localhost:3000/products/bangle/bangles/bracelet"
+        "link": "/lilastore/products/bangle/bangles/bracelet"
     },
     {
         "name": "Mantasa",
-        "link": "http://localhost:3000/products/bangle/bangles/mantasa"
+        "link": "/lilastore/products/bangle/bangles/mantasa"
     },
     {
         "name": "Chains",
-        "link": "http://localhost:3000/products/otherproduct/otherproducts/chain"
+        "link": "/lilastore/products/otherproduct/otherproducts/chain"
     },
     {
         "name": "Kamarband",
-        "link": "http://localhost:3000/products/otherproduct/otherproducts/kamarband"
+        "link": "/lilastore/products/otherproduct/otherproducts/kamarband"
     },
     {
         "name": "Rings",
-        "link": "http://localhost:3000/products/otherproduct/otherproducts/ring"
+        "link": "/lilastore/products/otherproduct/otherproducts/ring"
     },
     {
         "name": "Payals",
-        "link": "http://localhost:3000/products/otherproduct/otherproducts/payal"
+        "link": "/lilastore/products/otherproduct/otherproducts/payal"
     }
 ]

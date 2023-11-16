@@ -85,24 +85,31 @@
         ]
     },
     {
+        "id": 7,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1700162336/necklace/fancy-necklace/Stone-necklace1.webp",
+        "description": "Fancy Necklace",
+        "detail": "Beautiful Fancy Necklace \n Earring: 1 pair. \n Stone Type: AD Stone. \n",
+        "price": "240"
+    },
+    {
         "id": 8,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697223075/necklace/fancy-necklace/western-necklace5.c2d2831cacd112c4fb88_y9tlkh.jpg",
-        "category": "Fancy Necklace",
-        "description": "Beautiful Fancy Necklace \n Earring: 1 pair. \n",
+        "description": "Fancy Necklace",
+        "detail": "Beautiful Fancy Necklace \n Earring: 1 pair. \n",
         "price": "100"
     },
     {
         "id": 9,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697223071/necklace/fancy-necklace/western-necklace1.110b990c5ec501df0ea8_fuirtf.jpg",
-        "category": "Fancy Necklace",
-        "description": "Beautiful Fancy Necklace \n Earring: 1 pair. \n",
+        "description": "Fancy Necklace",
+        "detail": "Beautiful Fancy Necklace \n Earring: 1 pair. \n",
         "price": "180"
     },
     {
         "id": 10,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697223071/necklace/fancy-necklace/western-necklace2.c26cdeb737ffe956a4cc_tfggop.jpg",
-        "category": "Fancy Necklace",
-        "description": "Beautiful Fancy Necklace \n Earring: Not available. \n",
+        "description": "Fancy Necklace",
+        "detail": "Beautiful Fancy Necklace \n Earring: Not available. \n",
         "price": "180"
     }
 ]
