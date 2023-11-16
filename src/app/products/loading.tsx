@@ -1,6 +1,6 @@
 "use client"
 import { useEffect } from 'react';
-import Style from './styles/loading.module.css'
+import Style from './../styles/loading.module.css'
 
 const Loading: React.FC = () => {
     useEffect(() => {

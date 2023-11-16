@@ -2,7 +2,10 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Footer from './components/Footer'
-import SplashScreen from './components/effects/SplashScreen'
+import dynamic from 'next/dynamic';
+
+// import SplashScreen from './components/effects/SplashScreen'
+const SplashScreen = dynamic(() => import('./components/effects/SplashScreen'), { ssr: false });
 
 const inter = Inter({ subsets: ['latin'] })
 

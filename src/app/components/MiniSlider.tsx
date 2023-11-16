@@ -25,7 +25,7 @@ function MiniSlider() {
 
         
         const data = await res.json();
-        console.log('Fetched Data:', data);
+        // console.log('Fetched Data:', data);
         setProductData(data);
       } catch(err) {
         console.error('Error fetching data:', err);
