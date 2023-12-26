@@ -1,26 +1,5 @@
 [
     {
-        "id": 1,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658866/earring/golden-earrings/ear71.b4c94c3cc411a3e851c6_qdgop7.jpg",
-        "description": "Golden Earring",
-        "detail": "Beautiful Golden Earring \n  Currently out of stock. \n",
-        "price": "60"
-    },
-    {
-        "id": 2,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658864/earring/golden-earrings/ear70.b876db0206be869f766e_bpciyj.jpg",
-        "description": "Golden Earring",
-        "detail": "Beautiful Golden Earring \n",
-        "price": "30"
-    },
-    {
-        "id": 3,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658863/earring/golden-earrings/ear68.f0c1f8c26aa345ca07f0_q9z75v.jpg",
-        "description": "Golden Earring",
-        "detail": "Beautiful Golden Earring \n  Currently out of stock. \n",
-        "price": "100"
-    },
-    {
         "id": 5,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658763/earring/golden-earrings/ear125.3f123d235a8e57803df5_dj57nf.jpg",
         "description": "Golden Earring",
@@ -84,13 +63,6 @@
         "price": "120"
     },
     {
-        "id": 17,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697727515/earring/golden-earrings/ear7.187be51708daacaba22e_pbyhnc.jpg",
-        "description": "Golden Earring",
-        "detail": "Beautiful Golden Earring \n  Currently out of stock. \n",
-        "price": "130"
-    },
-    {
         "id": 18,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697727517/earring/golden-earrings/ear17.2786e20ca274e3aaeffd_nocxg9.jpg",
         "description": "Golden Earring",
@@ -131,13 +103,6 @@
         "description": "Golden Earring",
         "detail": "Beautiful Golden Earring \n",
         "price": "54"
-    },
-    {
-        "id": 24,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697727852/earring/golden-earrings/ear22.c567563d42d02310d8bd_viyw03.jpg",
-        "description": "Golden Earring",
-        "detail": "Beautiful Golden Earring \n",
-        "price": "70"
     },
     {
         "id": 25,

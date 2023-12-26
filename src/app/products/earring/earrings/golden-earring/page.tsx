@@ -22,7 +22,7 @@ const GoldenEarring: React.FC = () => {
                                         <CldImage
                                             itemType='img'
                                             src={material.url}
-                                            alt={`Golden Earring ${idx + 1}`}
+                                            alt={`Golden Earring ${material.id}`}
                                             width={400}
                                             height={600}
                                             loading='lazy'

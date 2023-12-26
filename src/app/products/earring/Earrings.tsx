@@ -24,7 +24,7 @@ const Earrings: React.FC = () => {
                                     <CldImage
                                         itemType='img'
                                         src={material.url}
-                                        alt={`image${idx + 1}`}
+                                        alt={`image${material.id}`}
                                         width={400}
                                         height={600}
                                         loading='lazy'

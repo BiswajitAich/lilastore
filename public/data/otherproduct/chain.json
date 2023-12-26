@@ -1,17 +1,10 @@
 [
     {
-        "id": 1,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659332/more-products/chains/chain35.af059241e8dbd5aba851_nrepyz.jpg",
+        "id": 38,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1703493878/more-products/chains/chain1.webp",
         "description":  "Chain",
         "detail": "Beautiful Chain Design \n",
-        "price": "120"
-    },
-    {
-        "id": 2,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659331/more-products/chains/chain37.db4e02e4369624387a2a_zoesvo.jpg",
-        "description":  "Chain",
-        "detail": "Beautiful Chain Design \n",
-        "price": "100"
+        "price": "80"
     },
     {
         "id": 3,
@@ -19,20 +12,6 @@
         "description":  "Chain",
         "detail": "Beautiful Chain Design \n",
         "price": "120"
-    },
-    {
-        "id": 4,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659306/more-products/chains/chain5.23c4a1cd93ae6c09e5f4_xubzcy.jpg",
-        "description":  "Chain",
-        "detail": "Beautiful Chain Design \n [OUT OF STOCK ]\n This product will be available soon...\n",
-        "price": "50"
-    },
-    {
-        "id": 5,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659304/more-products/chains/chain4.a7ef1c41efcec85f87ae_iaqsiz.jpg",
-        "description":  "Chain",
-        "detail": "Beautiful Chain Design \n [OUT OF STOCK ]\n This product will be available soon...\n",
-        "price": "50"
     },
     {
         "id": 6,

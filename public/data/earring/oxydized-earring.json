@@ -21,13 +21,6 @@
         "price": "100"
     },
     {
-        "id": 4,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658414/earring/oxydized-earrings/oxydizedearrings19.1123210612a5295819c2_ufhunn.jpg",
-        "description": "Oxydized Earring",
-        "detail": "Beautiful Oxydized Earring",
-        "price": "80"
-    },
-    {
         "id": 5,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658413/earring/oxydized-earrings/oxydizedearrings15.04accbe28a0a8db91483_madn48.jpg",
         "description": "Oxydized Earring",
@@ -82,13 +75,6 @@
         "description": "Beautiful Oxydized Earring",
         "detail": "Beautiful Oxydized Earring",
         "price": "150"
-    },
-    {
-        "id": 13,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658388/earring/oxydized-earrings/oxidizedearrings6.258ed9f3335b351ef153_bcy08n.jpg",
-        "description": "Beautiful Oxydized Earring",
-        "detail": "Beautiful Oxydized Earring",
-        "price": "95"
     },
     {
         "id": 14,

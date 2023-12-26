@@ -21,28 +21,6 @@
         "price": "150"
     },
     {
-        "id": 5,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1696574887/necklace/golden-necklace/neck39.ebb10d0dd3165c13a4cb_rwbgvp.jpg",
-        "description": "Golden Necklace",
-        "detail": "Beautiful Golden Necklace \n",
-        "price": "150"
-    },
-    {
-        "id": 6,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1696574887/necklace/golden-necklace/neck38.1.f511fcf02a0d924c940c_qpglze.jpg",
-        "description": "Golden Necklace",
-        "detail": "Beautiful Golden Necklace \n",
-        "price": "100",
-        "type": [
-            {
-                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1696574887/necklace/golden-necklace/neck38.1.f511fcf02a0d924c940c_qpglze.jpg"
-            },
-            {
-                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1696574887/necklace/golden-necklace/neck38.b1b0de9822acfb9c56ca_rnv8ph.jpg"
-            }
-        ]
-    },
-    {
         "id": 7,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1696574887/necklace/golden-necklace/neck37.87a9eb90c7abb4c8e150_hbcn5e.jpg",
         "description": "Golden Necklace",
@@ -116,13 +94,6 @@
         "price": "299"
     },
     {
-        "id": 16,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1696574884/necklace/golden-necklace/neck23.355e88032298289d09a7_if1oml.jpg",
-        "description": "Beautiful Golden Necklace",
-        "detail": "Beautiful Golden Necklace \n",
-        "price": "250"
-    },
-    {
         "id": 17,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1696574884/necklace/golden-necklace/neck25.f1acff55a003e196f9e4_isgq3m.jpg",
         "description": "Beautiful Golden Necklace",
@@ -130,31 +101,10 @@
         "price": "260"
     },
     {
-        "id": 18,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1696574884/necklace/golden-necklace/neck22.67a7848b8bc8cd2ed050_xalxvn.jpg",
-        "description": "Beautiful Golden Necklace",
-        "detail": "Beautiful Golden Necklace \n",
-        "price": "240"
-    },
-    {
-        "id": 19,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1696574884/necklace/golden-necklace/neck24.e8d43d57c7023cd225e9_kjsdci.jpg",
-        "description": "Beautiful Golden Necklace",
-        "detail": "Beautiful Golden Necklace \n",
-        "price": "230"
-    },
-    {
         "id": 20,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1696574884/necklace/golden-necklace/neck21.c46e0666e9216a5ccc54_nrsfrd.jpg",
         "description": "Beautiful Golden Necklace",
         "detail": "Beautiful Golden Necklace \n",
-        "price": "360"
-    },
-    {
-        "id": 21,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1696574884/necklace/golden-necklace/neck19.92209f68ed64e43abf47_ilnqw7.jpg",
-        "description": "Beautiful Golden Necklace",
-        "detail": "Beautiful Golden Necklace \n  Currently out of stock. \n",
         "price": "360"
     },
     {
@@ -317,20 +267,6 @@
         "description": "Beautiful Golden Necklace",
         "detail": "Beautiful Golden Necklace \n",
         "price": "440"
-    },
-    {
-        "id": 46,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1696574880/necklace/golden-necklace/neck10.7a7e956cac87310619ea_x17myo.jpg",
-        "description": "Beautiful Golden Necklace",
-        "detail": "Beautiful Golden Necklace \n",
-        "price": "340"
-    },
-    {
-        "id": 47,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1696574880/necklace/golden-necklace/neck9.39d5b5cf2c8d73e9f17b_hd2lvx.jpg",
-        "description": "Beautiful Golden Necklace",
-        "detail": "Beautiful Golden Necklace \n",
-        "price": "290"
     },
     {
         "id": 48,

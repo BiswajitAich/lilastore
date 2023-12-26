@@ -1,5 +1,19 @@
 [
     {
+        "id": 14,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1703493946/necklace/mangalsutra/mangalsutra1.webp",
+        "description": "Beautiful Mangalsutra ",
+        "detail": "Beautiful Mangalsutra  \n Earring: Not available. \n Type: Golden. \n",
+        "price": "120"
+    },
+    {
+        "id": 15,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1703493943/necklace/mangalsutra/mangalsutra2.webp",
+        "description": "Beautiful Mangalsutra ",
+        "detail": "Beautiful Mangalsutra  \n Earring: Not available. \n Type: Golden. \n",
+        "price": "120"
+    },
+    {
         "id": 1,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697553801/necklace/mangalsutra/mangalsutra6.4667db2ca80e3029ec6f_gli8qk.jpg",
         "description": "Mangalsutra ",

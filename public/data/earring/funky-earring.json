@@ -45,13 +45,6 @@
         "price": "170"
     },
     {
-        "id": 5,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658331/earring/funky-earrings/funky-earrings7.6c57eaf2784b0c6520f3_pcrp8n.jpg",
-        "description": "Funky Earring",
-        "detail": "Beautiful Funky Earring \n Design: Lemon . \n",
-        "price": "100"
-    },
-    {
         "id": 6,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658317/earring/funky-earrings/funky-earrings10.1dacdedf57cb95e8954e_fzfevw.jpg",
         "description": "Funky Earring",
@@ -86,13 +79,6 @@
         "description": "Funky Earring",
         "detail": "Beautiful Funky Earring \n  ",
         "price": "100"
-    },
-    {
-        "id": 10,
-        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658310/earring/funky-earrings/funky-earrings4.fd128ec67053b4a561c6_rdqmve.jpg",
-        "description": "Funky Earring",
-        "detail": "Beautiful Funky Earring \n",
-        "price": "40"
     },
     {
         "id": 11,
