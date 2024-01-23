@@ -179,6 +179,101 @@
 }
 
 
+.viewImages{
+    min-height: 100%;
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    backdrop-filter: blur(10px);
+    animation: showImages 0.3s ease-in-out;
+}
+
+@keyframes showImages {
+    0%{
+        opacity: 0;
+    }
+
+    80%{
+        filter: blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+
+.viewImagesContainer{
+    width: 100dvw;
+    height: auto;
+    max-width: 600px;
+    aspect-ratio: 3/4;
+}
+
+.viewImagesImg {
+    width: 100dvw;
+    height: auto;
+    max-width: 600px;
+    aspect-ratio: 3/4;
+    transition: transform 0.3s ease;
+    transform-origin: top left;
+    overflow: hidden;
+}
+
+.viewImagesImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.viewImagesImgs{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    overflow-y: auto;
+    gap: 2%;
+    padding: 2px 0;
+    justify-content: flex-start;
+    flex-direction: row;
+}  
+
+.viewImagesImgs div{
+    width: auto;
+    height: 100px;
+    aspect-ratio: 3/4;
+}
+
+.viewImagesImgs img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.backBtn{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px black;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 5px;
+}
+
 @media screen and (max-width: 600px) {
     .pagecontainer {
         width: 100%;
@@ -215,3 +310,5 @@
         display: none;
     }
 }
+
+

@@ -1,6 +1,48 @@
 [
     {
+        "id": 1,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705991100/earring/golden-earrings/golden-earring6.webp",
+        "description": "Golden Earring",
+        "detail": "Beautiful Golden Earring \n",
+        "price": "......"
+    },
+    {
+        "id": 2,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705991099/earring/golden-earrings/golden-earring5.webp",
+        "description": "Golden Earring",
+        "detail": "Beautiful Golden Earring \n",
+        "price": "......"
+    },
+    {
+        "id": 3,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705991099/earring/golden-earrings/golden-earring4.webp",
+        "description": "Golden Earring",
+        "detail": "Beautiful Golden Earring \n",
+        "price": "......"
+    },
+    {
+        "id": 4,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705991098/earring/golden-earrings/golden-earring3.webp",
+        "description": "Golden Earring",
+        "detail": "Beautiful Golden Earring \n",
+        "price": "......"
+    },
+    {
         "id": 5,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989620/earring/golden-earrings/golden-earring2.webp",
+        "description": "Golden Earring",
+        "detail": "Beautiful Golden Earring \n",
+        "price": "......"
+    },
+    {
+        "id": 31,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989620/earring/golden-earrings/golden-earring1.webp",
+        "description": "Golden Earring",
+        "detail": "Beautiful Golden Earring \n",
+        "price": "......"
+    },
+    {
+        "id": 32,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697658763/earring/golden-earrings/ear125.3f123d235a8e57803df5_dj57nf.jpg",
         "description": "Golden Earring",
         "detail": "Beautiful Golden Earring \n",
@@ -87,7 +129,7 @@
         "id": 21,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697727528/earring/golden-earrings/ear18.e6bcb01346af60962849_ouev5u.jpg",
         "description": "Golden Earring",
-        "detail": "Beautiful Golden Earring \n",
+        "detail": "Beautiful Golden Earring \n [Currently out of stock]\n",
         "price": "60"
     },
     {
@@ -101,14 +143,14 @@
         "id": 23,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697727543/earring/golden-earrings/ear20.915062423b8d4cf99b6b_mjzwol.jpg",
         "description": "Golden Earring",
-        "detail": "Beautiful Golden Earring \n",
+        "detail": "Beautiful Golden Earring \n ",
         "price": "54"
     },
     {
         "id": 25,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697727852/earring/golden-earrings/ear21.af21a7c90cfbb7ecf793_vyi4rs.jpg",
         "description": "Golden Earring",
-        "detail": "Beautiful Golden Earring \n",
+        "detail": "Beautiful Golden Earring \n [Currently out of stock]\n",
         "price": "54"
     },
     {

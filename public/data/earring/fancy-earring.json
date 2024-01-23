@@ -1,5 +1,138 @@
 [
     {
+        "id": 27,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989553/earring/fancy-earrings/fancy2.2.webp",
+        "description": "Fancy Earring",
+        "detail": "Beautiful Fancy Earring \n Colour: Red, Black, White \n",
+        "price": "000000",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989553/earring/fancy-earrings/fancy2.2.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989553/earring/fancy-earrings/fancy2.1.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989551/earring/fancy-earrings/fancy2.webp"
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989558/earring/fancy-earrings/fancy4.webp",
+        "description": "Fancy Earring",
+        "detail": "Beautiful Fancy Earring \n Colour: Red, Green, Black, White \n",
+        "price": "000000",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989558/earring/fancy-earrings/fancy4.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989559/earring/fancy-earrings/fancy4.1.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989558/earring/fancy-earrings/fancy4.2.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989556/earring/fancy-earrings/fancy4.3.webp"
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989557/earring/fancy-earrings/fancy5.1.webp",
+        "description": "Fancy Earring",
+        "detail": "Beautiful Fancy Earring \n Colour: Red, Black, White \n",
+        "price": "000000",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989557/earring/fancy-earrings/fancy5.1.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989557/earring/fancy-earrings/fancy5.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989557/earring/fancy-earrings/fancy5.2.webp"
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989552/earring/fancy-earrings/fancy3.webp",
+        "description": "Fancy Earring",
+        "detail": "Beautiful Fancy Earring \n Colour: Golgen, Silver, Black. \n",
+        "price": "000000",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989552/earring/fancy-earrings/fancy3.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989555/earring/fancy-earrings/fancy3.1.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989559/earring/fancy-earrings/fancy3.2.webp"
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989556/earring/fancy-earrings/fancy7.webp",
+        "description": "Fancy Earring",
+        "detail": "Beautiful Fancy Earring \n Colour: Golden, Silver \n",
+        "price": "81",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989556/earring/fancy-earrings/fancy7.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989555/earring/fancy-earrings/fancy7.1.webp"
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989554/earring/fancy-earrings/fancy8.webp",
+        "description": "Fancy Earring",
+        "detail": "Beautiful Fancy Earring \n Colour: Golden, Silver \n",
+        "price": "81",
+        "type": [
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989554/earring/fancy-earrings/fancy8.webp"
+            },
+            {
+                "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989552/earring/fancy-earrings/fancy12.webp"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705990244/earring/fancy-earrings/fancy11.webp",
+        "description": "Beautiful Fancy Earring",
+        "detail": "Beautiful Fancy Earring",
+        "price": "45"
+    },
+    {
+        "id": 24,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989556/earring/fancy-earrings/fancy6.webp",
+        "description": "Beautiful Fancy Earring",
+        "detail": "Beautiful Fancy Earring",
+        "price": "81"
+    },
+    {
+        "id": 19,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705990243/earring/fancy-earrings/fancy10.webp",
+        "description": "Beautiful Fancy Earring",
+        "detail": "Beautiful Fancy Earring",
+        "price": "45"
+    },
+    {
+        "id": 20,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705990243/earring/fancy-earrings/fancy9.webp",
+        "description": "Beautiful Fancy Earring",
+        "detail": "Beautiful Fancy Earring",
+        "price": "45"
+    },
+    {
         "id": 1,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1700122936/earring/fancy-earrings/Fancy1.5.webp",
         "description": "Fancy Earring",

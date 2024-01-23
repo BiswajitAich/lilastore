@@ -1,5 +1,54 @@
 [
     {
+        "id": 63,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989318/necklace/choker/tqr2gnpn6iurc8btbaom.webp",
+        "description": "Beautiful Golden Choker ",
+        "detail": "Beautiful Choker \n Earring: 1 pair. \n ",
+        "price": "....."
+    },
+    {
+        "id": 64,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989407/necklace/choker/tf3upr92soe6twwa7fpl.webp",
+        "description": "Beautiful Silver Choker ",
+        "detail": "Beautiful Choker \n silver choker with colouring stone \n ",
+        "price": "....."
+    },
+    {
+        "id": 65,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989409/necklace/choker/l3owjawzar37ccrrkm0a.webp",
+        "description": "Beautiful Choker ",
+        "detail": "Beautiful Golden Choker \n Earring: 1 pair. \n ",
+        "price": "100"
+    },
+    {
+        "id": 66,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989409/necklace/choker/mdgzoqgskqx599h5k0fd.webp",
+        "description": "Beautiful Choker ",
+        "detail": "Beautiful Golden Choker \n Earring: 1 pair. \n ",
+        "price": "....."
+    },
+    {
+        "id": 67,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989409/necklace/choker/edjucn8g1nytnggta2iw.webp",
+        "description": "Beautiful Choker ",
+        "detail": "Beautiful Golden Choker \n Earring: 1 pair. \n ",
+        "price": "....."
+    },
+    {
+        "id": 68,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989409/necklace/choker/rdnmkefdelqvcyyzihto.webp",
+        "description": "Beautiful Choker ",
+        "detail": "Beautiful Golden Choker \n Earring: 1 pair. \n ",
+        "price": "....."
+    },
+    {
+        "id": 69,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1705989414/necklace/choker/ytvsmrfowxe8zw9fphka.webp",
+        "description": "Beautiful Choker ",
+        "detail": "Beautiful Golden Choker \n Earring: 1 pair. \n ",
+        "price": "100"
+    },
+    {
         "id": 55,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1703491962/necklace/choker/choker1.webp",
         "description": "Beautiful Choker ",
@@ -204,7 +253,7 @@
         "id": 19,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697223201/necklace/choker/choker38.0ba767b35fb2f870f3a1_dhvcex.jpg",
         "description": "Beautiful Choker ",
-        "detail": "Beautiful Choker  \n Earring: 1 pair.\n Type: Golden.\n",
+        "detail": "Beautiful Choker  \n Earring: 1 pair.\n Type: Golden.\n [Currently out of stock]\n",
         "price": "360"
     },
     {
@@ -225,7 +274,7 @@
         "id": 22,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697223200/necklace/choker/choker29.f826092f83ec5121b6b6_wr9zxc.jpg",
         "description": "Beautiful Choker ",
-        "detail": "Beautiful Choker  \n Earring: 1 pair.\n Type: AD stone with Golden diamond (stone).\n",
+        "detail": "Beautiful Choker  \n Earring: 1 pair.\n Type: AD stone with Golden diamond (stone).\n ",
         "price": "120"
     },
     {
@@ -260,7 +309,7 @@
         "id": 27,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697223199/necklace/choker/choker10.15f8dc97e3b489400da7_o7jayb.jpg",
         "description": "Beautiful Choker ",
-        "detail": "Beautiful Choker  \n Earring: 1 pair.\n Type: Golden.\n",
+        "detail": "Beautiful Choker  \n Earring: 1 pair.\n Type: Golden.\n [Currently out of stock]\n",
         "price": "120"
     },
     {

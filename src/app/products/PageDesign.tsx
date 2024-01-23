@@ -20,10 +20,13 @@ interface PageDesignProps {
 
 export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [loaded, setLoaded] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
+  const [zoom, setZoom] = useState<number>(1);
+  const [loaded, setLoaded] = useState<boolean>(false);
+  const [viewImage, setViewImage] = useState<any>([false]);
   const imgContainerRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+
   // useEffect(() => {
   //   document.addEventListener('contextmenu', function (event) {
   //     event.preventDefault();
@@ -104,6 +107,14 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
 
   }
 
+  const handleViewImages = (img: string) => {
+    setViewImage([true, img])
+  }
+  const handleZoom = () => {
+    if (zoom === 1) setZoom(1.5)
+    else if (zoom === 1.5) setZoom(2)
+    else setZoom(1)
+  }
 
 
   return (
@@ -129,6 +140,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                     scrollSnapAlign: "center",
                     transition: "opacity 300ms ease",
                   }}
+                  onClick={() => handleViewImages(type.url)}
                   onLoad={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.style.opacity = "1";
@@ -146,6 +158,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                   opacity: 0,
                   transition: "opacity 1s ease",
                 }}
+                onClick={() => handleViewImages(selectedProduct.url)}
                 onLoad={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.opacity = "1";
@@ -198,12 +211,63 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
         />
         Get the product on What's App
       </button>
-    </div>
+
+
+      {viewImage[0] ? (
+        <div
+          className={pageStyle.viewImages}
+          onClick={(e) => {
+            const isOutsideImageContainer = !((e.target as HTMLElement).closest('#image-container'));
+
+            if (isOutsideImageContainer)
+              setViewImage([false]);
+          }}
+        >
+          <button onClick={() => setViewImage([false])} className={pageStyle.backBtn}>X</button>
+          <div id="image-container" className={pageStyle.viewImagesContainer}>
+
+            <div
+              className={pageStyle.viewImagesImg}
+              >
+              <CldImage
+                src={viewImage[1]}
+                width={1000}
+                height={1000}
+                loading='eager'
+                alt={'product Image'}
+                onDoubleClick={handleZoom}
+                style={{ transform: `scale(${zoom})` }}
+              />
+            </div>
+
+            <div
+              className={pageStyle.viewImagesImgs}
+            >
+              {selectedProduct?.type?.map((type,idx:number) => (
+                <div>
+                  <CldImage
+                    src={type.url}
+                    onClick={() => handleViewImages(type.url)}
+                    width={100}
+                    height={100}
+                    loading='eager'
+                    alt={'product Image'+idx}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ) : null
+      }
+
+
+    </div >
   );
 };
 
- 
-export async function generateMetadata({ selectedProduct }: PageDesignProps ): Promise<Metadata> {
+
+export async function generateMetadata({ selectedProduct }: PageDesignProps): Promise<Metadata> {
   return {
     title: selectedProduct.description,
     openGraph: {
