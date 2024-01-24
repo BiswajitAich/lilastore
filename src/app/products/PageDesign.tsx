@@ -190,7 +190,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
             display: "flex",
             flexDirection: "column",
             gap: "10px",
-          }}>{selectedProduct.detail.split('\n').map((item, key) => {
+          }}>{selectedProduct.detail?.split('\n').map((item, key) => {
             return <span key={key}>{item}<br /></span>
           })}</p>
         </div>
