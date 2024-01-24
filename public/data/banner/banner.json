@@ -1,5 +1,13 @@
 [
     {
+        "id":  6,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659088/cosmetics/makeup/makeup1",
+        "category": "MAKEUP KIT",
+        "description": "| Offer Price | \n Beautiful Makeup Kit. \n Branded product.",
+        "price": "1000",
+        "goto": ""
+    },
+    {
         "id": 1,
         "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1698046027/necklace/terracotta-necklace/IMG_20230917_205056_1_z7agtt.webp",
         "category": "Terracotta Necklace",
