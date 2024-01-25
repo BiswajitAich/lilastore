@@ -3,6 +3,7 @@
     background: transparent;
     position: absolute;
     top: 370px;
+    overflow: hidden;
 }
 
 .scrollDiv {
@@ -12,6 +13,7 @@
     aspect-ratio: 3/4;
     border-radius: 50%;
     background: transparent;
+    overflow: hidden;
 }
 
 .scrollDiv img {
@@ -96,6 +98,36 @@
     background-color: wheat;
     top: 35px;
     border-top-right-radius: 50px;
+}
+
+.WaveLoaderWrap{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    white-space: nowrap;
+    gap: 5%;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+.WaveLoaderDiv{
+    min-height: 100px;
+    max-height: 100px;
+    width: auto;
+    aspect-ratio: 3/4;
+    border-radius: 10px;
+    background-color: grey;
+    animation: pulse 1s ease-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100%{
+        opacity: 0.5;
+        background-color: aquamarine;
+    }
+    0%{
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 600px) {

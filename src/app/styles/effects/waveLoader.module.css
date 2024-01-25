@@ -1,0 +1,38 @@
+.waveContainer {
+    height: 100%;
+    min-width: 100%;
+    overflow:-moz-hidden-unscrollable;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.7),  rgb(255, 255, 255));
+    animation: wavePulse 2s ease-in-out infinite;
+}
+
+@keyframes wavePulse {
+    0% {
+        transform: translateX(-100%);
+    }
+    99.9% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wave{
+        animation-duration: 1.5s;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wave{
+        animation-duration: 1s;
+    }
+}

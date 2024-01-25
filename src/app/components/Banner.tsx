@@ -1,9 +1,10 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
 import bannerstyles from './../styles/banner.module.css'
-import bannerContent from "../../../public/data/banner/banner.json"
+// import bannerContent from "../../../public/data/banner/banner.json"
 import { CldImage } from 'next-cloudinary'
 import Link from 'next/link'
+import WaveLoader from './effects/WaveLoader'
 
 interface product {
   id?: number,
@@ -21,7 +22,28 @@ const Banner: React.FC = () => {
   const scrollsRef = useRef<HTMLDivElement>(null);
   const [isDown, setIsDown] = useState(false);
   const [position, setPosition] = useState(0);
-  const [displayDiv, setDisplayDiv] = useState<product[]>(bannerContent);
+  const [displayDiv, setDisplayDiv] = useState<product[]>();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        if (displayDiv) return;
+        const control = new AbortController();
+        const signal = control.signal
+        const response = await fetch('https://lilastore007-default-rtdb.firebaseio.com/banner/.json', {
+          signal
+        });
+
+        const data = await response.json();
+        setDisplayDiv(data)
+        console.log(data);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+
+    fetchData();
+  }, [displayDiv])
 
   useEffect(() => {
 
@@ -49,14 +71,14 @@ const Banner: React.FC = () => {
       if (scrolls) {
         if (!isDown) return;
         const x = e.pageX - scrollsRef.current.offsetLeft;
-    
+
         if (startX !== null && scrollLeft !== null) {
           const walk = (x - startX) * 3;
           scrollsRef.current.scrollLeft = scrollLeft - walk;
         }
       }
     }
-  
+
     const scrolls = scrollsRef.current;
 
     if (scrolls) {
@@ -85,6 +107,7 @@ const Banner: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setDisplayDiv((prev) => {
+        if (!prev) return;
         const [first, ...rest] = prev;
         return [...rest, first];
       });
@@ -137,39 +160,51 @@ const Banner: React.FC = () => {
 
   return (
     <div className={bannerstyles.banner}>
-      <div className={bannerstyles.gradient} />
-      <div className={bannerstyles.scrolls} ref={scrollsRef}>
-        {displayDiv.map((content, idx) => (
-          content.url && content.goto && <Link href={content.goto} key={idx} style={{height: "100%", minWidth: "100%"}}>
-            <div className={bannerstyles.scrollDiv}>
-              <div className={bannerstyles.imgs}>
-                <CldImage
-                  src={content.url}
-                  loading='eager'
-                  priority
-                  alt={`imade${idx + 1}`}
-                  width={300}
-                  height={400}
-                />
-              </div>
-              <div className={bannerstyles.details}>
-                <div>{content.category}</div>
-                <div>{content.description && content.description.split('\n').map((item, key)=>{ return <span key={key}>{item}<br/></span>})}</div>
-                <div>Rs {content.price}</div>
-              </div>
-            </div>
-          </Link>
-        ))}
 
+
+      {displayDiv ? (
+        <>
+          <button className={bannerstyles.leftBtn} aria-label="Previous Slide" onClick={handleLeftBtn}>
+            <div className={bannerstyles.goBack1}></div>
+            <div className={bannerstyles.goBack2}></div>
+          </button>
+          <button className={bannerstyles.rightBtn} aria-label="Next Slide" onClick={handleRightBtn}>
+            <div className={bannerstyles.goBack1}></div>
+            <div className={bannerstyles.goBack2}></div>
+          </button>
+        </>
+      ) : null}
+
+
+
+      <div className={bannerstyles.gradient} />
+
+      <div className={bannerstyles.scrolls} ref={scrollsRef}>
+        {!displayDiv ? (<WaveLoader/>) : (<>
+          {displayDiv?.map((content, idx) => (
+            content.url && content.goto && <Link href={content.goto} key={idx} style={{ height: "100%", minWidth: "100%" }}>
+              <div className={bannerstyles.scrollDiv}>
+                <div className={bannerstyles.imgs}>
+                  <CldImage
+                    src={content.url}
+                    loading='eager'
+                    priority
+                    alt={`imade${idx + 1}`}
+                    width={300}
+                    height={400}
+                  />
+                </div>
+                <div className={bannerstyles.details}>
+                  <div>{content.category}</div>
+                  <div>{content.description && content.description.split('\n').map((item, key) => { return <span key={key}>{item}<br /></span> })}</div>
+                  <div>Rs {content.price}</div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </>)}
       </div>
-      <button className={bannerstyles.leftBtn} aria-label="Previous Slide" onClick={handleLeftBtn}>
-        <div className={bannerstyles.goBack1}></div>
-        <div className={bannerstyles.goBack2}></div>
-      </button>
-      <button className={bannerstyles.rightBtn} aria-label="Next Slide" onClick={handleRightBtn}>
-        <div className={bannerstyles.goBack1}></div>
-        <div className={bannerstyles.goBack2}></div>
-      </button>
+
     </div>
   )
 }

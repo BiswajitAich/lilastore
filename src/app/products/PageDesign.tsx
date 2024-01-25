@@ -251,7 +251,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                     width={100}
                     height={100}
                     loading='eager'
-                    alt={'product Image'+idx}
+                    alt={'Img'+idx+type.url}
                   />
                 </div>
               ))}
