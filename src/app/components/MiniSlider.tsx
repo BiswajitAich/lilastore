@@ -17,7 +17,7 @@ function MiniSlider() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('/lilastore/data/miniSlider/miniSlider.json');
+        const res = await fetch('/data/miniSlider/miniSlider.json');
 
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
