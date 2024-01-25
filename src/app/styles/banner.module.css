@@ -96,11 +96,11 @@
 }
 
 .leftBtn {
-    left: -25px;
+    left: 0px;
 }
 
 .rightBtn {
-    right: -25px;
+    right: 0px;
     transform: rotate(-180deg);
 }
 
@@ -116,24 +116,26 @@
     border: 1px solid black;
 }
 
-.goBack1 {
+.goBack1, .goBack2{
     min-width: 25px;
     height: 5px;
     position: absolute;
-    transform: rotate(45deg);
     background-color: wheat;
+    border-right: 1px solid black;
+}
+
+.goBack1 {
+    transform: rotate(45deg);
     top: 34px;
     border-bottom-right-radius: 50px;
+    border-bottom: 1px solid black;
 }
 
 .goBack2 {
-    min-width: 25px;
-    height: 5px;
-    position: absolute;
     transform: rotate(-45deg);
-    background-color: wheat;
     top: 19px;
     border-top-right-radius: 50px;
+    border-top: 1px solid black;
 }
 
 @media screen and (max-width: 600px) {

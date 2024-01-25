@@ -3,7 +3,6 @@
     background: transparent;
     position: absolute;
     top: 370px;
-    overflow: hidden;
 }
 
 .scrollDiv {
@@ -11,9 +10,10 @@
     max-height: 100px;
     width: auto;
     aspect-ratio: 3/4;
-    border-radius: 50%;
+    border-radius: 5%;
     background: transparent;
     overflow: hidden;
+    min-width: 78px;
 }
 
 .scrollDiv img {

@@ -244,14 +244,14 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
               className={pageStyle.viewImagesImgs}
             >
               {selectedProduct?.type?.map((type,idx:number) => (
-                <div>
+                <div key={idx}>
                   <CldImage
                     src={type.url}
                     onClick={() => handleViewImages(type.url)}
                     width={100}
                     height={100}
                     loading='eager'
-                    alt={'Img'+idx+type.url}
+                    alt={'Img'+idx}
                   />
                 </div>
               ))}
