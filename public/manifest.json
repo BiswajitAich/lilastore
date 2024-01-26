@@ -2,10 +2,10 @@
     "theme_color": "#4a90e2",
     "background_color": "#000000",
     "display": "standalone",
-    "start_url": "/lilastore/",
+    "start_url": "/",
     "name": "Lila Store App",
     "description": "Imitation jewelry store online and offline high qyality products at affordable price...",
-    "short_name": "LS app",
+    "short_name": "lilastore",
     "icons": [
         {
             "src": "/lilastore/images/logos/LS-logo-512x512.png",
