@@ -23,6 +23,8 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const [zoom, setZoom] = useState<number>(1);
   const [loaded, setLoaded] = useState<boolean>(false);
+  const [showShareOptions, setShowShareOptions] = useState<boolean>(false);
+  const [showCopied, setShowCopied] = useState<boolean>(false);
   const [viewImage, setViewImage] = useState<any>([false]);
   const imgContainerRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
@@ -116,6 +118,72 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
     else setZoom(1)
   }
 
+  const handleShare = (action: string) => {
+    switch (action) {
+      case 'enter':
+        setShowShareOptions(true);
+        break;
+      case 'exit':
+        setShowShareOptions(false);
+        break;
+      case 'toggle':
+        if (showShareOptions) setShowShareOptions(false);
+        else setShowShareOptions(true)
+        break;
+      default:
+        break;
+    }
+  };
+
+  const handleSocialMedia = (e: string) => {
+    if (e === 'whatsapp') {
+      const currentUrl = window.location.href;
+      const message1 = 'Checkout this product ';
+      const message2 = 'Website link - https://lilastore.vercel.app'
+      const whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(`${message1} ${currentUrl}
+      
+      ${message2}`)}`;
+      window.open(whatsappShareUrl, '_blank');
+    }
+    else if (e === 'facebook') {
+      const currentUrl = window.location.href;
+      const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`;
+
+      window.open(facebookShareUrl, '_blank');
+    }
+    // else if (e === 'instagram') {
+    //   const currentUrl = window.location.href;
+    //   const instagramShareUrl = `https://www.instagram.com/share?url=${encodeURIComponent(currentUrl)}`;
+
+    //   window.open(instagramShareUrl, '_blank');
+    // }
+    else return
+  }
+
+  
+  const handleCopy  = () => {
+    const currentUrl = window.location.href;
+    
+    const tempInput = document.createElement('input');
+    tempInput.value = currentUrl;
+    document.body.appendChild(tempInput);
+  
+    tempInput.select();
+    document.execCommand('copy');
+  
+    document.body.removeChild(tempInput);
+  
+    console.log('URL copied to clipboard:', currentUrl);
+    setShowCopied(true);
+  
+    setTimeout(() => {
+      setShowCopied(false);
+    }, 500);
+  };
+  
+
+
+
 
   return (
     <div className={pageStyle.pagebody}>
@@ -166,6 +234,62 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                 }}
               />
             )}
+            <div
+              onMouseEnter={() => handleShare('enter')}
+              onMouseLeave={() => handleShare('exit')}
+              className={pageStyle.shareDiv}
+            >
+              <button
+                className={pageStyle.share}
+                onClick={() => handleShare('toggle')}
+              >&#x1F709;</button>
+              {
+                showShareOptions ? (
+                  <div className={pageStyle.shareOptions}>
+                    <button
+                      onClick={() => handleSocialMedia('whatsapp')}
+                    >
+                      <img src="./../../../../images/logos/whatsapp-icon.webp"
+                        height={40}
+                        width={40}
+                        alt='WhatsApp share' />
+                    </button>
+                    <button
+                      onClick={() => handleSocialMedia('facebook')}
+                    >
+                      <img src="./../../../../images/logos/facebook-icon.webp"
+                        height={40}
+                        width={40}
+                        alt='Facebook share' />
+                    </button>
+                    {/* <button
+                      onClick={() => handleSocialMedia('instagram')}
+                    >
+                      <img src="./../../../../images/logos/instagram-icon.webp"
+                        height={40}
+                        width={40}
+                        alt='Instagram share' />
+                    </button> */}
+                    <div className={pageStyle.copy}>
+                      <button
+                        style={{
+                          width: '40px',
+                          height: '40px',
+                          fontSize: '40px',
+                          fontWeight: 'bolder',
+                          paddingBottom: '10px',
+                        }}
+                        onClick={handleCopy}
+                      >
+                        &#x2398;
+                      </button>
+                      {showCopied ? (<p>copied</p>) : null}
+                    </div>
+                  </div>
+                ) : null
+              }
+            </div>
+
           </div>
           {selectedProduct.type ? (
             <>
@@ -177,7 +301,6 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                 <div className={pageStyle.goBack1}></div>
                 <div className={pageStyle.goBack2}></div>
               </button>
-
             </>
           ) : null}
         </div>
@@ -228,7 +351,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
 
             <div
               className={pageStyle.viewImagesImg}
-              >
+            >
               <CldImage
                 src={viewImage[1]}
                 width={1000}
@@ -243,7 +366,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
             <div
               className={pageStyle.viewImagesImgs}
             >
-              {selectedProduct?.type?.map((type,idx:number) => (
+              {selectedProduct?.type?.map((type, idx: number) => (
                 <div key={idx}>
                   <CldImage
                     src={type.url}
@@ -251,7 +374,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                     width={100}
                     height={100}
                     loading='eager'
-                    alt={'Img'+idx}
+                    alt={'Img' + idx}
                   />
                 </div>
               ))}

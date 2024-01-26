@@ -26,15 +26,17 @@
     gap: 20px;
 }
 
-.head button{
+.head button {
     background-color: transparent;
     font-weight: 600;
     padding: 5px;
 }
-.head button:hover{
+
+.head button:hover {
     background-color: rgba(255, 219, 191, 0.309);
     border-radius: 10px;
 }
+
 .imgcontainer {
     min-width: 100%;
     min-height: 100%;
@@ -76,7 +78,8 @@
 .details p {
     min-width: 100%;
 }
-.details p span:nth-child(1){
+
+.details p span:nth-child(1) {
     color: crimson;
 }
 
@@ -179,7 +182,7 @@
 }
 
 
-.viewImages{
+.viewImages {
     min-height: 100%;
     min-width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -194,11 +197,11 @@
 }
 
 @keyframes showImages {
-    0%{
+    0% {
         opacity: 0;
     }
 
-    80%{
+    80% {
         filter: blur(10px);
     }
 
@@ -209,7 +212,7 @@
 }
 
 
-.viewImagesContainer{
+.viewImagesContainer {
     width: 100dvw;
     height: auto;
     max-width: 600px;
@@ -226,14 +229,14 @@
     overflow: hidden;
 }
 
-.viewImagesImg img{
+.viewImagesImg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 
-.viewImagesImgs{
+.viewImagesImgs {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -245,21 +248,21 @@
     padding: 2px 0;
     justify-content: flex-start;
     flex-direction: row;
-}  
+}
 
-.viewImagesImgs div{
+.viewImagesImgs div {
     width: auto;
     height: 100px;
     aspect-ratio: 3/4;
 }
 
-.viewImagesImgs img{
+.viewImagesImgs img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.backBtn{
+.backBtn {
     width: 50px;
     height: 50px;
     position: absolute;
@@ -273,6 +276,79 @@
     font-size: 20px;
     margin: 5px;
 }
+
+.shareDiv {
+    position: absolute;
+    top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: transparent;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.share {
+    width: 40px;
+    height: 40px;
+    font-weight: 900;
+    font-size: 30px;
+    transform: rotate(90deg);
+    text-shadow: 0 0 10px whitesmoke, 0 0 10px whitesmoke, 0 0 10px whitesmoke;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.share:hover {
+    background-color: azure;
+    transition: all 1s ease-out;
+}
+
+.shareOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    animation: drop 0.5s ease;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+@keyframes drop {
+    0% {
+        max-height: 0;
+    }
+
+    100% {
+        max-height: 250px;
+    }
+}
+
+.copy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.copy p {
+    color: aquamarine;
+    text-shadow: 0 0 10px BLACK, 0 0 10px BLACK, 0 0 10px BLACK;
+    animation: dropRight 0.5s ease;
+}
+
+@keyframes dropRight {
+    0% {
+        max-width: 0;
+    }
+
+    100% {
+        max-width: 100px;
+    }
+}
+
 
 @media screen and (max-width: 600px) {
     .pagecontainer {
@@ -310,5 +386,3 @@
         display: none;
     }
 }
-
-
