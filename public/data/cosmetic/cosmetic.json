@@ -5,5 +5,33 @@
         "description": "MAKEUP KIT",
         "detail": " Beautiful Makeup Kit. \n Branded product. \n all in one kit. \n",
         "price": "1000"
+    },
+    {
+        "id": 2,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659088/cosmetics/makeup/makeup2",
+        "description": "MAKEUP KIT",
+        "detail": " Beautiful Makeup Kit. \n Branded product. \n all in one kit. \n",
+        "price": "225"
+    },
+    {
+        "id": 3,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659088/cosmetics/makeup/makeup3",
+        "description": "MAKEUP KIT",
+        "detail": " Beautiful Makeup Kit. \n Branded product. \n all in one kit. \n",
+        "price": "225"
+    },
+    {
+        "id": 4,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659088/cosmetics/makeup/makeup4",
+        "description": "MAKEUP KIT",
+        "detail": " Beautiful Makeup Kit. \n Branded product. \n all in one kit. \n",
+        "price": "225"
+    },
+    {
+        "id": 5,
+        "url": "https://res.cloudinary.com/di3zlyh9o/image/upload/v1697659088/cosmetics/makeup/makeup5",
+        "description": "MAKEUP KIT",
+        "detail": " Beautiful Makeup Kit. \n Branded product. \n all in one kit. \n",
+        "price": "225"
     }
 ]
