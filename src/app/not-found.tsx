@@ -8,7 +8,7 @@ import ZeroImage from "../../public/images/some/zero-not-found-image.webp"
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-export default function Home() {
+export default function NotFound() {
 
     const [count, setCount] = useState(5);
     const router = useRouter();

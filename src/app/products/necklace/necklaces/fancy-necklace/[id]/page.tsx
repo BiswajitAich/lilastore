@@ -2,6 +2,7 @@ import React from 'react';
 import ProductData from '../../../../../../../public/data/necklace/fancy-necklace.json';
 import { PageDesign } from '@/app/products/PageDesign';
 import Necklaces from '../../../Necklaces';
+import NotFound from '@/app/not-found';
 
 export async function generateStaticParams() {
   return ProductData.map(product => ({
@@ -16,7 +17,7 @@ const FancyNecklacesPage = ({ params }: { params: { id: string } }) => {
   const selectedProduct = ProductData.find((product) => product.id === productId);
 
   if (!selectedProduct) {
-    return <p>Product not found</p>;
+    return <NotFound />;
   }
 
   const detail = typeof selectedProduct.detail === 'string' ? selectedProduct.detail : '';

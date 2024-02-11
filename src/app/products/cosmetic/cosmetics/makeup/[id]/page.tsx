@@ -2,6 +2,7 @@ import React from 'react';
 import ProductData from '../../../../../../../public/data/cosmetic/cosmetic.json';
 import { PageDesign } from '@/app/products/PageDesign';
 import Cosmetics from '../../../Cosmetics';
+import NotFound from '@/app/not-found';
 
 export async function generateStaticParams() {
   return ProductData.map(product => ({
@@ -16,7 +17,7 @@ const Cosmetic = ({ params }: { params: { id: string } }) => {
   const selectedProduct = ProductData.find((product) => product.id === productId);
 
   if (!selectedProduct) {
-    return <p>Product not found</p>;
+    return <NotFound />;
   }
 
   return (
