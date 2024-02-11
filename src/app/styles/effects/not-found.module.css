@@ -1,0 +1,82 @@
+.body {
+    background-image: url('../../../../public/images/some/background-not-found-image.webp');
+    position: fixed;
+    inset: 0 0 0 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.mainBody {
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+}
+
+.backgroundBody {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100dvw;
+    height: 100dvh;
+    max-width: 600px;
+}
+
+.fourOfour {
+    display: flex;
+    position: fixed;
+    top: 30%;
+    transform: translateX(-50%);
+    left: 50%;
+    background: linear-gradient(90deg, transparent, rgb(63, 1, 1), rgb(63, 1, 1), transparent);
+    height: 50px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fourOfour div {
+    height: 50px;
+    width: 50px;
+}
+
+.fourOfour div img,
+.backgroundBody img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.message {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #e602ff;
+    background: black;
+    width: 100%;
+    text-align: center;
+    max-width: 600px;
+    height: 12%;
+    min-height: 100px;
+}
+
+.homeLink {
+    position: fixed;
+    padding: 10px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3a000171;
+    color: #ff00ae;
+}
+
+@media screen and (max-width: 600px) {
+    .message {
+        height: 25%;
+    }
+}
