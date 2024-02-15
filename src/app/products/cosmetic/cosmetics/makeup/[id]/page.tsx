@@ -3,6 +3,7 @@ import ProductData from '../../../../../../../public/data/cosmetic/cosmetic.json
 import { PageDesign } from '@/app/products/PageDesign';
 import Cosmetics from '../../../Cosmetics';
 import NotFound from '@/app/not-found';
+import { Metadata } from 'next';
 
 export async function generateStaticParams() {
   return ProductData.map(product => ({
@@ -36,3 +37,25 @@ const Cosmetic = ({ params }: { params: { id: string } }) => {
 };
 
 export default Cosmetic;
+
+
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const productId = parseInt(params.id, 10);
+
+  const selectedProduct = ProductData.find((product) => product.id === productId);
+
+  if (!selectedProduct) {
+    return {
+      title: "Product Not Found"
+    };
+  }
+
+  return {
+    title: selectedProduct?.description,
+    openGraph: {
+      images: selectedProduct?.url,
+      description: selectedProduct?.detail,
+    },
+    keywords: `${selectedProduct?.description}, ${selectedProduct?.detail}`,
+  }
+}
