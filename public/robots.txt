@@ -6,4 +6,4 @@ Allow: /
 Disallow: /uploads/
 Disallow: /downloads/
 
-Sitemap: https://biswajitaich.github.io/lilastore/sitemap.xml
+Sitemap: https://lilastore.vercel.app/sitemap.xml
