@@ -11,16 +11,29 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Lila Store App',
-  description: 'Jewelry website',
+  description: 'Jewellery & Cosmetic website',
   manifest: '/manifest.json',
-  themeColor: '#3498db',
+  themeColor: '#d4af37',
   verification: {
     google: "XqAHR-yUTZKXnzYTxXLO15Qh8FTBYbNnlVU46jkByEI",
   },
   authors: {
     name: 'Biswajit Aich'
   },
-  applicationName: 'MY Lila Store',
+  applicationName: 'Lila Store',
+  appleWebApp: true,
+  icons: [
+    'public/images/logos/lila-store-logo.webp',
+    'public/images/logos/ls-logo.webp',
+    'public/images/logos/LS-logo-512x512.png',
+  ],
+  openGraph: {
+    type: 'website',
+    title: 'Lila Store App',
+    description: 'Best Jewellery & Cosmetic website with affordable price range.',
+    url: 'https://lilastore.vercel.app',
+    images: 'https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/LS-logo-512x512.png',
+  },
   keywords: 'Konnagar, Imitation Jewlry, Golden Necklace ,Golden Earring ,Golden Bangle ,Oxidized Necklace,Oxidized Earring ,Oxidized Bangle ,Terracotta Necklace ,Terracotta Earring ,Chemicalbead Necklace ,Kundan Necklace ,Fancy Necklace ,Choker, Mangalsutra ,Stone Earring ,AD Stone ,Funky Earring ,Fancy Earring ,Bracelets ,Mantasa ,Chains ,Kamarband ,Rings ,Payals ',
   robots: 'index, follow',
   viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'

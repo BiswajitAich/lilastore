@@ -1,11 +1,12 @@
 {
-    "theme_color": "#4a90e2",
-    "background_color": "#000000",
+    "theme_color": "#d4af37",
+    "background_color": "#ffffff",
     "display": "standalone",
     "start_url": "/",
     "name": "Lila Store App",
     "description": "Imitation jewelry store online and offline high qyality products at affordable price...",
     "short_name": "lilastore",
+    "orientation": "portrait",
     "icons": [
         {
             "src": "/images/logos/LS-logo-512x512.png",
