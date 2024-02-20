@@ -15,8 +15,7 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   themeColor: '#d4af37',
   verification: {
-    google: "8AO-KxssBnO3-PTBnbw4TXV-vTiJt7WDb8Y4K_4qxVo",
-    // google: "XqAHR-yUTZKXnzYTxXLO15Qh8FTBYbNnlVU46jkByEI",
+    google: ["8AO-KxssBnO3-PTBnbw4TXV-vTiJt7WDb8Y4K_4qxVo", "XqAHR-yUTZKXnzYTxXLO15Qh8FTBYbNnlVU46jkByEI"],
   },
   authors: {
     name: 'Biswajit Aich'
