@@ -79,6 +79,11 @@
     min-width: 100%;
 }
 
+.details p:nth-last-child(1) {
+    color: seagreen;
+    font-size: small;
+}
+
 .details p span:nth-child(1) {
     color: crimson;
 }
@@ -260,6 +265,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .backBtn {

@@ -135,28 +135,21 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
     }
   };
 
-  const handleSocialMedia = (e: string) => {
+  const handleSocialMedia  = async (e: string) => {
     if (e === 'whatsapp') {
       const currentUrl = window.location.href;
-      const message1 = 'Checkout this product ';
-      const message2 = 'Website link - https://lilastore.vercel.app'
-      const whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(`${message1} ${currentUrl}
-      
-      ${message2}`)}`;
+      const message = 'Checkout this product ';
+      const whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(`${message}
+      ${currentUrl}`)}`;
       window.open(whatsappShareUrl, '_blank');
     }
-    else if (e === 'facebook') {
-      const currentUrl = window.location.href;
-      const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`;
+    else if (e === 'share-navigator') {
+      await navigator.share({
+        title: document.title,
+        url: window.location.href
+      })
 
-      window.open(facebookShareUrl, '_blank');
     }
-    // else if (e === 'instagram') {
-    //   const currentUrl = window.location.href;
-    //   const instagramShareUrl = `https://www.instagram.com/share?url=${encodeURIComponent(currentUrl)}`;
-
-    //   window.open(instagramShareUrl, '_blank');
-    // }
     else return
   }
 
@@ -255,9 +248,9 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                         alt='WhatsApp share' />
                     </button>
                     <button
-                      onClick={() => handleSocialMedia('facebook')}
+                      onClick={() => handleSocialMedia('share-navigator')}
                     >
-                      <img src="./../../../../images/logos/facebook-icon.webp"
+                      <img src="./../../../../images/logos/share-navigator.webp"
                         height={40}
                         width={40}
                         alt='Facebook share' />
@@ -316,6 +309,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
           }}>{selectedProduct.detail?.split('\n').map((item, key) => {
             return <span key={key}>{item}<br /></span>
           })}</p>
+          <p>*delivery charges may apply!</p>
         </div>
       </div>
       <button type='button' className={pageStyle.contact} onClick={() => handleOrder(selectedProduct.description, selectedProduct.price, selectedProduct.url)}>
@@ -371,6 +365,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                   <CldImage
                     src={type.url}
                     onClick={() => handleViewImages(type.url)}
+                    onMouseEnter={() => handleViewImages(type.url)}
                     width={100}
                     height={100}
                     loading='eager'
