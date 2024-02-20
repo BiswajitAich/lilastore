@@ -1,6 +1,6 @@
 {
-    "theme_color": "#d4af37",
-    "background_color": "#ffffff",
+    "theme_color": "#FFD700",
+    "background_color": "#000000",
     "display": "standalone",
     "start_url": "/",
     "name": "Lila Store App",
