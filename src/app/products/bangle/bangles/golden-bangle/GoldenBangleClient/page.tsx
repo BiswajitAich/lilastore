@@ -1,28 +1,41 @@
 "use client"
 import React from 'react'
-import productData from '../../../../../../public/data/earring/adstone-earring.json'
+// import productData? from '../../../../../../public/data/bangle/golden-bangle.json'
 import { CldImage } from 'next-cloudinary'
-import StyleScript from '../../../../styles/products.module.css'
+import StyleScript from '../../../../../styles/products.module.css'
 import Link from 'next/link'
 import UseReveal from '@/app/components/effects/UseReveal'
+import NotFound from '@/app/not-found'
 
-const StoneEarringClient: React.FC = () => {
-    const refs: React.RefObject<HTMLAnchorElement>[] = productData.map(() => UseReveal());
+interface BeaceletClientProps {
+    price: string
+    id: number,
+    url: string,
+    category: string,
+    goto: string,
+}
 
+const GoldenBangleClient: React.FC<any> = ({ProductData}) => {
+    const [productData] = React.useState<BeaceletClientProps[]>(ProductData);
+    const refs: React.RefObject<HTMLAnchorElement>[] = (productData?.map(() => UseReveal()) ?? []) as React.RefObject<HTMLAnchorElement>[];
+
+
+    if (!productData) return <NotFound />
+    
     return (
         <div className={StyleScript.body} >
             <div className={StyleScript.productBody}>
-                <h3>Stone Earring Collection<div /></h3>
-                <div className={StyleScript.productContainer}>
-                    {productData.map((material, idx) => (
-                        <Link href={`/products/earring/earrings/adstone-earring/${material.id}`} ref={refs[idx]} className={StyleScript.reveal} key={idx}>
+                <h3>Golden Bangle Collection<div /></h3>
+                <div className={StyleScript.productContainer} >
+                    {productData?.map((material, idx) => (
+                        <Link href={`/products/bangle/bangles/golden-bangle/${material.id}`} ref={refs[idx]} className={StyleScript.reveal} key={idx}>
                             <div className={StyleScript.productCard} >
                                 <div className={StyleScript.imageDiv}  >
                                     {
                                         <CldImage
                                             itemType='img'
                                             src={material.url}
-                                            alt={`Stone Earring ${idx + 1}`}
+                                            alt={`Golden Bangle ${idx + 1}`}
                                             width={400}
                                             height={600}
                                             loading='lazy'
@@ -54,4 +67,5 @@ const StoneEarringClient: React.FC = () => {
     )
 }
 
-export default StoneEarringClient
+export default GoldenBangleClient
+

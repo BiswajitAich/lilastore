@@ -1,15 +1,14 @@
-import OxydizedEarringClient from "./OxydizedEarringClient/page";
-
+import BangleTypesClient from "./BangleTypesClient"
 let productData: any | null = null;
 
 export async function fetchData() {
-    
+
     try {
         const base = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin;
         const resp = await fetch(`${base}/api/fetchData`, {
             method: "POST",
             body: JSON.stringify({
-                searchName: "earring/oxydized-earring"
+                searchName: "bangle/bangle"
             }),
             headers: {
                 'Content-Type': 'application/json'
@@ -32,15 +31,10 @@ export async function fetchData() {
 
 }
 
-const OxydizedEarring = async () => {
-    if(!productData) await fetchData()
+const BangleTypes: React.FC = async () => {
+  if(!productData) await fetchData()
 
-    return (<OxydizedEarringClient ProductData={productData} />)
+    return (<BangleTypesClient ProductData={productData}/>)
 }
-export default OxydizedEarring
 
-export function generateMetadata() {
-    return {
-        title: "Oxydized Earring Collection"
-    }
-}
+export default BangleTypes

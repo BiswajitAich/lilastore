@@ -1,11 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Footer from './components/Footer'
-import dynamic from 'next/dynamic';
+// import Footer from './components/Footer'
+// import dynamic from 'next/dynamic';
 
 // import SplashScreen from './components/effects/SplashScreen'
-const SplashScreen = dynamic(() => import('./components/effects/SplashScreen'), { ssr: false });
+// const SplashScreen = dynamic(() => import('./components/effects/SplashScreen'), { ssr: false });
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -49,8 +49,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <Footer />
-        <SplashScreen />
+        {/* <Footer /> */}
+        {/* <SplashScreen /> */}
       </body>
     </html>
   )

@@ -1,14 +1,34 @@
 "use client"
 import React from 'react'
-import productData from '../../../../../../public/data/bangle/oxydized-bangle.json'
+// import productData from '../../../../../../public/data/bangle/oxydized-bangle.json'
 import { CldImage } from 'next-cloudinary'
 import StyleScript from '../../../../styles/products.module.css'
 import Link from 'next/link'
 import UseReveal from '@/app/components/effects/UseReveal'
+import NotFound from '@/app/not-found'
 
-const OxydizedBangleClient: React.FC = () => {
-    const refs: React.RefObject<HTMLAnchorElement>[] = productData.map(() => UseReveal());
+interface BeaceletClientProps {
+    price: string
+    id: number,
+    url: string,
+    category: string,
+    goto: string,
+}
+const OxydizedBangleClient: React.FC<any> = ({ProductData}) => {
+    const [productData] = React.useState<BeaceletClientProps[]>(ProductData);
+    const refs: React.RefObject<HTMLAnchorElement>[] = (productData?.map(() => UseReveal()) ?? []) as React.RefObject<HTMLAnchorElement>[];
 
+    
+    React.useEffect(() => {
+        window.addEventListener('scroll', function (e) {
+            if (window.scrollY <= 0) {
+                e.preventDefault();
+            }
+        });
+    }, [])
+
+
+    if (!productData) return <NotFound />
     return (
         <div className={StyleScript.body} >
             <div className={StyleScript.productBody}>

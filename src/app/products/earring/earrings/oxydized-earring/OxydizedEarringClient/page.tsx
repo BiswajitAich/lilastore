@@ -1,50 +1,39 @@
 "use client"
 import React from 'react'
-// import productData from '../../../../../../../public/data/bangle/mantasa.json'
+// import productData from '../../../../../../public/data/earring/oxydized-earring.json'
 import { CldImage } from 'next-cloudinary'
-import StyleScript from '../../../../styles/products.module.css'
+import StyleScript from '../../../../../styles/products.module.css'
 import Link from 'next/link'
 import UseReveal from '@/app/components/effects/UseReveal'
 import NotFound from '@/app/not-found'
-
 interface BeaceletClientProps {
-    price: string
     id: number,
     url: string,
     category: string,
     goto: string,
+    price: string,
 }
-
-const MantasaClient: React.FC<any> = ({ProductData}) => {
+const OxydizedEarringClient: React.FC<any> = ({ProductData}) => {
     const [productData] = React.useState<BeaceletClientProps[]>(ProductData);
     const refs: React.RefObject<HTMLAnchorElement>[] = (productData?.map(() => UseReveal()) ?? []) as React.RefObject<HTMLAnchorElement>[];
 
     
-    React.useEffect(() => {
-        window.addEventListener('scroll', function (e) {
-            if (window.scrollY <= 0) {
-                e.preventDefault();
-            }
-        });
-    }, [])
-
-
     if (!productData) return <NotFound />
     
     return (
         <div className={StyleScript.body} >
             <div className={StyleScript.productBody}>
-                <h3>Mantasa Collection<div /></h3>
+                <h3>Oxydized Earring Collection<div /></h3>
                 <div className={StyleScript.productContainer}>
-                    {productData.map((material, idx) => (
-                        <Link href={`/products/bangle/bangles/mantasa/${material.id}`} ref={refs[idx]} className={StyleScript.reveal} key={idx}>
+                    {productData?.map((material, idx) => (
+                        <Link href={`/products/earring/earrings/oxydized-earring/${material.id}`} ref={refs[idx]} className={StyleScript.reveal} key={idx}>
                             <div className={StyleScript.productCard} >
                                 <div className={StyleScript.imageDiv}  >
                                     {
                                         <CldImage
                                             itemType='img'
                                             src={material.url}
-                                            alt={`Mantasa ${idx + 1}`}
+                                            alt={`Oxydized Earring ${idx + 1}`}
                                             width={400}
                                             height={600}
                                             loading='lazy'
@@ -76,4 +65,4 @@ const MantasaClient: React.FC<any> = ({ProductData}) => {
     )
 }
 
-export default MantasaClient
+export default OxydizedEarringClient

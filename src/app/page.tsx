@@ -6,9 +6,11 @@ import Banner from './components/Banner';
 import MiniSlider from './components/MiniSlider'
 import Necklaces from './products/necklace/Necklaces';
 import Earrings from './products/earring/Earrings';
-import Bangles from './products/bangle/Bangles';
+import Bangles from './products/bangle/BangleTypes/page';
 import OtherProduct from './products/otherproduct/OtherProduct';
 import { Marquee } from './components/Marquee'
+import Loading from './loading';
+import Footer from './components/Footer';
 
 export default function Home() {
 
@@ -48,7 +50,7 @@ export default function Home() {
   return (
     <div>
       <main className={styles.main}>
-        <Suspense fallback={<div>Loading...</div>} >
+        <Suspense fallback={<Loading />} >
           <Header />
           <Marquee />
           <Banner />
@@ -57,6 +59,7 @@ export default function Home() {
           <Earrings />
           <Bangles />
           <OtherProduct />
+          <Footer />
         </Suspense>
       </main>
     </div>

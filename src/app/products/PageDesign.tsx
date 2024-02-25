@@ -35,8 +35,8 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
   //   });
   // }, [])
   useEffect(() => {
-    if (selectedProduct.type) {
-      const totalImages = selectedProduct.type.length;
+    if (selectedProduct?.type) {
+      const totalImages = selectedProduct?.type.length;
       let loadedImages = 0;
 
       const handleImageLoad = () => {
@@ -46,17 +46,17 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
         }
       };
 
-      selectedProduct.type.forEach((type: { url: string }) => {
+      selectedProduct?.type.forEach((type: { url: string }) => {
         const img = new Image();
         img.src = type.url;
         img.onload = handleImageLoad;
       });
     }
-  }, [selectedProduct.type]);
+  }, [selectedProduct?.type]);
 
   function handleRight() {
-    if (selectedProduct.type) {
-      const newIndex = (currentImageIndex + 1) % selectedProduct.type.length;
+    if (selectedProduct?.type) {
+      const newIndex = (currentImageIndex + 1) % selectedProduct?.type.length;
       setCurrentImageIndex(newIndex);
 
 
@@ -75,8 +75,8 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
   }
 
   function handleLeft() {
-    if (selectedProduct.type) {
-      const newIndex = (currentImageIndex - 1 + selectedProduct.type.length) % selectedProduct.type.length;
+    if (selectedProduct?.type) {
+      const newIndex = (currentImageIndex - 1 + selectedProduct?.type.length) % selectedProduct?.type.length;
       setCurrentImageIndex(newIndex);
 
       if (imgContainerRef.current) {
@@ -183,12 +183,12 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
       <div className={pageStyle.pagecontainer}>
         <div className={pageStyle.head}>
           <button type='button' onClick={() => { router.push('/') }}>Home</button>
-          <p>{selectedProduct.description}</p>
+          <p>{selectedProduct?.description}</p>
         </div>
         <div className={pageStyle.imgcontainer}>
           <div className={`${pageStyle.imgDiv} ${loaded ? '' : pageStyle.animation}`} ref={imgContainerRef}>
-            {selectedProduct.type ? (
-              selectedProduct.type.map((type: { url: string }, idx: number) => (
+            {selectedProduct?.type ? (
+              selectedProduct?.type.map((type: { url: string }, idx: number) => (
                 <CldImage
                   key={idx}
                   src={type.url}
@@ -210,7 +210,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
               ))
             ) : (
               <CldImage
-                src={selectedProduct.url}
+                src={selectedProduct?.url}
                 width={1000}
                 height={1000}
                 loading='eager'
@@ -219,7 +219,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                   opacity: 0,
                   transition: "opacity 1s ease",
                 }}
-                onClick={() => handleViewImages(selectedProduct.url)}
+                onClick={() => handleViewImages(selectedProduct?.url)}
                 onLoad={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.opacity = "1";
@@ -284,7 +284,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
             </div>
 
           </div>
-          {selectedProduct.type ? (
+          {selectedProduct?.type ? (
             <>
               <button className={pageStyle.leftBtn} onClick={handleLeft}>
                 <div className={pageStyle.goBack1}></div>
@@ -298,15 +298,15 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
           ) : null}
         </div>
         <div className={pageStyle.details}>
-          <p>Rs {selectedProduct.price}</p>
-          <p>{selectedProduct.description}</p>
+          <p>Rs {selectedProduct?.price}</p>
+          <p>{selectedProduct?.description}</p>
           <p style={{
             textAlign: "left",
             minWidth: "50%",
             display: "flex",
             flexDirection: "column",
             gap: "10px",
-          }}>{selectedProduct.detail?.split('\n').map((item, key) => {
+          }}>{selectedProduct?.detail?.split('\n').map((item, key) => {
             return <span key={key}>{item}<br /></span>
           })}</p>
           <p>*delivery charges may apply!</p>
