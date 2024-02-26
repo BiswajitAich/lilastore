@@ -45,13 +45,25 @@ export const metadata: Metadata = {
     siteName: 'Lila Store',
     images: [{
       url: 'https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/LS-logo-512x512.png',
-      width: '512',
-      height: '512',
+      width: 512,
+      height: 512,
       alt: 'LS_LOGO'
     }]
   },
   keywords: 'Konnagar, Imitation Jewlry, Golden Necklace ,Golden Earring ,Golden Bangle ,Oxidized Necklace,Oxidized Earring ,Oxidized Bangle ,Terracotta Necklace ,Terracotta Earring ,Chemicalbead Necklace ,Kundan Necklace ,Fancy Necklace ,Choker, Mangalsutra ,Stone Earring ,AD Stone ,Funky Earring ,Fancy Earring ,Bracelets ,Mantasa ,Chains ,Kamarband ,Rings ,Payals ',
-  robots: 'index, follow',
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
 }
 

@@ -4,7 +4,7 @@ let productData: any | null = null;
 
 
 const Makeup = async () => {
-    async function fetchData() {
+    async function getServerSideProps() {
 
         try {
             const base = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin;
@@ -34,7 +34,7 @@ const Makeup = async () => {
     
     }
     
-    if(!productData) await fetchData()
+    if(!productData) await getServerSideProps()
 
     return (<MakeupClient ProductData={productData} />)
 }

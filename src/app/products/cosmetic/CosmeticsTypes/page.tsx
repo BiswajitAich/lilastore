@@ -3,7 +3,7 @@ let productData: any | null = null;
 
 
 const CosmeticsTypes: React.FC = async () => {
-    async function fetchData() {
+    async function getServerSideProps() {
 
         try {
             const base = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin;
@@ -33,7 +33,7 @@ const CosmeticsTypes: React.FC = async () => {
     
     }
     
-  if(!productData) await fetchData()
+  if(!productData) await getServerSideProps()
 
     return (<CosmeticsTypesClient ProductData={productData}/>)
 }
