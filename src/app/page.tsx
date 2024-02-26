@@ -11,7 +11,7 @@ import OtherProduct from './products/otherproduct/OtherProduct';
 import { Marquee } from './components/Marquee'
 import Loading from './loading';
 import Footer from './components/Footer';
-import Cosmetics from './products/cosmetic/Cosmetics';
+// import Cosmetics from './products/cosmetic/Cosmetics';
 
 export default function Home() {
 
@@ -59,7 +59,7 @@ export default function Home() {
           <Necklaces />
           <Earrings />
           <Bangles />
-          <Cosmetics />
+          {/* <Cosmetics /> */}
           <OtherProduct />
           <Footer />
         </Suspense>
