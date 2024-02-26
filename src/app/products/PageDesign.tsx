@@ -3,7 +3,7 @@ import { CldImage } from 'next-cloudinary';
 import React, { useState, useRef, useEffect } from 'react';
 import pageStyle from '../styles/productPage.module.css';
 import { useRouter } from 'next/navigation';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 
 interface PageDesignProps {
   selectedProduct: {
@@ -385,13 +385,23 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
 };
 
 
-export async function generateMetadata({ selectedProduct }: PageDesignProps): Promise<Metadata> {
-  return {
-    title: selectedProduct.description,
-    openGraph: {
-      images: selectedProduct.url,
-      description: selectedProduct.detail,
-    },
-    keywords: `${selectedProduct.description}, ${selectedProduct.detail}`,
-  }
+// export async function generateMetadata({ selectedProduct }: PageDesignProps): Promise<Metadata> {
+//   return {
+//     title: selectedProduct.description,
+//     openGraph: {
+//       images: selectedProduct.url,
+//       description: selectedProduct.detail,
+//     },
+//     keywords: `${selectedProduct.description}, ${selectedProduct.detail}`,
+//   }
+// }
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#d4af37' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  // userScalable: false,
 }

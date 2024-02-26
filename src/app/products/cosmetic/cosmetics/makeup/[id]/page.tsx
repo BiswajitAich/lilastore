@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageDesign } from '@/app/products/PageDesign';
-// import Cosmetics from '../../../Cosmetics';
+import Cosmetics from '../../../Cosmetics';
 import NotFound from '@/app/not-found';
 import { Metadata } from 'next';
 import Footer from '@/app/components/Footer';
@@ -66,7 +66,7 @@ const Makeup = async ({ params }: { params: { id: string } }) => {
       {/* <p>{params.id}</p>
       <p>{selectedProduct.description}</p> */}
       <PageDesign selectedProduct={selectedProduct} />
-      {/* <Cosmetics /> */}
+      <Cosmetics />
       <Footer />
     </div>
   );
