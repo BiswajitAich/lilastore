@@ -1,9 +1,8 @@
-import ChokerNecklacesClient from "./CokerNecklaceClient/page";
-
+import NecklacesTypesClient from "./NecklaceTypesClient";
 let productData: any | null = null;
 
 
-const ChokerNecklaces = async () => {
+const NecklaceTypes: React.FC = async () => {
     async function fetchData() {
 
         try {
@@ -11,7 +10,7 @@ const ChokerNecklaces = async () => {
             const resp = await fetch(`${base}/api/fetchData`, {
                 method: "POST",
                 body: JSON.stringify({
-                    searchName: "necklace/choker"
+                    searchName: "necklace/necklaces"
                 }),
                 headers: {
                     'Content-Type': 'application/json'
@@ -34,14 +33,9 @@ const ChokerNecklaces = async () => {
     
     }
     
-    if(!productData) await fetchData()
+  if(!productData) await fetchData()
 
-    return (<ChokerNecklacesClient ProductData={productData} />)
+    return (<NecklacesTypesClient ProductData={productData}/>)
 }
-export default ChokerNecklaces
 
-export function generateMetadata() {
-    return {
-        title: "Choker Necklaces Collection"
-    }
-}
+export default NecklaceTypes
