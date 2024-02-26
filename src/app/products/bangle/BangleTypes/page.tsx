@@ -25,17 +25,17 @@ const BangleTypes: React.FC = async () => {
             } else {
                 productData = null;
             }
-    
-    
+
+
         } catch (error) {
             console.log("errrrrrrrrrrrrr", error)
         }
-    
-    }
-    
-  if(!productData) await fetchData()
 
-    return (<BangleTypesClient ProductData={productData}/>)
+    }
+
+    if (!productData) await fetchData()
+
+    return (<BangleTypesClient ProductData={productData} />)
 }
 
 export default BangleTypes

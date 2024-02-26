@@ -1,5 +1,4 @@
 import React from 'react';
-// import ProductData from '../../../../../../../public/data/bangle/bracelet.json';
 import { PageDesign } from '@/app/products/PageDesign';
 import Bangles from '../../../BangleTypes/page';
 import NotFound from '@/app/not-found';
@@ -11,7 +10,7 @@ let ProductData: any | null = null;
 let selectedProduct: any | null = null;
 
 export async function generateStaticParams() {
-    if(ProductData) return
+  if (ProductData) return
 
   try {
     controller = new AbortController();
@@ -38,10 +37,11 @@ export async function generateStaticParams() {
       // console.error(`Error fetching data: ${resp.status}`);
       ProductData = null;
     }
-    
+
 
   } catch (error) {
-    console.log("errrrrrrrrrrrrr",error)
+    console.log("errrrrrrrrrrrrr", error)
+
   }
   return ProductData?.map((product: any) => product.id.toString()) || [];
 
@@ -52,7 +52,7 @@ const BraceletPage = async ({ params }: { params: { id: string } }) => {
   const productId = parseInt(params.id, 10);
   await generateStaticParams()
 
-  selectedProduct = ProductData?.find((product:any) => product.id === productId);
+  selectedProduct = ProductData?.find((product: any) => product.id === productId);
 
   if (!selectedProduct) {
     return <NotFound />;

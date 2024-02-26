@@ -11,7 +11,7 @@ let ProductData: any | null = null;
 let selectedProduct: any | null = null;
 
 export async function generateStaticParams() {
-  if(ProductData) return
+  if (ProductData) return
   try {
     controller = new AbortController();
     const signal = controller.signal;
@@ -31,16 +31,16 @@ export async function generateStaticParams() {
     })
     if (resp.ok) {
       ProductData = await resp.json();
-      console.log("ProductData :",ProductData)
+      console.log("ProductData :", ProductData)
 
     } else {
       // console.error(`Error fetching data: ${resp.status}`);
       ProductData = null;
     }
-    
+
 
   } catch (error) {
-    console.log("errrrrrrrrrrrrr",error)
+    console.log("errrrrrrrrrrrrr", error)
   }
   return ProductData?.map((product: any) => product.id.toString()) || [];
 

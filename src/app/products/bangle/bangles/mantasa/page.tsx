@@ -26,15 +26,15 @@ const Mantasa = async () => {
             } else {
                 productData = null;
             }
-    
-    
+
+
         } catch (error) {
             console.log("errrrrrrrrrrrrr", error)
         }
-    
+
     }
-    
-    if(!productData) await fetchData()
+
+    if (!productData) await fetchData()
 
     return (<MantasaClient ProductData={productData} />)
 }

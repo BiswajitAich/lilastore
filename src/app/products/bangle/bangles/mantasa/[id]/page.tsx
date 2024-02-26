@@ -10,7 +10,7 @@ let ProductData: any | null = null;
 let selectedProduct: any | null = null;
 
 export async function generateStaticParams() {
-    if(ProductData) return
+  if (ProductData) return
 
   try {
     controller = new AbortController();
@@ -37,10 +37,10 @@ export async function generateStaticParams() {
       // console.error(`Error fetching data: ${resp.status}`);
       ProductData = null;
     }
-    
+
 
   } catch (error) {
-    console.log("errrrrrrrrrrrrr",error)
+    console.log("errrrrrrrrrrrrr", error)
   }
   return ProductData?.map((product: any) => product.id.toString()) || [];
 

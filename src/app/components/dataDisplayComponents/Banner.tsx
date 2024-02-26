@@ -1,10 +1,10 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
-import bannerstyles from './../styles/banner.module.css'
+import bannerstyles from './../../styles/banner.module.css'
 // import bannerContent from "../../../public/data/banner/banner.json"
 import { CldImage } from 'next-cloudinary'
 import Link from 'next/link'
-import WaveLoader from './effects/WaveLoader'
+import WaveLoader from '../effects/WaveLoader'
 
 interface product {
   id?: number,

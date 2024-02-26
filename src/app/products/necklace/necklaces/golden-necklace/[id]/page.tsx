@@ -58,7 +58,7 @@ const GoldenNecklacesPage = async ({ params }: { params: { id: string } }) => {
   if (!selectedProduct) {
     return <NotFound />;
   }
-  
+
   return (
     <div style={{
       display: 'flex',

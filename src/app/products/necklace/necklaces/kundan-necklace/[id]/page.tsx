@@ -78,7 +78,7 @@ export default KundanNecklacesPage;
 
 export async function generateMetadata(): Promise<Metadata> {
   await generateStaticParams()
-  
+
   if (!selectedProduct) {
     return {
       title: "Product Not Found"

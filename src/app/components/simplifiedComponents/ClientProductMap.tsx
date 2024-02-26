@@ -7,12 +7,16 @@ import StyleScript from '../../styles/products.module.css'
 
 
 interface Props {
-    price: string
+    price?: string
     id: number,
     url: string,
-    category: string,
+    category?: string,
     goto: string,
-}
+    description?: string,
+    type?: {
+      url: string
+    }
+  }
 
 const ClientProductMap: React.FC<any> = ({ProductData, path, alt}) => {
     const [productData] = React.useState<Props[]>(ProductData);

@@ -1,9 +1,8 @@
-import ChainClient from "./ChainClient/page";
-
+import OtherProductsTypesClient from "./OtherProductsTypesClient";
 let productData: any | null = null;
 
 
-const Chain = async () => {
+const OtherProductsTypes: React.FC = async () => {
     async function fetchData() {
 
         try {
@@ -11,7 +10,7 @@ const Chain = async () => {
             const resp = await fetch(`${base}/api/fetchData`, {
                 method: "POST",
                 body: JSON.stringify({
-                    searchName: "otherproduct/chain"
+                    searchName: "otherproduct/otherproduct"
                 }),
                 headers: {
                     'Content-Type': 'application/json'
@@ -34,14 +33,9 @@ const Chain = async () => {
     
     }
     
-    if(!productData) await fetchData()
+  if(!productData) await fetchData()
 
-    return (<ChainClient ProductData={productData} />)
+    return (<OtherProductsTypesClient ProductData={productData}/>)
 }
-export default Chain
 
-export function generateMetadata() {
-    return {
-        title: "Chain Collection"
-    }
-}
+export default OtherProductsTypes

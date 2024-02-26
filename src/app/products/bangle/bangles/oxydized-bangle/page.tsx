@@ -26,15 +26,15 @@ const OxydizedBangle = async () => {
             } else {
                 productData = null;
             }
-    
-    
+
+
         } catch (error) {
             console.log("errrrrrrrrrrrrr", error)
         }
-    
+
     }
-    
-        if(!productData) await fetchData()
+
+    if (!productData) await fetchData()
 
     return (<OxydizedBangleClient ProductData={productData} />)
 }

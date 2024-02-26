@@ -1,57 +1,47 @@
-"use client"
-import React from 'react'
-import productData from '../../../../../../public/data/otherproduct/kamarband.json'
-import { CldImage } from 'next-cloudinary'
-import StyleScript from '../../../../styles/products.module.css'
-import Link from 'next/link'
-import UseReveal from '@/app/components/effects/UseReveal'
+import KamarbandClient from "./KamarbandClient/page";
 
-const Kamarband: React.FC = () => {
-    const refs: React.RefObject<HTMLAnchorElement>[] = productData.map(() => UseReveal());
+let productData: any | null = null;
 
-    return (
-        <div className={StyleScript.body} >
-            <div className={StyleScript.productBody}>
-                <h3>Kamarband Collection<div /></h3>
-                <div className={StyleScript.productContainer}>
-                    {productData.map((material, idx) => (
-                        <Link href={`/products/otherproduct/otherproducts/kamarband/${material.id}`} ref={refs[idx]} className={StyleScript.reveal} key={idx}>
-                            <div className={StyleScript.productCard} >
-                                <div className={StyleScript.imageDiv}  >
-                                    {
-                                        <CldImage
-                                            itemType='img'
-                                            src={material.url}
-                                            alt={`Kamarband ${idx + 1}`}
-                                            width={400}
-                                            height={600}
-                                            loading='lazy'
-                                            style={{
-                                                borderRadius: "12px",
-                                            }}
-                                            onLoad={(e) => {
-                                                const target = e.target as HTMLImageElement;
-                                                    target.classList.remove(StyleScript.animation);
-                                                    target.style.opacity = "1";
-                                            }}
-                                            className={StyleScript.animation}
-                                        />
-                                    }
-                                </div>
-                                <div className={StyleScript.design}/>
-                                <div className={StyleScript.details}>
-                                    <p style={{
-                                        fontWeight: "bold",
-                                        color: "green"
-                                    }}>Rs {material.price}</p>
-                                </div>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-            </div>
-        </div>
-    )
+
+const Kamarband = async () => {
+    async function fetchData() {
+
+        try {
+            const base = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin;
+            const resp = await fetch(`${base}/api/fetchData`, {
+                method: "POST",
+                body: JSON.stringify({
+                    searchName: "otherproduct/kamarband"
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                next: {
+                    revalidate: 10000,
+                },
+            })
+            if (resp.ok) {
+                productData = await resp.json();
+                // console.log("productData....",productData)
+            } else {
+                productData = null;
+            }
+    
+    
+        } catch (error) {
+            console.log("errrrrrrrrrrrrr", error)
+        }
+    
+    }
+    
+    if(!productData) await fetchData()
+
+    return (<KamarbandClient ProductData={productData} />)
 }
-
 export default Kamarband
+
+export function generateMetadata() {
+    return {
+        title: "Kamarband Collection"
+    }
+}
