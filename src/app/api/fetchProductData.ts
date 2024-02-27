@@ -6,7 +6,7 @@ export async function fetchProductData(searchName: string) {
         headers: {
           'Content-Type': 'application/json'
         },
-        cache: "force-cache"
+        next: { revalidate: 3600 } 
       });
   
       if (resp.ok) {
