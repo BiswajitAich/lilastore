@@ -4,6 +4,7 @@ import minisliderstyles from "../../styles/miniSlider.module.css";
 import { CldImage } from 'next-cloudinary';
 // import productData from "../../../public/data/miniSlider/miniSlider.json";
 import Link from 'next/link';
+import { fetchProductData } from '@/app/api/fetchProductData';
 
 interface Product {
   goto: string;
@@ -16,34 +17,9 @@ function MiniSlider() {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const base = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin;
-        const res = await fetch(`${base}/api/fetchData`, {
-          method: "POST",
-          body: JSON.stringify({
-            searchName: "miniSlider/miniSlider"
-          }),
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          next: {
-            revalidate: 10000,
-          },
-        })
-
-        if (!res.ok) {
-          throw new Error(`HTTP error! Status: ${res.status}`);
-        }
-
-
-        const data = await res.json();
-        // console.log('Fetched Data:', data);
-        setProductData(data);
-      } catch (err) {
-        console.error('Error fetching data:', err);
-      }
-    };
-
+      const data = fetchProductData("miniSlider/miniSlider")
+      setProductData(await data);
+    }
     fetchData();
   }, [])
 

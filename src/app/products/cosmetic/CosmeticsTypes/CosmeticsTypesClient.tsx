@@ -1,13 +1,13 @@
 import React from 'react'
 import ProductTypesComponent from '@/app/components/simplifiedComponents/ProductTypesComponent'
 
-const BangleTypesClient: React.FC<any> = ({ProductData}) => {
-    return (
+const CosmeticsTypesClient: React.FC<any> = ({ProductData}) => {
+    return(
         <ProductTypesComponent
             ProductData={ProductData}
-            heading="Bangle Collection"
+            heading="Cosmetics Collection"
         />
     )
 }
 
-export default BangleTypesClient
+export default CosmeticsTypesClient

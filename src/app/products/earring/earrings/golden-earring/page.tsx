@@ -1,41 +1,8 @@
+import { fetchProductData } from "@/app/api/fetchProductData";
 import GoldenEarringClient from "./GoldenEarringClient/page";
 
-let productData: any | null = null;
-
-
 const GoldenEarring = async () => {
-    async function fetchData() {
-    
-        try {
-            const base = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin;
-            const resp = await fetch(`${base}/api/fetchData`, {
-                method: "POST",
-                body: JSON.stringify({
-                    searchName: "earring/golden-earring"
-                }),
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                next: {
-                    revalidate: 10000,
-                },
-            })
-            if (resp.ok) {
-                productData = await resp.json();
-                // console.log("productData....",productData)
-            } else {
-                productData = null;
-            }
-    
-    
-        } catch (error) {
-            console.log("errrrrrrrrrrrrr", error)
-        }
-    
-    }
-    
-    if(!productData) await fetchData()
-
+    const productData = await fetchProductData("earring/golden-earring")
     return (<GoldenEarringClient ProductData={productData} />)
 }
 export default GoldenEarring

@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageDesign } from '@/app/products/PageDesign';
-import Bangles from '../../../BangleTypes/page';
+import Makeup from '../page';
 import NotFound from '@/app/not-found';
 import { Metadata } from 'next';
 import Footer from '@/app/components/Footer';
@@ -8,10 +8,11 @@ import { fetchProductData } from '@/app/api/fetchProductData';
 
 let selectedProduct: any | null = null;
 
-const Mantasa = async ({ params }: { params: { id: string } }) => {
+const MakeupPage = async ({ params }: { params: { id: string } }) => {
   const productId = parseInt(params.id, 10);
-  const ProductData = await fetchProductData("bangle/mantasa")
-  selectedProduct = ProductData?.find((product: { id: number; }) => product.id === productId);
+  const ProductData = await fetchProductData("cosmetic/makeup")
+
+  selectedProduct = ProductData?.find((product: any) => product.id === productId);
 
   if (!selectedProduct) {
     return <NotFound />;
@@ -25,19 +26,19 @@ const Mantasa = async ({ params }: { params: { id: string } }) => {
       alignItems: 'center',
     }}>
       <PageDesign selectedProduct={selectedProduct} />
-      <Bangles />
+      <Makeup />
       <Footer />
     </div>
   );
 };
 
-export default Mantasa;
+export default MakeupPage
 
 export async function generateMetadata(): Promise<Metadata> {
 
   if (!selectedProduct) {
     return {
-      title: "Product Not Found"
+      title: "Product Not Found (404)"
     };
   }
 

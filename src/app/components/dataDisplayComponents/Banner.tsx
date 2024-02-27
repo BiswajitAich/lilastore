@@ -31,14 +31,16 @@ const Banner: React.FC = () => {
         const control = new AbortController();
         const signal = control.signal
         const response = await fetch('https://lilastore007-default-rtdb.firebaseio.com/banner/.json', {
-          signal
+          signal,
+          cache: "force-cache"
         });
 
         const data = await response.json();
         setDisplayDiv(data)
-        console.log(data);
+        // console.log(data);
       } catch (error) {
         console.error('Error:', error);
+        setDisplayDiv([])
       }
     };
 
@@ -160,51 +162,51 @@ const Banner: React.FC = () => {
 
   return (
     <div className={bannerstyles.banner}>
+      {displayDiv ? (<>
+
+        {displayDiv ? (
+          <>
+            <button className={bannerstyles.leftBtn} aria-label="Previous Slide" onClick={handleLeftBtn}>
+              <div className={bannerstyles.goBack1}></div>
+              <div className={bannerstyles.goBack2}></div>
+            </button>
+            <button className={bannerstyles.rightBtn} aria-label="Next Slide" onClick={handleRightBtn}>
+              <div className={bannerstyles.goBack1}></div>
+              <div className={bannerstyles.goBack2}></div>
+            </button>
+          </>
+        ) : null}
 
 
-      {displayDiv ? (
-        <>
-          <button className={bannerstyles.leftBtn} aria-label="Previous Slide" onClick={handleLeftBtn}>
-            <div className={bannerstyles.goBack1}></div>
-            <div className={bannerstyles.goBack2}></div>
-          </button>
-          <button className={bannerstyles.rightBtn} aria-label="Next Slide" onClick={handleRightBtn}>
-            <div className={bannerstyles.goBack1}></div>
-            <div className={bannerstyles.goBack2}></div>
-          </button>
-        </>
-      ) : null}
 
+        <div className={bannerstyles.gradient} />
 
-
-      <div className={bannerstyles.gradient} />
-
-      <div className={bannerstyles.scrolls} ref={scrollsRef}>
-        {!displayDiv ? (<WaveLoader/>) : (<>
-          {displayDiv?.map((content, idx) => (
-            content.url && content.goto && <Link href={content.goto} key={idx} style={{ height: "100%", minWidth: "100%" }}>
-              <div className={bannerstyles.scrollDiv}>
-                <div className={bannerstyles.imgs}>
-                  <CldImage
-                    src={content.url}
-                    loading='eager'
-                    priority
-                    alt={`imade${idx + 1}`}
-                    width={300}
-                    height={400}
-                  />
+        <div className={bannerstyles.scrolls} ref={scrollsRef}>
+          {!displayDiv ? (<WaveLoader />) : (<>
+            {displayDiv?.map((content, idx) => (
+              content?.url && content?.goto && <Link href={content.goto} key={idx} style={{ height: "100%", minWidth: "100%" }}>
+                <div className={bannerstyles.scrollDiv}>
+                  <div className={bannerstyles.imgs}>
+                    <CldImage
+                      src={content?.url}
+                      loading='eager'
+                      priority
+                      alt={`imade${idx + 1}`}
+                      width={300}
+                      height={400}
+                    />
+                  </div>
+                  <div className={bannerstyles.details}>
+                    <div>{content?.category}</div>
+                    <div>{content?.description && content?.description.split('\n').map((item, key) => { return <span key={key}>{item}<br /></span> })}</div>
+                    <div>Rs {content?.price}</div>
+                  </div>
                 </div>
-                <div className={bannerstyles.details}>
-                  <div>{content.category}</div>
-                  <div>{content.description && content.description.split('\n').map((item, key) => { return <span key={key}>{item}<br /></span> })}</div>
-                  <div>Rs {content.price}</div>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </>)}
-      </div>
-
+              </Link>
+            ))}
+          </>)}
+        </div>
+      </>) : null}
     </div>
   )
 }
