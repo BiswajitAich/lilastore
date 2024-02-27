@@ -4,6 +4,7 @@ import React from 'react'
 import { CldImage } from 'next-cloudinary'
 import UseReveal from '@/app/components/effects/UseReveal'
 import StyleScript from '../../styles/products.module.css'
+import NoImage from './NoImage';
 
 
 interface Props {
@@ -45,6 +46,7 @@ const ClientProductMap: React.FC<any> = ({ProductData, path, alt}) => {
                                         target.style.opacity = "1";
                                     }}
                                     className={StyleScript.animation}
+                                    onError={NoImage}
                                 />
                             }
                         </div>

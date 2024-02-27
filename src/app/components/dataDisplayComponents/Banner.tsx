@@ -5,6 +5,7 @@ import bannerstyles from './../../styles/banner.module.css'
 import { CldImage } from 'next-cloudinary'
 import Link from 'next/link'
 import WaveLoader from '../effects/WaveLoader'
+import NoImage from '../simplifiedComponents/NoImage'
 
 interface product {
   id?: number,
@@ -194,6 +195,7 @@ const Banner: React.FC = () => {
                       alt={`imade${idx + 1}`}
                       width={300}
                       height={400}
+                      onError={NoImage}
                     />
                   </div>
                   <div className={bannerstyles.details}>

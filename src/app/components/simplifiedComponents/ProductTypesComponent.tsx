@@ -3,6 +3,7 @@ import React from 'react'
 import StyleScript from '../../styles/products.module.css'
 import { CldImage } from 'next-cloudinary'
 import Link from 'next/link'
+import NoImage from './NoImage'
 
 interface Props {
   price?: string
@@ -47,6 +48,7 @@ const ProductTypesComponent: React.FC<any> = ({ ProductData, heading }) => {
                       target.classList.remove(StyleScript.animation);
                       target.style.opacity = "1";
                     }}
+                    onError={NoImage}
                   />
                 }
               </div>

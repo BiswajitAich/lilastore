@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import pageStyle from '../styles/productPage.module.css';
 import { useRouter } from 'next/navigation';
 import { Metadata, Viewport } from 'next';
+import NoImage from '../components/simplifiedComponents/NoImage';
 
 interface PageDesignProps {
   selectedProduct: {
@@ -206,6 +207,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                     const target = e.target as HTMLImageElement;
                     target.style.opacity = "1";
                   }}
+                  onError={NoImage}
                 />
               ))
             ) : (
@@ -225,6 +227,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                   target.style.opacity = "1";
                   setLoaded(true);
                 }}
+                onError={NoImage}
               />
             )}
             <div
@@ -354,6 +357,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                 alt={'product Image'}
                 onDoubleClick={handleZoom}
                 style={{ transform: `scale(${zoom})` }}
+                onError={NoImage}
               />
             </div>
 
@@ -370,6 +374,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                     height={100}
                     loading='eager'
                     alt={'Img' + idx}
+                    onError={NoImage}
                   />
                 </div>
               ))}
