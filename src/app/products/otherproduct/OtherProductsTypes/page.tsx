@@ -1,6 +1,6 @@
 import OtherProductsTypesClient from "./OtherProductsTypesClient";
 const fetchProductsData = async () => {
-    if (navigator.onLine) {
+    if (typeof navigator !== 'undefined' && navigator?.onLine) {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API}otherproduct/otherproduct.json`, {
             method: "GET",
             // cache: "force-cache"

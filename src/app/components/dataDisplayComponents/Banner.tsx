@@ -46,7 +46,7 @@ const Banner: React.FC = () => {
       }
     };
 
-    if(navigator.onLine) fetchData();
+    if (typeof navigator !== 'undefined' && navigator?.onLine) fetchData();
 
   }, [displayDiv, navigator?.onLine])
 

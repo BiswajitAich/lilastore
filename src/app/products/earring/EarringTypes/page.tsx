@@ -1,10 +1,10 @@
 import EarringTypesClient from "./EarringTypesClient";
 const fetchProductsData = async () => {
-    if (navigator.onLine) {
+    if (typeof navigator !== 'undefined' && navigator?.onLine) {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API}earring/earring.json`, {
             method: "GET",
             // // cache: "force-cache"
-            next: { revalidate: 3600}
+            next: { revalidate: 3600 }
         })
         if (res.ok) {
             const data = await res.json()
@@ -13,7 +13,7 @@ const fetchProductsData = async () => {
         } else {
             return null
         }
-    }else{
+    } else {
         return null
     }
 }
