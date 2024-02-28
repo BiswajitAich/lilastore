@@ -1,94 +1,99 @@
 [
     {
-        "name": "Golden Necklace",
-        "link": "/lilastore/products/necklace/necklaces/golden-necklace"
-    },
-    {
-        "name": "Golden Earring",
-        "link": "/lilastore/products/earring/earrings/golden-earring"
-    },
-    {
-        "name": "Golden Bangle",
-        "link": "/lilastore/products/bangle/bangles/golden-bangle"
-    },
-    {
-        "name": "Oxidized Necklace",
-        "link": "/lilastore/products/necklace/necklaces/oxydized-necklace"
-    },
-    {
-        "name": "Oxidized Earring",
-        "link": "/lilastore/products/earring/earrings/oxydized-earring"
-    },
-    {
-        "name": "Oxidized Bangle",
-        "link": "/lilastore/products/bangle/bangles/oxydized-bangle"
-    },
-    {
-        "name": "Terracotta Necklace",
-        "link": "/lilastore/products/necklace/necklaces/terracotta-necklace"
-    },
-    {
-        "name": "Terracotta Earring",
-        "link": "/lilastore/products/earring/earrings/terracotta-earring"
-    },
-    {
-        "name": "Chemicalbead Necklace",
-        "link": "/lilastore/products/necklace/necklaces/chemicalbead-necklace"
-    },
-    {
-        "name": "Kundan Necklace",
-        "link": "/lilastore/products/necklace/necklaces/kundan-necklace"
-    },
-    {
-        "name": "Fancy Necklace",
-        "link": "/lilastore/products/necklace/necklaces/fancy-necklace"
-    },
-    {
-        "name": "Choker",
-        "link": "/lilastore/products/necklace/necklaces/choker"
-    },
-    {
-        "name": "Mangalsutra",
-        "link": "/lilastore/products/necklace/necklaces/mangalsutra"
-    },
-    {
-        "name": "Stone Earring",
-        "link": "/lilastore/products/earring/earrings/adstone-earring"
-    },
-    {
-        "name": "AD Stone Earring",
-        "link": "/lilastore/products/earring/earrings/adstone-earring"
-    },
-    {
-        "name": "Funky Earring",
-        "link": "/lilastore/products/earring/earrings/funky-earring"
-    },
-    {
-        "name": "Fancy Earring",
-        "link": "/lilastore/products/earring/earrings/fancy-earring"
-    },
-    {
         "name": "Bracelets",
-        "link": "/lilastore/products/bangle/bangles/bracelet"
+        "link": "/products/bangle/bangles/bracelet"
     },
     {
         "name": "Mantasa",
-        "link": "/lilastore/products/bangle/bangles/mantasa"
+        "link": "/products/bangle/bangles/mantasa"
+    },
+    {
+        "name": "Golden Bangle",
+        "link": "/products/bangle/bangles/golden-bangle"
+    },
+    {
+        "name": "Oxidized Bangle",
+        "link": "/products/bangle/bangles/oxydized-bangle"
+    },
+    {
+        "name": "Makeup kits",
+        "link": "/products/cosmetic/cosmetics/makeup"
+    },
+    {
+        "name": "Stone Earring",
+        "link": "/products/earring/earrings/adstone-earring"
+    },
+    {
+        "name": "AD Stone Earring",
+        "link": "/products/earring/earrings/adstone-earring"
+    },
+    {
+        "name": "Fancy Earring",
+        "link": "/products/earring/earrings/fancy-earring"
+    },
+    {
+        "name": "Funky Earring",
+        "link": "/products/earring/earrings/funky-earring"
+    },
+    {
+        "name": "Golden Earring",
+        "link": "/products/earring/earrings/golden-earring"
+    },
+    {
+        "name": "Oxidized Earring",
+        "link": "/products/earring/earrings/oxydized-earring"
+    },
+    {
+        "name": "Terracotta Earring",
+        "link": "/products/earring/earrings/terracotta-earring"
+    },
+    {
+        "name": "Chemicalbead Necklace",
+        "link": "/products/necklace/necklaces/chemicalbead-necklace"
+    },
+    {
+        "name": "Choker",
+        "link": "/products/necklace/necklaces/choker"
+    },
+    {
+        "name": "Fancy Necklace",
+        "link": "/products/necklace/necklaces/fancy-necklace"
+    },
+    {
+        "name": "Golden Necklace",
+        "link": "/products/necklace/necklaces/golden-necklace"
+    },
+    {
+        "name": "Kundan Necklace",
+        "link": "/products/necklace/necklaces/kundan-necklace"
+    },
+    {
+        "name": "Mangalsutra",
+        "link": "/products/necklace/necklaces/mangalsutra"
+    },
+    {
+        "name": "Oxidized Necklace",
+        "link": "/products/necklace/necklaces/oxydized-necklace"
+    },
+    {
+        "name": "Terracotta Necklace",
+        "link": "/products/necklace/necklaces/terracotta-necklace"
     },
     {
         "name": "Chains",
-        "link": "/lilastore/products/otherproduct/otherproducts/chain"
+        "link": "/products/otherproduct/otherproducts/chain"
     },
     {
         "name": "Kamarband",
-        "link": "/lilastore/products/otherproduct/otherproducts/kamarband"
+        "link": "/products/otherproduct/otherproducts/kamarband"
+    },
+    
+    {
+        "name": "Payals",
+        "link": "/products/otherproduct/otherproducts/payal"
     },
     {
         "name": "Rings",
-        "link": "/lilastore/products/otherproduct/otherproducts/ring"
-    },
-    {
-        "name": "Payals",
-        "link": "/lilastore/products/otherproduct/otherproducts/payal"
+        "link": "/products/otherproduct/otherproducts/ring"
     }
 ]
