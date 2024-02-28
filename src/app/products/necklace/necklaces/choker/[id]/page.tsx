@@ -4,13 +4,14 @@ import Necklaces from '../../../Necklaces';
 import NotFound from '@/app/not-found';
 import { Metadata } from 'next';
 import { fetchProductData } from '@/app/api/fetchProductData';
+import Footer from '@/app/components/Footer';
 
 let selectedProduct: any | null = null;
 
 const ChokerNecklacesPage = async ({ params }: { params: { id: string } }) => {
   const productId = parseInt(params.id, 10);
   const ProductData = await fetchProductData("necklace/choker")
-  selectedProduct = ProductData.find((product: { id: number; }) => product.id === productId);
+  selectedProduct = ProductData?.find((product: { id: number; }) => product.id === productId);
 
   if (!selectedProduct) {
     return <NotFound />;
@@ -25,6 +26,7 @@ const ChokerNecklacesPage = async ({ params }: { params: { id: string } }) => {
     }}>
       <PageDesign selectedProduct={selectedProduct} />
       <Necklaces />
+      <Footer />
     </div>
   );
 };

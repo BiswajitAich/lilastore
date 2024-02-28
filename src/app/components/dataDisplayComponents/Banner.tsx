@@ -33,7 +33,8 @@ const Banner: React.FC = () => {
         const signal = control.signal
         const response = await fetch('https://lilastore007-default-rtdb.firebaseio.com/banner/.json', {
           signal,
-          cache: "force-cache"
+          // cache: "force-cache"
+            next: { revalidate: 3600}
         });
 
         const data = await response.json();
@@ -45,8 +46,9 @@ const Banner: React.FC = () => {
       }
     };
 
-    fetchData();
-  }, [displayDiv])
+    if(navigator.onLine) fetchData();
+
+  }, [displayDiv, navigator?.onLine])
 
   useEffect(() => {
 
@@ -152,7 +154,7 @@ const Banner: React.FC = () => {
       if (screenWidth > 300) {
         const element = scrolls.children[newPosition] as HTMLElement;
         scrolls.scrollTo({
-          left: element.offsetLeft,
+          left: element?.offsetLeft,
           behavior: 'smooth',
         });
       } else return;

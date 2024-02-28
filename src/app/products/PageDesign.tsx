@@ -5,6 +5,7 @@ import pageStyle from '../styles/productPage.module.css';
 import { useRouter } from 'next/navigation';
 import { Metadata, Viewport } from 'next';
 import NoImage from '../components/simplifiedComponents/NoImage';
+import StopContextMenu from '../components/simplifiedComponents/StopContextMenu';
 
 interface PageDesignProps {
   selectedProduct: {
@@ -136,7 +137,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
     }
   };
 
-  const handleSocialMedia  = async (e: string) => {
+  const handleSocialMedia = async (e: string) => {
     if (e === 'whatsapp') {
       const currentUrl = window.location.href;
       const message = 'Checkout this product ';
@@ -154,33 +155,33 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
     else return
   }
 
-  
-  const handleCopy  = () => {
+
+  const handleCopy = () => {
     const currentUrl = window.location.href;
-    
+
     const tempInput = document.createElement('input');
     tempInput.value = currentUrl;
     document.body.appendChild(tempInput);
-  
+
     tempInput.select();
     document.execCommand('copy');
-  
+
     document.body.removeChild(tempInput);
-  
+
     console.log('URL copied to clipboard:', currentUrl);
     setShowCopied(true);
-  
+
     setTimeout(() => {
       setShowCopied(false);
     }, 500);
   };
-  
+
 
 
 
 
   return (
-    <div className={pageStyle.pagebody}>
+    <div className={pageStyle.pagebody} onContextMenu={StopContextMenu}>
       <div className={pageStyle.pagecontainer}>
         <div className={pageStyle.head}>
           <button type='button' onClick={() => { router.push('/') }}>Home</button>
@@ -390,16 +391,17 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
 };
 
 
-// export async function generateMetadata({ selectedProduct }: PageDesignProps): Promise<Metadata> {
-//   return {
-//     title: selectedProduct.description,
-//     openGraph: {
-//       images: selectedProduct.url,
-//       description: selectedProduct.detail,
-//     },
-//     keywords: `${selectedProduct.description}, ${selectedProduct.detail}`,
-//   }
-// }
+export async function generateMetadata({ selectedProduct }: PageDesignProps): Promise<Metadata> {
+  return {
+    title: selectedProduct.description,
+    openGraph: {
+      images: selectedProduct.url,
+      description: selectedProduct.detail,
+    },
+    keywords: `${selectedProduct.description}, ${selectedProduct.detail}`,
+  }
+}
+
 export const viewport: Viewport = {
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#d4af37' },

@@ -12,14 +12,10 @@ import { Marquee } from './components/Marquee'
 import Loading from './loading';
 import Footer from './components/Footer';
 import Cosmetics from './products/cosmetic/Cosmetics';
+import StopContextMenu from './components/simplifiedComponents/StopContextMenu';
 
 export default function Home() {
 
-  useEffect(() => {
-    document.addEventListener('contextmenu', function (event) {
-      event.preventDefault();
-    });
-  }, [])
 
   useEffect(() => {
     // window.scrollTo(0, 0);
@@ -39,18 +35,11 @@ export default function Home() {
       console.log('Add to Home Screen prompt is not available on this device/browser.');
     }
 
-
-    return () => {
-      document.removeEventListener('contextmenu', function (event) {
-        event.preventDefault();
-      });
-    };
-
   }, [])
 
   return (
     <div>
-      <main className={styles.main}>
+      <main className={styles.main} onContextMenu={StopContextMenu}>
         <Suspense fallback={<Loading />} >
           <Header />
           <Marquee />

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: 'Lila Store App',
   description: 'Jewellery & Cosmetic website',
   manifest: '/manifest.json',
-  // themeColor: '#d4af37',
+  themeColor: '#d4af37',
   verification: {
     google: ["8AO-KxssBnO3-PTBnbw4TXV-vTiJt7WDb8Y4K_4qxVo", "XqAHR-yUTZKXnzYTxXLO15Qh8FTBYbNnlVU46jkByEI"],
   },
@@ -64,8 +64,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+  viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0'
+  // viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
 }
+
+
 
 export default function RootLayout({
   children,

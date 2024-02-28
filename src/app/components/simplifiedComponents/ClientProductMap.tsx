@@ -5,6 +5,7 @@ import { CldImage } from 'next-cloudinary'
 import UseReveal from '@/app/components/effects/UseReveal'
 import StyleScript from '../../styles/products.module.css'
 import NoImage from './NoImage';
+import StopContextMenu from './StopContextMenu';
 
 
 interface Props {
@@ -24,7 +25,7 @@ const ClientProductMap: React.FC<any> = ({ProductData, path, alt}) => {
     const refs: React.RefObject<HTMLAnchorElement>[] = (productData?.map(() => UseReveal()) ?? []) as React.RefObject<HTMLAnchorElement>[];
 
     return (
-        <div className={StyleScript.productContainer}>
+        <div className={StyleScript.productContainer} onContextMenu={StopContextMenu}>
             {productData?.map((material:Props, idx:number) => (
                 <Link href={`${path}${material.id}`} ref={refs[idx]} className={StyleScript.reveal} key={idx}>
                     <div className={StyleScript.productCard} >

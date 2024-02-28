@@ -4,6 +4,7 @@ import StyleScript from '../../styles/products.module.css'
 import { CldImage } from 'next-cloudinary'
 import Link from 'next/link'
 import NoImage from './NoImage'
+import StopContextMenu from './StopContextMenu'
 
 interface Props {
   price?: string
@@ -21,7 +22,7 @@ interface Props {
 
 const ProductTypesComponent: React.FC<any> = ({ ProductData, heading }) => {
   return (
-    <div className={StyleScript.productBody}>
+    <div className={StyleScript.productBody} onContextMenu={StopContextMenu}>
       <h3>{heading}<div /></h3>
       <div className={StyleScript.productContainer}>
         {ProductData?.map((material: Props, idx: number) => (

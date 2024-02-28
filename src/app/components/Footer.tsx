@@ -1,5 +1,7 @@
+"use client"
 import React from 'react'
 import Style from './../styles/fotter.module.css'
+import NoImage from './simplifiedComponents/NoImage'
 
 const Footer: React.FC = () => {
     return (
@@ -8,15 +10,32 @@ const Footer: React.FC = () => {
                 <h4>CONTACT US ON :</h4>
                 <div>
                     <a href='https://wa.me/9038810186' target="_blank" rel="noopener noreferrer">
-                        <img src="https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/whatsapp-icon.webp" alt='ContactWhatsApp' /><p>WhatsApp</p>
+                        <img
+                            src="https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/whatsapp-icon.webp"
+                            alt='ContactWhatsApp'
+                            onError={NoImage}
+                            loading="lazy"
+                        />
+                        <p>WhatsApp</p>
                     </a>
                     <div style={{ minHeight: '50px', width: '5px', backgroundColor: 'white' }} />
                     <a href='https://www.facebook.com/profile.php?id=100091896976745' target="_blank" rel="noopener noreferrer" >
-                        <img src='https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/facebook-icon.webp' alt='ContactFacebook' /><p>Facebook</p>
+                        <img
+                            src='https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/facebook-icon.webp'
+                            alt='ContactFacebook'
+                            onError={NoImage}
+                            loading="lazy"
+                        />
+                        <p>Facebook</p>
                     </a>
                     <div style={{ minHeight: '50px', width: '5px', backgroundColor: 'white' }} />
                     <a href='https://instagram.com/suraviai?igshid=YWYwM2|1ZDdmOQ==' target="_blank" rel="noopener noreferrer">
-                        <img src='https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/instagram-icon.webp' alt='ContactInsta' /><p>Instagram</p>
+                        <img src='https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/instagram-icon.webp'
+                            alt='ContactInsta'
+                            onError={NoImage}
+                            loading="lazy"
+                        />
+                        <p>Instagram</p>
                     </a>
                 </div>
             </div>
@@ -25,18 +44,32 @@ const Footer: React.FC = () => {
                 <h4>Follow US ON :</h4>
                 <div>
                     <a href='https://www.facebook.com/profile.php?id=100091896976745' target="_blank" rel="noopener noreferrer" >
-                        <img src='https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/facebook-icon.webp' alt='FollowFacebook' /><p>Facebook</p>
+                        <img
+                            src='https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/facebook-icon.webp'
+                            alt='FollowFacebook'
+                            onError={NoImage}
+                            loading="lazy"
+                        />
+                        <p>Facebook</p>
                     </a>
                     <div style={{ minHeight: '50px', width: '5px', backgroundColor: 'white' }} />
                     <a href='https://instagram.com/suraviai?igshid=YWYwM2|1ZDdmOQ==' target="_blank" rel="noopener noreferrer">
-                        <img src='https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/instagram-icon.webp' alt='FollowInsta' /><p>Instagram</p>
+                        <img
+                            src='https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/instagram-icon.webp'
+                            alt='FollowInsta'
+                            onError={NoImage}
+                            loading="lazy"
+                        />
+                        <p>Instagram</p>
                     </a>
                 </div>
             </div>
 
             <div className={Style.container}>
                 <h4>STORE LOCATION :</h4>
-                <p>Find us on <a href='https://maps.app.goo.gl/D6ZnhFRcBDfce6kS9' target="_blank" rel="noreferrer noopener" style={{ borderBottom: "1px solid cyan" }}>Google Maps</a></p>
+                <p>Find us on <a href='https://maps.app.goo.gl/D6ZnhFRcBDfce6kS9'
+                    target="_blank" rel="noreferrer noopener"
+                    style={{ borderBottom: "1px solid cyan" }}>Google Maps</a></p>
                 <p>Lal Bahadur Road, Rammohan Place, Konnagar, Kolkata, West Bengal 712235</p>
             </div>
 

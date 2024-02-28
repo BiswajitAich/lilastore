@@ -12,7 +12,7 @@ const GoldenBanglePage = async ({ params }: { params: { id: string } }) => {
   const productId = parseInt(params.id, 10);
   const ProductData = await fetchProductData("bangle/oxydized-bangle")
 
-  selectedProduct = ProductData.find((product: { id: number; }) => product.id === productId);
+  selectedProduct = ProductData?.find((product: { id: number; }) => product.id === productId);
 
   if (!selectedProduct) {
     return <NotFound />;

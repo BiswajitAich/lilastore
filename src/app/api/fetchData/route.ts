@@ -6,7 +6,7 @@ export const GET = async (request: NextRequest) => {
 
     const fetchData = async (searchName: string) => {
         try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API}/${searchName}.json`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API}${searchName}.json`);
             const data = await res.json()
             console.log("server data fetched:",data)
             return data;
