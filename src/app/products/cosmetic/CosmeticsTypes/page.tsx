@@ -1,6 +1,6 @@
 import CosmeticsTypesClient from "./CosmeticsTypesClient";
 const fetchProductsData = async () => {
-    if (typeof navigator !== 'undefined' && navigator?.onLine) {
+    try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API}cosmetic/cosmetic.json`, {
             method: "GET",
             // cache: "force-cache"
@@ -13,7 +13,7 @@ const fetchProductsData = async () => {
         } else {
             return null
         }
-    } else {
+    } catch (error) {
         return null
     }
 }

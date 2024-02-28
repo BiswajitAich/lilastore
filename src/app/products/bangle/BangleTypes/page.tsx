@@ -1,20 +1,20 @@
 import BangleTypesClient from "./BangleTypesClient"
 
 const fetchProductsData = async () => {
-    if (typeof navigator !== 'undefined' && navigator?.onLine) {
+    try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API}bangle/bangle.json`, {
             method: "GET",
             // cache: "force-cache"
-            next: { revalidate: 3600}
+            next: { revalidate: 3600 }
         })
         if (res.ok) {
             const data = await res.json()
             console.log("static data fetched:", data)
             return data;
-        }else{
+        } else {
             return null
         }
-    }else{
+    } catch (error) {
         return null
     }
 }
