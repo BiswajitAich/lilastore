@@ -71,7 +71,7 @@ function MiniSlider() {
                     borderRadius: "12px",
                     transition: "all 0.3s ease-in-out",
                   }}
-                  onError={NoImage}
+                  onError={(e) => NoImage(e)}
                 />
               </Link>
             </div>

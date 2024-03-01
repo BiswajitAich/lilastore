@@ -1,8 +1,9 @@
+import { Suspense } from "react";
+import Loading from "../../loading";
 import OtherProductsTypesClient from "./OtherProductsTypesClient";
 const fetchProductsData = async () => {
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API}otherproduct/otherproduct.json`, {
-            method: "GET",
             // cache: "force-cache"
             next: { revalidate: 3600}
         })
@@ -19,7 +20,12 @@ const fetchProductsData = async () => {
 }
 const OtherProductsTypes: React.FC = async () => {
     const productData = await fetchProductsData()
-    return (<OtherProductsTypesClient ProductData={productData} />)
+    return (<>
+        <Suspense fallback={<Loading />}>
+            <OtherProductsTypesClient ProductData={productData} />
+        </Suspense>
+    </>)
+
 }
 
 export default OtherProductsTypes

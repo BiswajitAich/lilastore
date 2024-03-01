@@ -208,7 +208,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                     const target = e.target as HTMLImageElement;
                     target.style.opacity = "1";
                   }}
-                  onError={NoImage}
+                  onError={(e) => NoImage(e)}
                 />
               ))
             ) : (
@@ -228,7 +228,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                   target.style.opacity = "1";
                   setLoaded(true);
                 }}
-                onError={NoImage}
+                onError={(e) => NoImage(e)}
               />
             )}
             <div
@@ -358,7 +358,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                 alt={'product Image'}
                 onDoubleClick={handleZoom}
                 style={{ transform: `scale(${zoom})` }}
-                onError={NoImage}
+                onError={(e) => NoImage(e)}
               />
             </div>
 
@@ -375,7 +375,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                     height={100}
                     loading='eager'
                     alt={'Img' + idx}
-                    onError={NoImage}
+                    onError={(e) => NoImage(e)}
                   />
                 </div>
               ))}

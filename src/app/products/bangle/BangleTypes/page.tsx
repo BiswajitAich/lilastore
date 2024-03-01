@@ -1,9 +1,10 @@
+import React, { Suspense } from "react"
 import BangleTypesClient from "./BangleTypesClient"
+import Loading from "@/app/loading"
 
 const fetchProductsData = async () => {
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API}bangle/bangle.json`, {
-            method: "GET",
             // cache: "force-cache"
             next: { revalidate: 3600 }
         })
@@ -21,7 +22,11 @@ const fetchProductsData = async () => {
 
 const BangleTypes: React.FC = async () => {
     const productData = await fetchProductsData()
-    return (<BangleTypesClient ProductData={productData} />)
+    return (<>
+        <Suspense fallback={<Loading />}>
+            <BangleTypesClient ProductData={productData} />
+        </Suspense>
+    </>)
 }
 
 export default BangleTypes

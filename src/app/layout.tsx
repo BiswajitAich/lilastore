@@ -16,7 +16,7 @@ export const viewport: Viewport = {
   ],
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
+  maximumScale: 5,
   // userScalable: false,
 }
 export const metadata: Metadata = {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0'
+  viewport: 'width=device-width, initial-scale=1.0, maximum-scale=5.0'
   // viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
 }
 

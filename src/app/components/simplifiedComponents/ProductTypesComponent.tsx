@@ -44,12 +44,12 @@ const ProductTypesComponent: React.FC<any> = ({ ProductData, heading }) => {
                       transition: "all 1s ease",
                     }}
                     className={StyleScript.animation}
+                    onError={(e)=>NoImage(e)}
                     onLoad={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.classList.remove(StyleScript.animation);
                       target.style.opacity = "1";
                     }}
-                    onError={NoImage}
                   />
                 }
               </div>

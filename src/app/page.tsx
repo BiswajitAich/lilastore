@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, Suspense } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import styles from './page.module.css'
 import { Header } from './components';
 import Banner from './components/dataDisplayComponents/Banner';
@@ -14,28 +14,49 @@ import Footer from './components/Footer';
 import Cosmetics from './products/cosmetic/Cosmetics';
 import StopContextMenu from './components/simplifiedComponents/StopContextMenu';
 
+interface BeforeInstallPromptEvent extends Event {
+  platforms: string[];
+  userChoice: Promise<{
+    outcome: 'accepted' | 'dismissed';
+    platform: string;
+  }>;
+  prompt(): Promise<void>;
+}
+
+
 export default function Home() {
 
-
+  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   useEffect(() => {
-    // window.scrollTo(0, 0);
-
-    if ('beforeinstallprompt' in window) {
-      window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        const event = e as any;
-        event.prompt();
-        event.userChoice.then((choice: { outcome: string }) => {
-          if (choice.outcome === 'accepted') {
-            console.log('User accepted the install prompt');
+    const handleBeforeInstallPrompt = (event: Event) => {
+      if ('prompt' in event) {
+        event.preventDefault();
+        setDeferredPrompt(event as BeforeInstallPromptEvent);
+      }
+    };
+    const handleAutoPrompt = () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult: { outcome: string; }) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted the A2HS prompt');
+          } else {
+            console.log('User dismissed the A2HS prompt');
           }
+          setDeferredPrompt(null);
         });
-      });
-    } else {
-      console.log('Add to Home Screen prompt is not available on this device/browser.');
-    }
+      }
+    };
 
-  }, [])
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    const autoPromptTimer = setTimeout(() => {
+      handleAutoPrompt();
+    }, 10000);
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+      clearTimeout(autoPromptTimer);
+    };
+  }, [deferredPrompt]);
 
   return (
     <div>
@@ -46,7 +67,7 @@ export default function Home() {
           <Banner />
           <MiniSlider />
           <Necklaces />
-          <Earrings /> 
+          <Earrings />
           <Bangles />
           <Cosmetics />
           <OtherProduct />
@@ -56,3 +77,5 @@ export default function Home() {
     </div>
   )
 }
+
+

@@ -197,7 +197,7 @@ const Banner: React.FC = () => {
                       alt={`imade${idx + 1}`}
                       width={300}
                       height={400}
-                      onError={NoImage}
+                      onError={(e) =>NoImage(e)}
                     />
                   </div>
                   <div className={bannerstyles.details}>

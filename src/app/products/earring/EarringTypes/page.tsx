@@ -1,8 +1,9 @@
+import { Suspense } from "react";
+import Loading from "../../loading";
 import EarringTypesClient from "./EarringTypesClient";
 const fetchProductsData = async () => {
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API}earring/earring.json`, {
-            method: "GET",
             // // cache: "force-cache"
             next: { revalidate: 3600 }
         })
@@ -19,7 +20,12 @@ const fetchProductsData = async () => {
 }
 const EarringTypes: React.FC = async () => {
     const productData = await fetchProductsData()
-    return (<EarringTypesClient ProductData={productData} />)
+    return (<>
+        <Suspense fallback={<Loading />}>
+            <EarringTypesClient ProductData={productData} />
+        </Suspense>
+    </>)
+
 }
 
 export default EarringTypes
