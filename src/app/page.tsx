@@ -60,7 +60,7 @@ export default function Home() {
 
   return (
     <div>
-      <main className={styles.main} onContextMenu={StopContextMenu}>
+      <main className={styles.main} >
         <Suspense fallback={<Loading />} >
           <Header />
           <Marquee />
