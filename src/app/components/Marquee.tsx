@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import style from "./../styles/marquee.module.css";
+import StopContextMenu from "./simplifiedComponents/StopContextMenu";
 
 export const Marquee: React.FC = () => {
   const data = [
@@ -39,7 +40,7 @@ export const Marquee: React.FC = () => {
   };
 
   return (
-    <div className={style.marqueeBody}>
+    <div className={style.marqueeBody} onContextMenu={StopContextMenu}>
         <div className={style.marqueeText}>
           <p style={{ color: getTextColor(index) }}>{data[index]}</p>
         </div>

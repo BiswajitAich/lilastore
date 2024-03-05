@@ -2,10 +2,11 @@
 import React from 'react'
 import Style from './../styles/fotter.module.css'
 import NoImage from './simplifiedComponents/NoImage'
+import StopContextMenu from './simplifiedComponents/StopContextMenu'
 
 const Footer: React.FC = () => {
     return (
-        <div className={Style.footerBody}>
+        <div className={Style.footerBody} onContextMenu={StopContextMenu}>
             <div className={Style.container}>
                 <h4>CONTACT US ON :</h4>
                 <div>

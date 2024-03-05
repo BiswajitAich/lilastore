@@ -1,13 +1,14 @@
 "use client"
 import { useEffect } from 'react';
 import Style from './../styles/loading.module.css'
+import StopContextMenu from './simplifiedComponents/StopContextMenu';
 
 const Loading: React.FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
     return (
-        <div className={Style.main}>
+        <div className={Style.main} onContextMenu={StopContextMenu}>
             <div className={Style.position}>
                 <div className={Style.ring}>
                 </div>

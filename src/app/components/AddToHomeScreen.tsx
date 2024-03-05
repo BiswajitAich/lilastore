@@ -1,63 +1,40 @@
 "use client"
 import { NextPage } from "next";
-import React from "react";
-import style from "@/app/styles/effects/addToHomeScreen.module.css"
+import React, { useEffect } from "react";
+import style from "@/app/styles/effects/addToHomeScreen.module.css";
 
-const Home: NextPage = () => {
+const AddToHomeScreen: NextPage = () => {
     const [display, setDisplay] = React.useState<boolean>(false);
-    let deferredPrompt: any;
+    const [deferredPrompt, setDeferredPrompt] = React.useState<Event | null>(null);
 
-    React.useEffect(() => {
-        const handleBeforeInstallPrompt = (event: any) => {
-            event.preventDefault();
-
-            if (window && 'deferredPrompt' in window && window.deferredPrompt) {
-                deferredPrompt = window.deferredPrompt;
-            
-                if (!window.matchMedia('(display-mode: standalone)').matches) {
-                    setDisplay(true);
-                    console.log("beforeinstallprompt event fired");
-                }
-            } else {
-                console.warn("No prompt available in beforeinstallprompt event");
-            }
-            
+    useEffect(() => {
+        const handler = (e: Event) => {
+            e.preventDefault();
+            setDeferredPrompt(e);
+            setDisplay(true);
         };
-        
 
-        window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+        window.addEventListener("beforeinstallprompt", handler);
 
         return () => {
-            window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+            window.removeEventListener("beforeinstallprompt", handler);
         };
     }, []);
 
     const handleInstall = () => {
         if (deferredPrompt) {
-            deferredPrompt.prompt();
+            (deferredPrompt as any).prompt();
 
-            deferredPrompt.userChoice
-                .then((choiceResult: any) => {
-                    console.log("User choice result:", choiceResult);
-
-                    if (choiceResult.outcome === "accepted") {
-                        console.log("User accepted the install prompt");
-                    } else {
-                        console.log("User dismissed the install prompt");
-                    }
-
-                    deferredPrompt = null;
-                    setDisplay(false);
-                })
-                .catch((error: any) => {
-                    console.error("Error during prompt:", error);
-                });
-        } else {
-            console.warn("No deferred prompt available");
+            (deferredPrompt as any).userChoice.then((choiceResult: any) => {
+                if (choiceResult.outcome === "accepted") {
+                    console.log("User accepted the A2HS prompt");
+                } else {
+                    console.log("User dismissed the A2HS prompt");
+                }
+                setDeferredPrompt(null);
+            });
         }
     };
-
-
 
     const handleDisplay = () => {
         setDisplay(!display);
@@ -80,4 +57,4 @@ const Home: NextPage = () => {
     );
 };
 
-export default Home;
+export default AddToHomeScreen;

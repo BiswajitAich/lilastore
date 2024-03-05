@@ -6,6 +6,7 @@ import { CldImage } from 'next-cloudinary'
 import Link from 'next/link'
 import WaveLoader from '../effects/WaveLoader'
 import NoImage from '../simplifiedComponents/NoImage'
+import StopContextMenu from '../simplifiedComponents/StopContextMenu'
 
 interface product {
   id?: number,
@@ -164,7 +165,7 @@ const Banner: React.FC = () => {
 
 
   return (
-    <div className={bannerstyles.banner}>
+    <div className={bannerstyles.banner} onContextMenu={StopContextMenu}>
       {displayDiv ? (<>
 
         {displayDiv ? (

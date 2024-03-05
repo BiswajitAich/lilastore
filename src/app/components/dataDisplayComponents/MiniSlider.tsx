@@ -6,6 +6,7 @@ import { CldImage } from 'next-cloudinary';
 import Link from 'next/link';
 import { fetchProductData } from '@/app/api/fetchProductData';
 import NoImage from '../simplifiedComponents/NoImage';
+import StopContextMenu from '../simplifiedComponents/StopContextMenu';
 
 interface Product {
   goto: string;
@@ -37,7 +38,7 @@ function MiniSlider() {
   };
 
   return (
-    <div className={minisliderstyles.miniMain}>
+    <div className={minisliderstyles.miniMain} onContextMenu={StopContextMenu}>
       {productData ? (<>
         <button onClick={handleLeftBtn} aria-label="Previous Slide" className={minisliderstyles.leftBtn}>
           <div className={minisliderstyles.goBack1}></div>

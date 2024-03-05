@@ -1,6 +1,7 @@
 import { Key, useRef, useState } from 'react';
 import productData from '../../../../public/data/search/searchData.json'
 import headerStyles from '../../styles/header.module.css'
+import StopContextMenu from '../simplifiedComponents/StopContextMenu';
 interface Product {
     name: string,
     link: string
@@ -36,7 +37,7 @@ const SearchBar: React.FC = () => {
 
     return (
         <>
-            <div className={headerStyles.headerDiv}>
+            <div className={headerStyles.headerDiv} onContextMenu={StopContextMenu}>
                 <input
                     type='text'
                     placeholder='Search for products...'

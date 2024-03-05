@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import headerStyles from './../styles/header.module.css'
 import SearchBar from './dataDisplayComponents/SearchBar';
+import StopContextMenu from './simplifiedComponents/StopContextMenu';
 
 
 
@@ -35,7 +36,7 @@ const Header = () => {
 
 
   return (
-    <header className={headerStyles.header}>
+    <header className={headerStyles.header} onContextMenu={StopContextMenu}>
 
       {/* logo */}
       {logo ? (
