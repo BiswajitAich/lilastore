@@ -1,12 +1,14 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import type { Viewport } from 'next'
+import dynamic from 'next/dynamic';
 import { Inter } from 'next/font/google'
 // import Footer from './components/Footer'
 // import dynamic from 'next/dynamic';
 
 // import SplashScreen from './components/effects/SplashScreen'
 // const SplashScreen = dynamic(() => import('./components/effects/SplashScreen'), { ssr: false });
+const AddToHomeScreen = dynamic(() => import('./components/AddToHomeScreen'), { ssr: false });
 
 const inter = Inter({ subsets: ['latin'] })
 export const viewport: Viewport = {
@@ -79,6 +81,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
+        <AddToHomeScreen />
         {/* <Footer /> */}
         {/* <SplashScreen /> */}
       </body>

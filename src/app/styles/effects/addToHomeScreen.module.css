@@ -1,0 +1,55 @@
+.container {
+  width: 98dvw;
+  height: 60px;
+  background-color: darkcyan;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 7px;
+  margin-left: 1dvw;
+  position: fixed;
+  bottom: 10px;
+  right: 1dvw;
+  max-width: 500px;
+  box-shadow: inset 1px 1px 3px black, inset -1px -1px 3px white;
+}
+
+.text {
+  color: gold;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.homeScreenBtn {
+  background: hotpink;
+  border: none;
+  color: darkred;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  margin-right: 35px;
+  box-shadow: inset 1px 1px 3px black, inset -1px -1px 3px white;
+}
+
+.homeScreenBtn:hover{
+  background: radial-gradient(#ff002d, tomato, gold);
+}
+
+.cross {
+  color: black;
+  background: rgba(225, 225, 225, 0.3);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+
+}
+
+.cross:hover{
+  color: rgb(255, 255, 255);
+  background: rgba(0, 0, 0, 0.3);
+}
