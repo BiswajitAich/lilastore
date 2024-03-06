@@ -11,6 +11,9 @@ import { Marquee } from './components/Marquee'
 import Loading from './loading';
 import Footer from './components/Footer';
 import Cosmetics from './products/cosmetic/Cosmetics';
+import dynamic from 'next/dynamic';
+const FloatingOptions = dynamic(() => import('./components/FloatingOptions'), { ssr: false });
+
 
 export default function Home() {
 
@@ -28,6 +31,7 @@ export default function Home() {
           <Cosmetics />
           <OtherProduct />
           <Footer />
+          <FloatingOptions />
         </Suspense>
       </main>
     </div>

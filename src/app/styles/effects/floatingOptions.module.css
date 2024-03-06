@@ -1,0 +1,142 @@
+.navContainer {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  inset: 0 0 0 0;
+  transition: background-color 5s ease;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+    }
+
+  to {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    }
+}
+
+.navDiv {
+  position: fixed;
+  bottom: 1dvh;
+  left: 1dvh;
+  transition: all 0.4s ease;
+}
+
+.navButton {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  overflow: hidden;
+}
+
+.navButton div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(240, 248, 255, 0.7);
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navButtonBar {
+  width: 35px;
+  height: 6px;
+  background-color: black;
+  border-radius: 3px;
+}
+
+.navButtonBar:nth-child(1) {
+  margin-top: 5px;
+}
+
+.navButtonBar:nth-child(3) {
+  margin-bottom: 5px;
+}
+
+.navButtonX {
+  color: whitesmoke;
+  font-size: 2rem;
+  background-color: black;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.options {
+  position: absolute;
+  left: -50px;
+  bottom: 60px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  transform: rotate(45deg);
+}
+
+.options button {
+  transform: rotate(-45deg);
+  background: radial-gradient(circle, #3498db, #2980b9);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  font-size: 1rem;
+  animation: scaleOut 0.2s ease forwards;
+  text-wrap: nowrap;
+}
+
+.options button:nth-child(4){
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.options button img{
+  background-color: transparent;
+}
+
+
+@keyframes scaleOut {
+  from {
+    transform: scale(0.5) rotate(-45deg);
+  }
+
+  to {
+    transform: scale(1) rotate(-45deg);
+  }
+}
+
+.options button:nth-child(2) {
+  margin-bottom: 50px;
+}
+
+.options button:nth-child(3) {
+  margin-bottom: 50px;
+}
+
+.options button:hover {
+  background: radial-gradient(circle, #ffcc00, #ff9900);
+}
+
+.copiedSpan {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 5px 10px;
+  z-index: 99;
+  border-radius: 10px;
+}

@@ -6,6 +6,7 @@
   -webkit-user-select: none !important;
   -webkit-tap-highlight-color: none !important;
   -webkit-user-drag: none !important;
+  touch-action: manipulation;
 }
 
 body {
