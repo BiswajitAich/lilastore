@@ -7,12 +7,14 @@ import NoImage from "./simplifiedComponents/NoImage";
 const FloatingOptions: NextPage = () => {
     const [display, setDisplay] = React.useState<boolean>(false);
     const [displaySpan, setDisplaySpan] = React.useState<boolean>(false);
+    const [displayInstall, setDisplayInstall] = React.useState<boolean>(false);
     const [deferredPrompt, setDeferredPrompt] = React.useState<Event | null>(null);
 
     useEffect(() => {
         const handler = (e: Event) => {
             e.preventDefault();
             setDeferredPrompt(e);
+            setDisplayInstall(true)
         };
 
         window.addEventListener("beforeinstallprompt", handler);
@@ -103,11 +105,17 @@ const FloatingOptions: NextPage = () => {
 
             </button>
             {display ? (
-                <div className={styles.options}>
+                <div className={styles.options}
+                    style={{
+                        left: displayInstall ? "" : "-20px",
+                        bottom: displayInstall ? "" : "15px"
+                    }}
+                >
                     <button onClick={handleShare}>share</button>
                     <button onClick={handleCopyText}>copy url</button>
-
-                    <button onClick={handleInstall}>Install App</button>
+                    {displayInstall ? (
+                        <button onClick={handleInstall}>Install App</button>
+                    ) : null}
                     <button onClick={handleContact}>
                         <img
                             src="https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/whatsapp-icon.webp"
