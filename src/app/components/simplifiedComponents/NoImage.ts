@@ -1,4 +1,5 @@
 export default function NoImage (e: React.SyntheticEvent<HTMLImageElement, Event>)  {
+    e.preventDefault();
     const target = e.target as HTMLImageElement;
     const img = new Image()
     img.src = "https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/some/no-image.webp"
