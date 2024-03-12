@@ -176,12 +176,25 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
     }, 500);
   };
 
+  const handleBackToPageBtn = () => {
+    console.log("clicked")
+    try {
+      router.back();
+    }
+    catch {
+      router.push('/');
+    }
+  };
+
 
 
 
 
   return (
     <div className={pageStyle.pagebody} onContextMenu={StopContextMenu}>
+      <div className={pageStyle.backToPageBtn}>
+        <button onClick={handleBackToPageBtn}>back</button>
+      </div>
       <div className={pageStyle.pagecontainer}>
         <div className={pageStyle.head}>
           <button type='button' onClick={() => { router.push('/') }}>Home</button>

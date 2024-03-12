@@ -6,7 +6,8 @@ import UseReveal from '@/app/components/effects/UseReveal'
 import StyleScript from '../../styles/products.module.css'
 import NoImage from './NoImage';
 import StopContextMenu from './StopContextMenu';
-
+import pageStyle from '@/app/styles/productPage.module.css'
+import { useRouter } from 'next/navigation'
 
 interface Props {
     price?: string
@@ -16,17 +17,30 @@ interface Props {
     goto: string,
     description?: string,
     type?: {
-      url: string
+        url: string
     }
-  }
+}
 
-const ClientProductMap: React.FC<any> = ({ProductData, path, alt}) => {
+const ClientProductMap: React.FC<any> = ({ ProductData, path, alt }) => {
     const [productData] = React.useState<Props[]>(ProductData);
     const refs: React.RefObject<HTMLAnchorElement>[] = (productData?.map(() => UseReveal()) ?? []) as React.RefObject<HTMLAnchorElement>[];
+    const router = useRouter();
+    const handleBackToPageBtn = () => {
+        try {
+            router.back();
+        }
+        catch {
+            router.push('/');
+        }
+    };
 
     return (
         <div className={StyleScript.productContainer} onContextMenu={StopContextMenu}>
-            {productData?.map((material:Props, idx:number) => (
+            <div className={pageStyle.backToPageBtn}>
+                <button onClick={handleBackToPageBtn}>back</button>
+            </div>
+
+            {productData?.map((material: Props, idx: number) => (
                 <Link href={`${path}${material.id}`} ref={refs[idx]} className={StyleScript.reveal} key={idx}>
                     <div className={StyleScript.productCard} >
                         <div className={StyleScript.imageDiv}  >

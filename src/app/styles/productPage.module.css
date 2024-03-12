@@ -355,6 +355,55 @@
     }
 }
 
+.backToPageBtn {
+    position: absolute;
+    top: 5dvh;
+    left: 10px;
+    box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.25);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding: 8px 12px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    background: radial-gradient(#00000047, transparent);
+    border: 1px solid white;
+}
+
+.backToPageBtn button {
+    height: 30px;
+    width: 45px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background: linear-gradient(130deg, white, #00000030);
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.backToPageBtn button:hover {
+    background: linear-gradient(130deg, #b3b3b3, #141414cb);
+    color: aliceblue;
+}
+
+@media screen and (max-width: 824px) {
+    .backToPageBtn {
+        left: 0px;
+    }
+}
+
+@media screen and (max-width: 795px) {
+    .backToPageBtn {
+        padding: 4px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .backToPageBtn {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 600px) {
     .pagecontainer {
