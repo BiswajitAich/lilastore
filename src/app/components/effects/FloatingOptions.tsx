@@ -118,7 +118,7 @@ const FloatingOptions: NextPage = () => {
             <div className={styles.navContainer} onClick={() => setDisplay(!display)} />
         ) : null}
         <div className={styles.navDiv} >
-            <button onClick={() => setDisplay(!display)} className={styles.navButton}>
+            <button onClick={() => setDisplay(!display)} className={styles.navButton} aria-label="Navigation Options">
                 {!display ? (
                     <div>
                         <p className={styles.navButtonBar} />

@@ -1,6 +1,11 @@
 User-agent: Googlebot
 Disallow: /nogooglebot/
 
+User-agent: bingbot
+User-agent: DuckDuckBot
+User-agent: archive.org_bot
+Allow: /
+
 User-agent: *
 Allow: /
 Disallow: /uploads/
