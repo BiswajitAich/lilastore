@@ -1,22 +1,17 @@
 import React from 'react'
-import StyleScript from '../../../../../styles/products.module.css'
 import NotFound from '@/app/not-found'
 import ClientProductMap from '@/app/components/simplifiedComponents/ClientProductMap'
 
-const TerracottaEarringClient: React.FC<any> = ({ProductData}) => {
+const TerracottaEarringClient: React.FC<any> = ({ ProductData }) => {
     if (!ProductData) return <NotFound />
-    
+
     return (
-        <div className={StyleScript.body} >
-            <div className={StyleScript.productBody}>
-                <h3>Terracotta Earring Collection<div /></h3>
-                <ClientProductMap
-                    ProductData={ProductData}
-                    path="/products/earring/earrings/terracotta-earring/"
-                    alt="Terracotta Earring"
-                />
-            </div>
-        </div>
+        <ClientProductMap
+            name="Terracotta Earring Collection"
+            ProductData={ProductData}
+            path="/products/earring/earrings/terracotta-earring/"
+            alt="Terracotta Earring"
+        />
     )
 }
 

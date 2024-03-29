@@ -194,13 +194,17 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
 
 
   return (
-    <div className={pageStyle.pagebody} onContextMenu={StopContextMenu}>
+    <div className={pageStyle.pagebody} onContextMenu={StopContextMenu}
+      style={{
+        background: theme === "moon" ? "linear-gradient(180deg, #001341 50%, transparent)" : ""
+      }}
+    >
       <div className={pageStyle.backToPageBtn}>
         <button onClick={handleBackToPageBtn}>back</button>
       </div>
       <div className={pageStyle.pagecontainer}
         style={{
-          backgroundColor: theme==="moon"? "darkslategrey" : "",
+          backgroundColor: theme === "moon" ? "darkslategrey" : "",
         }}
       >
         <div className={pageStyle.head}>
