@@ -5,6 +5,7 @@ import NotFound from '@/app/not-found';
 import { Metadata } from 'next';
 import Footer from '@/app/components/Footer';
 import { fetchProductData } from '@/app/api/fetchProductData';
+import ContextProvider from '@/app/components/simplifiedComponents/ContextProvider';
 
 let selectedProduct: any | null = null;
 
@@ -25,9 +26,11 @@ const KundanNecklacesPage = async ({ params }: { params: { id: string } }) => {
       justifyContent: 'flexStart',
       alignItems: 'center',
     }}>
-      <PageDesign selectedProduct={selectedProduct} />
-      <Necklaces />
-      <Footer />
+      <ContextProvider>
+        <PageDesign selectedProduct={selectedProduct} />
+        <Necklaces />
+        <Footer />
+      </ContextProvider>
     </div>
   );
 };
@@ -35,7 +38,7 @@ const KundanNecklacesPage = async ({ params }: { params: { id: string } }) => {
 export default KundanNecklacesPage;
 
 export async function generateMetadata(): Promise<Metadata> {
-  
+
   if (!selectedProduct) {
     return {
       title: "Product Not Found"

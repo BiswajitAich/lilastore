@@ -1,9 +1,14 @@
 import { fetchProductData } from "@/app/api/fetchProductData";
 import OxydizedNecklacesClient from "./OxydizedNecklaceClient/page";
+import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider";
 
 const OxydizedNecklaces = async () => {
     const productData = await fetchProductData("necklace/oxydized-necklace")
-    return (<OxydizedNecklacesClient ProductData={productData} />)
+    return (
+        <ContextProvider>
+            <OxydizedNecklacesClient ProductData={productData} />
+        </ContextProvider>
+    )
 }
 export default OxydizedNecklaces
 

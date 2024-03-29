@@ -4,6 +4,8 @@ import Necklaces from '../../../Necklaces';
 import NotFound from '@/app/not-found';
 import { Metadata } from 'next';
 import { fetchProductData } from '@/app/api/fetchProductData';
+import ContextProvider from '@/app/components/simplifiedComponents/ContextProvider';
+import Footer from '@/app/components/Footer';
 
 let selectedProduct: any | null = null;
 
@@ -25,8 +27,11 @@ const FancyNecklacesPage = async ({ params }: { params: { id: string } }) => {
       justifyContent: 'flexStart',
       alignItems: 'center',
     }}>
-      <PageDesign selectedProduct={{ ...selectedProduct, detail }} />
-      <Necklaces />
+      <ContextProvider>
+        <PageDesign selectedProduct={{ ...selectedProduct, detail }} />
+        <Necklaces />
+        <Footer />
+      </ContextProvider>
     </div>
   );
 };

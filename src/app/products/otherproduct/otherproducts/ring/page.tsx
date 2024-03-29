@@ -1,9 +1,14 @@
 import { fetchProductData } from "@/app/api/fetchProductData";
 import RingClient from "./RingClient/page";
+import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider";
 
 const Ring = async () => {
     const productData = await fetchProductData("otherproduct/ring")
-    return (<RingClient ProductData={productData} />)
+    return (
+        <ContextProvider>
+            <RingClient ProductData={productData} />
+        </ContextProvider>
+    )
 }
 export default Ring
 

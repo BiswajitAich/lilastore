@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link';
-import React from 'react'
+import React, { useContext } from 'react'
 import { CldImage } from 'next-cloudinary'
 import UseReveal from '@/app/components/effects/UseReveal'
 import StyleScript from '../../styles/products.module.css'
@@ -8,6 +8,7 @@ import NoImage from './NoImage';
 import StopContextMenu from './StopContextMenu';
 import pageStyle from '@/app/styles/productPage.module.css'
 import { useRouter } from 'next/navigation'
+import { Context } from './ContextProvider';
 
 interface Props {
     price?: string
@@ -25,6 +26,12 @@ const ClientProductMap: React.FC<any> = ({ ProductData, path, alt }) => {
     const [productData] = React.useState<Props[]>(ProductData);
     const refs: React.RefObject<HTMLAnchorElement>[] = (productData?.map(() => UseReveal()) ?? []) as React.RefObject<HTMLAnchorElement>[];
     const router = useRouter();
+    const contextValue = useContext(Context)
+    if (!contextValue) {
+        return null;
+    }
+    const { theme } = contextValue;
+
     const handleBackToPageBtn = () => {
         try {
             router.back();
@@ -42,7 +49,9 @@ const ClientProductMap: React.FC<any> = ({ ProductData, path, alt }) => {
 
             {productData?.map((material: Props, idx: number) => (
                 <Link href={`${path}${material.id}`} ref={refs[idx]} className={StyleScript.reveal} key={idx}>
-                    <div className={StyleScript.productCard} >
+                    <div className={StyleScript.productCard}
+                        style={{ backgroundColor: theme === "moon" ? "grey" : "" }}
+                    >
                         <div className={StyleScript.imageDiv}  >
                             {
                                 <CldImage

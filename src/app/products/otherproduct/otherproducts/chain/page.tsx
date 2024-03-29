@@ -1,9 +1,14 @@
 import { fetchProductData } from "@/app/api/fetchProductData";
 import ChainClient from "./ChainClient/page";
+import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider";
 
-const Chain = async () => {  
+const Chain = async () => {
     const productData = await fetchProductData("otherproduct/chain")
-    return (<ChainClient ProductData={productData} />)
+    return (
+        <ContextProvider>
+            <ChainClient ProductData={productData} />
+        </ContextProvider>
+    )
 }
 export default Chain
 

@@ -1,14 +1,22 @@
 "use client"
 import { NextPage } from "next";
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "@/app/styles/effects/floatingOptions.module.css";
-import NoImage from "./simplifiedComponents/NoImage";
+import NoImage from "../simplifiedComponents/NoImage";
+import { Context } from "../simplifiedComponents/ContextProvider";
 
 const FloatingOptions: NextPage = () => {
     const [display, setDisplay] = React.useState<boolean>(false);
     const [displaySpan, setDisplaySpan] = React.useState<boolean>(false);
     const [displayInstall, setDisplayInstall] = React.useState<boolean>(false);
     const [deferredPrompt, setDeferredPrompt] = React.useState<Event | null>(null);
+    const contextValue = useContext(Context);
+    if (!contextValue) {
+        return null;
+    }
+
+    const { theme, setTheme } = contextValue;
+
 
     useEffect(() => {
         const handler = (e: Event) => {
@@ -89,6 +97,22 @@ const FloatingOptions: NextPage = () => {
         window.open(whatsappUrl);
     };
 
+    const handleTheme = async () => {
+        if (typeof window === 'undefined') return
+        const currentTheme = localStorage.getItem("lilastore.theme");
+        if (!currentTheme) {
+            localStorage.setItem("lilastore.theme", "moon");
+            setTheme((prevTheme: string) => prevTheme === "moon" ? "sun" : "moon");
+            return
+        }
+        setTheme((prevTheme: string) => {
+            const newTheme = prevTheme === 'sun' ? 'moon' : 'sun';
+            localStorage.setItem("lilastore.theme", newTheme);
+            return newTheme;
+        });
+
+    };
+
     return (<>
         {display ? (
             <div className={styles.navContainer} onClick={() => setDisplay(!display)} />
@@ -105,26 +129,46 @@ const FloatingOptions: NextPage = () => {
 
             </button>
             {display ? (
-                <div className={styles.options}
-                    style={{
-                        left: displayInstall ? "" : "-20px",
-                        bottom: displayInstall ? "" : "15px"
-                    }}
-                >
-                    <button onClick={handleShare}>share</button>
-                    <button onClick={handleCopyText}>copy url</button>
-                    {displayInstall ? (
-                        <button onClick={handleInstall}>Install App</button>
-                    ) : null}
-                    <button onClick={handleContact}>
-                        <img
-                            src="https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/whatsapp-icon.webp"
-                            alt="WhatsApp us"
-                            onError={NoImage}
-                            loading="lazy"
-                        />
-                    </button>
-                </div>
+                <>
+                    <div className={styles.theme}>
+                        <button
+                            onClick={handleTheme}
+                            style={{
+                                backgroundColor: theme === "sun" ? "orange" : "black",
+                                justifyContent: theme === "sun" ? "flex-start" : "flex-end",
+                            }}
+                        >
+                            <div
+                                className={styles.themeDiv}
+                                style={{
+                                    backgroundColor: theme === "sun" ? "whitesmoke" : "blueviolet"
+                                }}
+                            >
+                                <div className={theme === "sun" ? styles.sun : styles.moon}></div>
+                            </div>
+                        </button>
+                    </div>
+                    <div className={styles.options}
+                        style={{
+                            left: displayInstall ? "" : "-20px",
+                            bottom: displayInstall ? "" : "15px"
+                        }}
+                    >
+                        <button onClick={handleShare}>share</button>
+                        <button onClick={handleCopyText}>copy url</button>
+                        {displayInstall ? (
+                            <button onClick={handleInstall}>Install App</button>
+                        ) : null}
+                        <button onClick={handleContact}>
+                            <img
+                                src="https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/whatsapp-icon.webp"
+                                alt="WhatsApp us"
+                                onError={NoImage}
+                                loading="lazy"
+                            />
+                        </button>
+                    </div>
+                </>
             ) : null}
 
         </div>

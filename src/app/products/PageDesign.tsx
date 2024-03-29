@@ -1,11 +1,12 @@
 "use client"
 import { CldImage } from 'next-cloudinary';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react';
 import pageStyle from '../styles/productPage.module.css';
 import { useRouter } from 'next/navigation';
 import { Metadata, Viewport } from 'next';
 import NoImage from '../components/simplifiedComponents/NoImage';
 import StopContextMenu from '../components/simplifiedComponents/StopContextMenu';
+import { Context } from '../components/simplifiedComponents/ContextProvider';
 
 interface PageDesignProps {
   selectedProduct: {
@@ -30,7 +31,9 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
   const [viewImage, setViewImage] = useState<any>([false]);
   const imgContainerRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
-
+  const contextValue = useContext(Context)
+  if (!contextValue) return null;
+  const { theme } = contextValue;
   // useEffect(() => {
   //   document.addEventListener('contextmenu', function (event) {
   //     event.preventDefault();
@@ -195,7 +198,11 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
       <div className={pageStyle.backToPageBtn}>
         <button onClick={handleBackToPageBtn}>back</button>
       </div>
-      <div className={pageStyle.pagecontainer}>
+      <div className={pageStyle.pagecontainer}
+        style={{
+          backgroundColor: theme==="moon"? "darkslategrey" : "",
+        }}
+      >
         <div className={pageStyle.head}>
           <button type='button' onClick={() => { router.push('/') }}>Home</button>
           <p>{selectedProduct?.description}</p>
@@ -314,9 +321,15 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
             </>
           ) : null}
         </div>
-        <div className={pageStyle.details}>
+        <div className={pageStyle.details}
+          style={{
+            color: theme === "moon" ? "#ffd900" : "",
+          }}
+        >
           <p>Rs {selectedProduct?.price}</p>
-          <p>{selectedProduct?.description}</p>
+          <p
+            style={{ backgroundColor: theme === "moon" ? "rgb(113 0 0)" : "" }}
+          >{selectedProduct?.description}</p>
           <p style={{
             textAlign: "left",
             minWidth: "50%",
@@ -326,7 +339,9 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
           }}>{selectedProduct?.detail?.split('\n').map((item, key) => {
             return <span key={key}>{item}<br /></span>
           })}</p>
-          <p>*delivery charges may apply!</p>
+          <p
+            style={{ color: theme === "moon" ? "#05fd72" : "" }}
+          >*delivery charges may apply!</p>
         </div>
       </div>
       <button type='button' className={pageStyle.contact} onClick={() => handleOrder(selectedProduct.description, selectedProduct.price, selectedProduct.url)}>
@@ -409,7 +424,7 @@ export async function generateMetadata({ selectedProduct }: PageDesignProps): Pr
     title: selectedProduct.description,
     openGraph: {
       images: selectedProduct.url,
-      description: selectedProduct.detail,
+      description: selectedProduct.detail + selectedProduct.description + selectedProduct.price,
     },
     keywords: `${selectedProduct.description}, ${selectedProduct.detail}`,
   }

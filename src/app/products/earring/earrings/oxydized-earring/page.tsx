@@ -1,9 +1,14 @@
 import { fetchProductData } from "@/app/api/fetchProductData";
 import OxydizedEarringClient from "./OxydizedEarringClient/page";
+import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider";
 
 const OxydizedEarring = async () => {
     const productData = await fetchProductData("earring/oxydized-earring")
-    return (<OxydizedEarringClient ProductData={productData} />)
+    return (
+        <ContextProvider>
+            <OxydizedEarringClient ProductData={productData} />
+        </ContextProvider>
+    )
 }
 export default OxydizedEarring
 

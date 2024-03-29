@@ -5,6 +5,7 @@ import NotFound from '@/app/not-found';
 import { Metadata } from 'next';
 import Footer from '@/app/components/Footer';
 import { fetchProductData } from '@/app/api/fetchProductData';
+import ContextProvider from '@/app/components/simplifiedComponents/ContextProvider';
 let selectedProduct: any | null = null;
 
 const FancyEarringPage = async ({ params }: { params: { id: string } }) => {
@@ -23,9 +24,11 @@ const FancyEarringPage = async ({ params }: { params: { id: string } }) => {
       justifyContent: 'flexStart',
       alignItems: 'center',
     }}>
-      <PageDesign selectedProduct={selectedProduct} />
-      <Earring />
-      <Footer />
+      <ContextProvider>
+        <PageDesign selectedProduct={selectedProduct} />
+        <Earring />
+        <Footer />
+      </ContextProvider>
     </div>
   );
 };

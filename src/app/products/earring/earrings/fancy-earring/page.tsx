@@ -1,9 +1,14 @@
 import { fetchProductData } from "@/app/api/fetchProductData";
 import FancyEarringClient from "./FancyEarringClient/page";
+import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider";
 
-const StoneEarring = async () => {  
+const StoneEarring = async () => {
     const productData = await fetchProductData("earring/fancy-earring")
-    return (<FancyEarringClient ProductData={productData} />)
+    return (
+        <ContextProvider>
+            <FancyEarringClient ProductData={productData} />
+        </ContextProvider>
+    )
 }
 export default StoneEarring
 

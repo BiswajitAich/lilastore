@@ -1,13 +1,22 @@
 import React, { Suspense } from "react"
 import BangleTypesClient from "./BangleTypesClient"
 import Loading from "@/app/loading"
+const api = process.env.NEXT_PUBLIC_API;
 
 const fetchProductsData = async () => {
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API}bangle/bangle.json`, {
-            // cache: "force-cache"
-            next: { revalidate: 3600 }
-        })
+        const path = "bangle/bangle.json";
+        let res: Response;
+        if (api?.startsWith("http://")) {
+            res = await fetch(`${api}?fetchData=${path}`, {
+                cache: 'no-cache'
+            });
+        } else {
+            res = await fetch(`${api}${path}`, {
+                // cache: "force-cache"
+                next: { revalidate: 3600 }
+            })
+        }
         if (res.ok) {
             const data = await res.json()
             console.log("static data fetched:", data)

@@ -1,9 +1,14 @@
 import { fetchProductData } from "@/app/api/fetchProductData";
 import MakeupClient from "./CosmeticsClient/page";
+import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider";
 
 const Makeup = async () => {
     const productData = await fetchProductData("cosmetic/makeup")
-    return (<><MakeupClient ProductData={productData} /></>)
+    return (
+        <ContextProvider>
+            <MakeupClient ProductData={productData} />
+        </ContextProvider>
+    )
 }
 export default Makeup
 

@@ -1,12 +1,21 @@
 import { Suspense } from "react";
 import Loading from "../../loading";
 import EarringTypesClient from "./EarringTypesClient";
+const api = process.env.NEXT_PUBLIC_API;
 const fetchProductsData = async () => {
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API}earring/earring.json`, {
-            // // cache: "force-cache"
-            next: { revalidate: 3600 }
-        })
+        const path = "earring/earring.json";
+        let res: Response;
+        if (api?.startsWith("http://")) {
+            res = await fetch(`${api}?fetchData=${path}`,{
+                cache: 'no-cache'
+            });
+        } else {
+            res = await fetch(`${api}${path}`, {
+                // cache: "force-cache"
+                next: { revalidate: 3600 }
+            })
+        }
         if (res.ok) {
             const data = await res.json()
             console.log("static data fetched:", data)

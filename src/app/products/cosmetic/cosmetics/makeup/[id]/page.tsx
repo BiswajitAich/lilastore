@@ -5,6 +5,7 @@ import NotFound from '@/app/not-found';
 import { Metadata } from 'next';
 import Footer from '@/app/components/Footer';
 import { fetchProductData } from '@/app/api/fetchProductData';
+import ContextProvider from '@/app/components/simplifiedComponents/ContextProvider';
 
 let selectedProduct: any | null = null;
 
@@ -25,9 +26,11 @@ const MakeupPage = async ({ params }: { params: { id: string } }) => {
       justifyContent: 'flexStart',
       alignItems: 'center',
     }}>
-      <PageDesign selectedProduct={selectedProduct} />
-      <Makeup />
-      <Footer />
+      <ContextProvider>
+        <PageDesign selectedProduct={selectedProduct} />
+        <Makeup />
+        <Footer />
+      </ContextProvider>
     </div>
   );
 };

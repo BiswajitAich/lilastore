@@ -5,6 +5,7 @@ import NotFound from '@/app/not-found';
 import { Metadata } from 'next';
 import { fetchProductData } from '@/app/api/fetchProductData';
 import Footer from '@/app/components/Footer';
+import ContextProvider from '@/app/components/simplifiedComponents/ContextProvider';
 
 let selectedProduct: any | null = null;
 
@@ -24,9 +25,11 @@ const ChokerNecklacesPage = async ({ params }: { params: { id: string } }) => {
       justifyContent: 'flexStart',
       alignItems: 'center',
     }}>
-      <PageDesign selectedProduct={selectedProduct} />
-      <Necklaces />
-      <Footer />
+      <ContextProvider>
+        <PageDesign selectedProduct={selectedProduct} />
+        <Necklaces />
+        <Footer />
+      </ContextProvider>
     </div>
   );
 };

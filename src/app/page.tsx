@@ -12,7 +12,8 @@ import Loading from './loading';
 import Footer from './components/Footer';
 import Cosmetics from './products/cosmetic/Cosmetics';
 import dynamic from 'next/dynamic';
-const FloatingOptions = dynamic(() => import('./components/FloatingOptions'), { ssr: false });
+import ContextProvider from './components/simplifiedComponents/ContextProvider';
+const FloatingOptions = dynamic(() => import('./components/effects/FloatingOptions'), { ssr: false });
 
 
 export default function Home() {
@@ -22,16 +23,18 @@ export default function Home() {
       <main className={styles.main} >
         <Suspense fallback={<Loading />} >
           <Header />
-          <Marquee />
-          <Banner />
-          <MiniSlider />
-          <Necklaces />
-          <Earrings />
-          <Bangles />
-          <Cosmetics />
-          <OtherProduct />
-          <Footer />
-          <FloatingOptions />
+          <ContextProvider>
+            <Marquee />
+            <Banner />
+            <MiniSlider />
+            <Necklaces />
+            <Earrings />
+            <Bangles />
+            <Cosmetics />
+            <OtherProduct />
+            <Footer />
+            <FloatingOptions />
+          </ContextProvider>
         </Suspense>
       </main>
     </div>

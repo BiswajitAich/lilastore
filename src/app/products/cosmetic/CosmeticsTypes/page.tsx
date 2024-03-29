@@ -1,12 +1,21 @@
 import { Suspense } from "react";
 import Loading from "../../loading";
 import CosmeticsTypesClient from "./CosmeticsTypesClient";
+const api = process.env.NEXT_PUBLIC_API;
 const fetchProductsData = async () => {
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API}cosmetic/cosmetic.json`, {
-            // cache: "force-cache"
-            next: { revalidate: 3600 }
-        })
+        const path = "cosmetic/cosmetic.json";
+        let res: Response;
+        if (api?.startsWith("http://")) {
+            res = await fetch(`${api}?fetchData=${path}`, {
+                cache: 'no-cache'
+            });
+        } else {
+            res = await fetch(`${api}${path}`, {
+                // cache: "force-cache"
+                next: { revalidate: 3600 }
+            })
+        }
         if (res.ok) {
             const data = await res.json()
             console.log("static data fetched:", data)

@@ -1,9 +1,15 @@
 import { fetchProductData } from "@/app/api/fetchProductData";
 import GoldenEarringClient from "./GoldenEarringClient/page";
+import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider";
 
 const GoldenEarring = async () => {
     const productData = await fetchProductData("earring/golden-earring")
-    return (<GoldenEarringClient ProductData={productData} />)
+    return (
+        <ContextProvider>
+            <GoldenEarringClient ProductData={productData} />
+        </ContextProvider>
+    )
+
 }
 export default GoldenEarring
 

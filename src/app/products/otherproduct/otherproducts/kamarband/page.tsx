@@ -1,9 +1,14 @@
 import { fetchProductData } from "@/app/api/fetchProductData";
 import KamarbandClient from "./KamarbandClient/page";
+import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider";
 
 const Kamarband = async () => {
     const productData = await fetchProductData("otherproduct/kamarband")
-    return (<KamarbandClient ProductData={productData} />)
+    return (
+    <ContextProvider>
+        <KamarbandClient ProductData={productData} />
+    </ContextProvider>
+    )
 }
 export default Kamarband
 

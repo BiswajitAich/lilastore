@@ -1,9 +1,14 @@
 import { fetchProductData } from "@/app/api/fetchProductData";
 import ChemicalbeadNecklacesClient from "./ChemicalbeadNecklaceClient/page";
+import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider";
 
 const ChemicalbeadNecklaces = async () => {
     const productData = await fetchProductData("necklace/chemicalbead-necklace")
-    return (<ChemicalbeadNecklacesClient ProductData={productData} />)
+    return (
+        <ContextProvider>
+            <ChemicalbeadNecklacesClient ProductData={productData} />
+        </ContextProvider>
+    )
 }
 export default ChemicalbeadNecklaces
 

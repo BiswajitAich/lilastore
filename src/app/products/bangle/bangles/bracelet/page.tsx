@@ -1,9 +1,14 @@
 import { fetchProductData } from "@/app/api/fetchProductData"
 import BeaceletClient from "./BraceletClient/page"
+import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider"
 
 const Bracelet = async () => {
     const productData = await fetchProductData("bangle/bracelet")
-    return (<><BeaceletClient ProductData={productData} /></>)
+    return (
+        <ContextProvider>
+            <BeaceletClient ProductData={productData} />
+        </ContextProvider>
+    )
 }
 export default Bracelet
 

@@ -5,12 +5,13 @@ import NotFound from '@/app/not-found';
 import { Metadata } from 'next';
 import Footer from '@/app/components/Footer';
 import { fetchProductData } from '@/app/api/fetchProductData';
+import ContextProvider from '@/app/components/simplifiedComponents/ContextProvider';
 
 let selectedProduct: any | null = null;
 
 const TerracottaNecklacesPage = async ({ params }: { params: { id: string } }) => {
   const productId = parseInt(params.id, 10);
-  const ProductData = await  fetchProductData("necklace/terracotta-necklace")
+  const ProductData = await fetchProductData("necklace/terracotta-necklace")
   selectedProduct = ProductData?.find((product: { id: number; }) => product.id === productId);
 
   if (!selectedProduct) {
@@ -24,9 +25,11 @@ const TerracottaNecklacesPage = async ({ params }: { params: { id: string } }) =
       justifyContent: 'flexStart',
       alignItems: 'center',
     }}>
-      <PageDesign selectedProduct={selectedProduct} />
-      <Necklaces />
-      <Footer />
+      <ContextProvider>
+        <PageDesign selectedProduct={selectedProduct} />
+        <Necklaces />
+        <Footer />
+      </ContextProvider>
     </div>
   );
 };

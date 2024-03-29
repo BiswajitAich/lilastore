@@ -5,6 +5,7 @@ import NotFound from '@/app/not-found';
 import { Metadata } from 'next';
 import Footer from '@/app/components/Footer';
 import { fetchProductData } from '@/app/api/fetchProductData';
+import ContextProvider from '@/app/components/simplifiedComponents/ContextProvider';
 
 let selectedProduct: any | null = null;
 
@@ -24,9 +25,11 @@ const GoldenNecklacesPage = async ({ params }: { params: { id: string } }) => {
       justifyContent: 'flexStart',
       alignItems: 'center',
     }}>
-      <PageDesign selectedProduct={selectedProduct} />
-      <Necklaces />
-      <Footer />
+      <ContextProvider>
+        <PageDesign selectedProduct={selectedProduct} />
+        <Necklaces />
+        <Footer />
+      </ContextProvider>
     </div>
   );
 };
@@ -45,7 +48,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: selectedProduct?.description,
     openGraph: {
       images: selectedProduct?.url,
-      description: selectedProduct?.detail,
+      description: selectedProduct?.description + " " + selectedProduct?.detail,
     },
     keywords: `${selectedProduct?.description}, ${selectedProduct?.detail}`,
   }

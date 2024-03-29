@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import bannerstyles from './../../styles/banner.module.css'
 // import bannerContent from "../../../public/data/banner/banner.json"
 import { CldImage } from 'next-cloudinary'
@@ -7,6 +7,7 @@ import Link from 'next/link'
 import WaveLoader from '../effects/WaveLoader'
 import NoImage from '../simplifiedComponents/NoImage'
 import StopContextMenu from '../simplifiedComponents/StopContextMenu'
+import { Context } from '../simplifiedComponents/ContextProvider'
 
 interface product {
   id?: number,
@@ -25,6 +26,11 @@ const Banner: React.FC = () => {
   const [isDown, setIsDown] = useState(false);
   const [position, setPosition] = useState(0);
   const [displayDiv, setDisplayDiv] = useState<product[]>();
+  const contextValue = useContext(Context)
+  if(!contextValue){
+    return null;
+  }
+  const {theme} = contextValue;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -183,7 +189,11 @@ const Banner: React.FC = () => {
 
 
 
-        <div className={bannerstyles.gradient} />
+        <div className={bannerstyles.gradient} 
+          style={{
+            background: theme==="moon"? "linear-gradient(0deg, darkblue, transparent)" : "",
+          }}
+        />
 
         <div className={bannerstyles.scrolls} ref={scrollsRef}>
           {!displayDiv ? (<WaveLoader />) : (<>
@@ -201,7 +211,11 @@ const Banner: React.FC = () => {
                       onError={(e) =>NoImage(e)}
                     />
                   </div>
-                  <div className={bannerstyles.details}>
+                  <div className={bannerstyles.details}
+                    style={{
+                      backgroundColor: theme==="moon"? "#93744b" : "",
+                    }}
+                  >
                     <div>{content?.category}</div>
                     <div>{content?.description && content?.description.split('\n').map((item, key) => { return <span key={key}>{item}<br /></span> })}</div>
                     <div>Rs {content?.price}</div>

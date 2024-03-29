@@ -1,9 +1,14 @@
 import { fetchProductData } from "@/app/api/fetchProductData";
 import MangalsutraNecklacesClient from "./MangalsutraNecklacesClient/page";
+import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider";
 
 const MangalsutraNecklaces = async () => {
     const productData = await fetchProductData("necklace/mangalsutra")
-    return (<MangalsutraNecklacesClient ProductData={productData} />)
+    return (
+        <ContextProvider>
+            <MangalsutraNecklacesClient ProductData={productData} />
+        </ContextProvider>
+    )
 }
 export default MangalsutraNecklaces
 
