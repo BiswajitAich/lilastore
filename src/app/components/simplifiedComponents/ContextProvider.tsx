@@ -7,7 +7,7 @@ interface ContextType {
 export const Context = createContext<ContextType|null>(null);
 export default function ContextProvider({ children }: { children: React.ReactNode }) {
     const [theme, setTheme] = useState<string>(()=>{
-        if(typeof window === undefined){
+        if(typeof window === 'undefined'){
             return "Sun";
         }
         const storedTheme = localStorage.getItem("lilastore.theme");

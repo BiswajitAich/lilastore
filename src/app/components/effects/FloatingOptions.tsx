@@ -110,7 +110,6 @@ const FloatingOptions: NextPage = () => {
             localStorage.setItem("lilastore.theme", newTheme);
             return newTheme;
         });
-
     };
 
     return (<>
