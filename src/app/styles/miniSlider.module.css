@@ -1,3 +1,10 @@
+.main {
+    min-width: 100dvw;
+    background: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+
 .miniMain {
     width: 80%;
     background: transparent;
@@ -100,7 +107,7 @@
     border-top-right-radius: 50px;
 }
 
-.WaveLoaderWrap{
+.WaveLoaderWrap {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
@@ -110,7 +117,7 @@
     max-height: 100px;
 }
 
-.WaveLoaderDiv{
+.WaveLoaderDiv {
     min-height: 100px;
     max-height: 100px;
     width: auto;
@@ -121,11 +128,14 @@
 }
 
 @keyframes pulse {
-    0%, 100%{
+
+    0%,
+    100% {
         opacity: 0.5;
         background-color: aquamarine;
     }
-    0%{
+
+    0% {
         opacity: 1;
     }
 }
@@ -134,10 +144,11 @@
     .miniMain {
         width: 100%;
     }
+
     .leftBtn {
         left: 0;
     }
-    
+
     .rightBtn {
         right: 2px;
         transform: rotate(-180deg);
@@ -151,7 +162,7 @@
     .scrollDiv:nth-child(1) {
         margin-left: 5px;
     }
-    
+
     .scrollDiv:nth-last-child(1) {
         margin-right: 5px;
     }
@@ -159,7 +170,7 @@
 
 @media screen and (max-width: 300px) {
     .miniMain {
-        top: 380px;
+        top: 370px;
     }
 
 }

@@ -97,20 +97,18 @@ const FloatingOptions: NextPage = () => {
         window.open(whatsappUrl);
     };
 
-    const handleTheme = async () => {
-        if (typeof window === 'undefined') return
-        const currentTheme = localStorage.getItem("lilastore.theme");
-        if (!currentTheme) {
-            localStorage.setItem("lilastore.theme", "moon");
-            setTheme((prevTheme: string) => prevTheme === "moon" ? "sun" : "moon");
-            return
-        }
-        setTheme((prevTheme: string) => {
-            const newTheme = prevTheme === 'sun' ? 'moon' : 'sun';
-            localStorage.setItem("lilastore.theme", newTheme);
-            return newTheme;
-        });
+    const handleTheme = () => {
+        if (typeof window === 'undefined') return;
+    
+        const storedTheme = localStorage.getItem("lilastore");
+        const currentTheme = storedTheme ? JSON.parse(storedTheme).theme : 'sun';
+        const newTheme = currentTheme === 'sun' ? 'moon' : 'sun';
+    
+        localStorage.setItem("lilastore", JSON.stringify({ theme: newTheme }));
+        setTheme(newTheme);
     };
+    
+    
 
     return (<>
         {display ? (

@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link';
-import React, { useContext } from 'react'
+import React from 'react'
 import { CldImage } from 'next-cloudinary'
 import UseReveal from '@/app/components/effects/UseReveal'
 import StyleScript from '../../styles/products.module.css'
@@ -8,7 +8,7 @@ import NoImage from './NoImage';
 import StopContextMenu from './StopContextMenu';
 import pageStyle from '@/app/styles/productPage.module.css'
 import { useRouter } from 'next/navigation'
-import { Context } from './ContextProvider';
+import { useTheme } from './ContextProvider';
 
 interface Props {
     price?: string
@@ -26,11 +26,7 @@ const ClientProductMap: React.FC<any> = ({ name, ProductData, path, alt }) => {
     const [productData] = React.useState<Props[]>(ProductData);
     const refs: React.RefObject<HTMLAnchorElement>[] = (productData?.map(() => UseReveal()) ?? []) as React.RefObject<HTMLAnchorElement>[];
     const router = useRouter();
-    const contextValue = useContext(Context)
-    if (!contextValue) {
-        return null;
-    }
-    const { theme } = contextValue;
+    const theme = useTheme();
 
     const handleBackToPageBtn = () => {
         try {
@@ -42,19 +38,20 @@ const ClientProductMap: React.FC<any> = ({ name, ProductData, path, alt }) => {
     };
 
     return (
-        <div className={StyleScript.body} 
+        <div className={StyleScript.body}
             style={{
-                backgroundColor: theme==="moon" ? "darkslategrey" : "",
+                backgroundColor: theme === "moon" ? "darkslategrey" : "",
             }}
+            onContextMenu={StopContextMenu}
         >
             <div className={StyleScript.productBody}
-             style={{
-                backgroundColor: theme==="moon" ? "darkkhaki" : "",
-                boxShadow: theme==="moon" ? "0px 0px 1pc #ffd900" : "",
-            }}
+                style={{
+                    backgroundColor: theme === "moon" ? "darkkhaki" : "",
+                    boxShadow: theme === "moon" ? "0px 0px 1pc #ffd900" : "",
+                }}
             >
                 <h3>{name}<div /></h3>
-                <div className={StyleScript.productContainer} onContextMenu={StopContextMenu}>
+                <div className={StyleScript.productContainer} >
                     <div className={pageStyle.backToPageBtn}>
                         <button onClick={handleBackToPageBtn}>back</button>
                     </div>

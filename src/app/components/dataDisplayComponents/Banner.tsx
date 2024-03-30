@@ -1,5 +1,5 @@
 "use client"
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import bannerstyles from './../../styles/banner.module.css'
 // import bannerContent from "../../../public/data/banner/banner.json"
 import { CldImage } from 'next-cloudinary'
@@ -7,7 +7,7 @@ import Link from 'next/link'
 import WaveLoader from '../effects/WaveLoader'
 import NoImage from '../simplifiedComponents/NoImage'
 import StopContextMenu from '../simplifiedComponents/StopContextMenu'
-import { Context } from '../simplifiedComponents/ContextProvider'
+import { useTheme } from '../simplifiedComponents/ContextProvider'
 
 interface product {
   id?: number,
@@ -26,11 +26,8 @@ const Banner: React.FC = () => {
   const [isDown, setIsDown] = useState(false);
   const [position, setPosition] = useState(0);
   const [displayDiv, setDisplayDiv] = useState<product[]>();
-  const contextValue = useContext(Context)
-  if(!contextValue){
-    return null;
-  }
-  const {theme} = contextValue;
+  const theme = useTheme();
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,7 +38,7 @@ const Banner: React.FC = () => {
         const response = await fetch('https://lilastore007-default-rtdb.firebaseio.com/banner/.json', {
           signal,
           // cache: "force-cache"
-            next: { revalidate: 3600}
+          next: { revalidate: 3600 }
         });
 
         const data = await response.json();
@@ -171,62 +168,69 @@ const Banner: React.FC = () => {
 
 
   return (
-    <div className={bannerstyles.banner} onContextMenu={StopContextMenu}>
-      {displayDiv ? (<>
+    <main className={bannerstyles.main}
+      style={{
+        background: theme === "moon" ? "linear-gradient(180deg, transparent, black)" : "",
+      }}
+      onContextMenu={StopContextMenu}
+    >
+      <div className={bannerstyles.banner} onContextMenu={StopContextMenu}>
+        {displayDiv ? (<>
 
-        {displayDiv ? (
-          <>
-            <button className={bannerstyles.leftBtn} aria-label="Previous Slide" onClick={handleLeftBtn}>
-              <div className={bannerstyles.goBack1}></div>
-              <div className={bannerstyles.goBack2}></div>
-            </button>
-            <button className={bannerstyles.rightBtn} aria-label="Next Slide" onClick={handleRightBtn}>
-              <div className={bannerstyles.goBack1}></div>
-              <div className={bannerstyles.goBack2}></div>
-            </button>
-          </>
-        ) : null}
+          {displayDiv ? (
+            <>
+              <button className={bannerstyles.leftBtn} aria-label="Previous Slide" onClick={handleLeftBtn}>
+                <div className={bannerstyles.goBack1}></div>
+                <div className={bannerstyles.goBack2}></div>
+              </button>
+              <button className={bannerstyles.rightBtn} aria-label="Next Slide" onClick={handleRightBtn}>
+                <div className={bannerstyles.goBack1}></div>
+                <div className={bannerstyles.goBack2}></div>
+              </button>
+            </>
+          ) : null}
 
 
 
-        <div className={bannerstyles.gradient} 
-          style={{
-            background: theme==="moon"? "linear-gradient(0deg, darkblue, transparent)" : "",
-          }}
-        />
+          <div className={bannerstyles.gradient}
+            style={{
+              background: theme === "moon" ? "linear-gradient(0deg, darkblue, transparent)" : "",
+            }}
+          />
 
-        <div className={bannerstyles.scrolls} ref={scrollsRef}>
-          {!displayDiv ? (<WaveLoader />) : (<>
-            {displayDiv?.map((content, idx) => (
-              content?.url && content?.goto && <Link href={content.goto} key={idx} style={{ height: "100%", minWidth: "100%" }}>
-                <div className={bannerstyles.scrollDiv}>
-                  <div className={bannerstyles.imgs}>
-                    <CldImage
-                      src={content?.url}
-                      loading='eager'
-                      priority
-                      alt={`imade${idx + 1}`}
-                      width={300}
-                      height={400}
-                      onError={(e) =>NoImage(e)}
-                    />
+          <div className={bannerstyles.scrolls} ref={scrollsRef}>
+            {!displayDiv ? (<WaveLoader />) : (<>
+              {displayDiv?.map((content, idx) => (
+                content?.url && content?.goto && <Link href={content.goto} key={idx} style={{ height: "100%", minWidth: "100%" }}>
+                  <div className={bannerstyles.scrollDiv}>
+                    <div className={bannerstyles.imgs}>
+                      <CldImage
+                        src={content?.url}
+                        loading='eager'
+                        priority
+                        alt={`imade${idx + 1}`}
+                        width={300}
+                        height={400}
+                        onError={(e) => NoImage(e)}
+                      />
+                    </div>
+                    <div className={bannerstyles.details}
+                      style={{
+                        backgroundColor: theme === "moon" ? "#93744b" : "",
+                      }}
+                    >
+                      <div>{content?.category}</div>
+                      <div>{content?.description && content?.description.split('\n').map((item, key) => { return <span key={key}>{item}<br /></span> })}</div>
+                      <div>Rs {content?.price}</div>
+                    </div>
                   </div>
-                  <div className={bannerstyles.details}
-                    style={{
-                      backgroundColor: theme==="moon"? "#93744b" : "",
-                    }}
-                  >
-                    <div>{content?.category}</div>
-                    <div>{content?.description && content?.description.split('\n').map((item, key) => { return <span key={key}>{item}<br /></span> })}</div>
-                    <div>Rs {content?.price}</div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </>)}
-        </div>
-      </>) : null}
-    </div>
+                </Link>
+              ))}
+            </>)}
+          </div>
+        </>) : null}
+      </div>
+    </main>
   )
 }
 

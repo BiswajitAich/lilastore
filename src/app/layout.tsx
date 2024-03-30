@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import type { Viewport } from 'next'
 import { Inter } from 'next/font/google'
+import ContextProvider from './components/simplifiedComponents/ContextProvider'
 // import Footer from './components/Footer'
 // import dynamic from 'next/dynamic';
 
@@ -78,9 +79,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
-        {/* <Footer /> */}
-        {/* <SplashScreen /> */}
+        <ContextProvider>
+          {children}
+          {/* <Footer /> */}
+          {/* <SplashScreen /> */}
+        </ContextProvider>
       </body>
     </html>
   )

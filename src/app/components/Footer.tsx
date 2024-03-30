@@ -3,10 +3,16 @@ import React from 'react'
 import Style from './../styles/fotter.module.css'
 import NoImage from './simplifiedComponents/NoImage'
 import StopContextMenu from './simplifiedComponents/StopContextMenu'
+import { useTheme } from './simplifiedComponents/ContextProvider'
 
 const Footer: React.FC = () => {
+    const theme = useTheme();
     return (
-        <div className={Style.footerBody} onContextMenu={StopContextMenu}>
+        <div className={Style.footerBody} onContextMenu={StopContextMenu}
+            style={{
+                backgroundColor: theme==="moon"? "rgb(21 1 81)" : "",
+            }}
+        >
             <div className={Style.container}>
                 <h4>CONTACT US ON :</h4>
                 <div>
