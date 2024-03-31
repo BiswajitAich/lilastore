@@ -386,6 +386,27 @@
     background: linear-gradient(130deg, #b3b3b3, #141414cb);
     color: aliceblue;
 }
+.coloursAvailable{
+    margin-top: 10px;
+    background: repeating-linear-gradient(45deg, black, transparent 100px);
+    color: aliceblue;
+    padding: 15px;
+}
+.selectedProductImages{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+    margin: 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    column-gap: 10px;
+}
+.selectedProductImages div{
+    min-width: 120px;
+    height: 160px;
+    background-color: black;
+}
 
 @media screen and (max-width: 824px) {
     .backToPageBtn {

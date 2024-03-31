@@ -218,8 +218,8 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
                 <CldImage
                   key={idx}
                   src={type.url}
-                  width={1000}
-                  height={1000}
+                  width={600}
+                  height={800}
                   loading='eager'
                   alt={`product Image${idx}`}
                   style={{
@@ -325,6 +325,37 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
             </>
           ) : null}
         </div>
+
+            <h3 className={pageStyle.coloursAvailable}>Colours Available :</h3>
+        <div className={pageStyle.selectedProductImages}>
+          {selectedProduct?.type ? (
+            selectedProduct?.type.map((type: { url: string }, idx: number) => (
+              <div>
+              <CldImage
+                key={idx}
+                src={type.url}
+                width={120}
+                height={160}
+                loading='eager'
+                alt={`product Image${idx}`}
+                style={{
+                  opacity: 0,
+                  scrollSnapAlign: "center",
+                  transition: "opacity 300ms ease",
+                }}
+                onClick={() => handleViewImages(type.url)}
+                onLoad={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.opacity = "1";
+                }}
+                onError={(e) => NoImage(e)}
+              />
+              </div>
+            ))
+          ) : null}
+        </div>
+
+
         <div className={pageStyle.details}
           style={{
             color: theme === "moon" ? "#ffd900" : "",

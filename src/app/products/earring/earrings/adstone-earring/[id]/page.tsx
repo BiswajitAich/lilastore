@@ -10,10 +10,7 @@ import ContextProvider from '@/app/components/simplifiedComponents/ContextProvid
 let selectedProduct: any | null = null;
 
 const ADStoneEarringPage = async ({ params }: { params: { id: string } }) => {
-  const productId = parseInt(params.id, 10);
-  const ProductData = await fetchProductData("earring/adstone-earring")
-  selectedProduct = ProductData?.find((product: any) => product.id === productId);
-
+  selectedProduct = await getPropsData(params);
   if (!selectedProduct) {
     return <NotFound />;
   }
@@ -36,20 +33,45 @@ const ADStoneEarringPage = async ({ params }: { params: { id: string } }) => {
 
 export default ADStoneEarringPage;
 
-export async function generateMetadata(): Promise<Metadata> {
-
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+selectedProduct = await getPropsData(params);
   if (!selectedProduct) {
     return {
       title: "Product Not Found"
     };
   }
 
+  
   return {
     title: selectedProduct?.description,
     openGraph: {
       images: selectedProduct?.url,
-      description: selectedProduct?.detail,
+      description: `${selectedProduct?.description}, ${selectedProduct?.detail}, Price: Rs ${selectedProduct.price}`,
     },
+    description: `${selectedProduct?.description}, ${selectedProduct?.detail}, Price: Rs ${selectedProduct.price}`,
     keywords: `${selectedProduct?.description}, ${selectedProduct?.detail}`,
+  }
+}
+
+const getPropsData = async (params: { id: string; }) => {
+  const productId = parseInt(params.id, 10);
+  try {
+    if (selectedProduct != null) {
+      console.log("\nfetchProductData not called!");
+      return selectedProduct;
+    } else {
+      const ProductData = await fetchProductData("earring/adstone-earring")
+      console.log("\nfetchProductData called!");
+      selectedProduct = ProductData?.find((product: { id: number; }) => product.id === productId);
+      return selectedProduct
+    }
+
+  } catch (error) {
+    console.error("Error fetching product data:", error);
+    return {
+      props: {
+        selectedProduct: null
+      }
+    };
   }
 }

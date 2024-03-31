@@ -22,7 +22,7 @@ export const GET = async (request: NextRequest) => {
             }
 
             const data = await res.json()
-            console.log("server data fetched:", data)
+            // console.log("server data fetched:", data)
             return data;
 
         } catch (error) {

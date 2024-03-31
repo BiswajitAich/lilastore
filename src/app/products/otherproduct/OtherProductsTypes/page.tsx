@@ -18,7 +18,7 @@ const fetchProductsData = async () => {
         }
         if (res.ok) {
             const data = await res.json()
-            console.log("static data fetched:", data)
+            // console.log("static data fetched:", data)
             return data;
         } else {
             return null
