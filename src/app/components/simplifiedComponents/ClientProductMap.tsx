@@ -9,6 +9,7 @@ import StopContextMenu from './StopContextMenu';
 import pageStyle from '@/app/styles/productPage.module.css'
 import { useRouter } from 'next/navigation'
 import { useTheme } from './ContextProvider';
+import Twinkler from '../effects/Twinkler';
 
 interface Props {
     price?: string
@@ -39,18 +40,23 @@ const ClientProductMap: React.FC<any> = ({ name, ProductData, path, alt }) => {
 
     return (
         <div className={StyleScript.body}
-            style={{
-                backgroundColor: theme === "moon" ? "darkslategrey" : "",
-            }}
+            // style={{
+            //     backgroundColor: theme === "moon" ? "darkslategrey" : "",
+            // }}
             onContextMenu={StopContextMenu}
         >
             <div className={StyleScript.productBody}
                 style={{
-                    backgroundColor: theme === "moon" ? "darkkhaki" : "",
+                    backgroundColor: theme === "moon" ? "#1A1A1A" : "",
                     boxShadow: theme === "moon" ? "0px 0px 1pc #ffd900" : "",
                 }}
             >
-                <h3>{name}<div /></h3>
+                <h3
+                    style={{
+                        backgroundColor: theme === "moon" ? "#333333" : "",
+                        color: theme === "moon" ? "#FFD700 " : ""
+                    }}
+                >{name}<div /></h3>
                 <div className={StyleScript.productContainer} >
                     <div className={pageStyle.backToPageBtn}>
                         <button onClick={handleBackToPageBtn}>back</button>
@@ -59,7 +65,7 @@ const ClientProductMap: React.FC<any> = ({ name, ProductData, path, alt }) => {
                     {productData?.map((material: Props, idx: number) => (
                         <Link href={`${path}${material.id}`} ref={refs[idx]} className={StyleScript.reveal} key={idx}>
                             <div className={StyleScript.productCard}
-                                style={{ backgroundColor: theme === "moon" ? "grey" : "" }}
+                                style={{ backgroundColor: theme === "moon" ? "#C0C0C0" : "" }}
                             >
                                 <div className={StyleScript.imageDiv}  >
                                     {
@@ -95,6 +101,7 @@ const ClientProductMap: React.FC<any> = ({ name, ProductData, path, alt }) => {
                     ))}
                 </div>
             </div>
+            <Twinkler />
         </div>
     )
 }

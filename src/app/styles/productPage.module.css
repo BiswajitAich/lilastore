@@ -402,10 +402,12 @@
     justify-content: flex-start;
     column-gap: 10px;
 }
+
 .selectedProductImages div{
-    min-width: 120px;
-    height: 160px;
+    min-width: 90px;
+    height: 120px;
     background-color: black;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 824px) {

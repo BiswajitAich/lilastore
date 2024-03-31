@@ -7,6 +7,7 @@ import { Metadata, Viewport } from 'next';
 import NoImage from '../components/simplifiedComponents/NoImage';
 import StopContextMenu from '../components/simplifiedComponents/StopContextMenu';
 import { Context } from '../components/simplifiedComponents/ContextProvider';
+import Twinkler from '../components/effects/Twinkler';
 
 interface PageDesignProps {
   selectedProduct: {
@@ -325,36 +326,36 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
             </>
           ) : null}
         </div>
-
+        {selectedProduct?.type ? (
+          <>
             <h3 className={pageStyle.coloursAvailable}>Colours Available :</h3>
-        <div className={pageStyle.selectedProductImages}>
-          {selectedProduct?.type ? (
-            selectedProduct?.type.map((type: { url: string }, idx: number) => (
-              <div>
-              <CldImage
-                key={idx}
-                src={type.url}
-                width={120}
-                height={160}
-                loading='eager'
-                alt={`product Image${idx}`}
-                style={{
-                  opacity: 0,
-                  scrollSnapAlign: "center",
-                  transition: "opacity 300ms ease",
-                }}
-                onClick={() => handleViewImages(type.url)}
-                onLoad={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.style.opacity = "1";
-                }}
-                onError={(e) => NoImage(e)}
-              />
-              </div>
-            ))
-          ) : null}
-        </div>
-
+            <div className={pageStyle.selectedProductImages}>
+              {selectedProduct?.type.map((type: { url: string }, idx: number) => (
+                <div>
+                  <CldImage
+                    key={idx}
+                    src={type.url}
+                    width={90}
+                    height={120}
+                    loading='eager'
+                    alt={`product Image${idx}`}
+                    style={{
+                      opacity: 0,
+                      scrollSnapAlign: "center",
+                      transition: "opacity 300ms ease",
+                    }}
+                    onClick={() => handleViewImages(type.url)}
+                    onLoad={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.opacity = "1";
+                    }}
+                    onError={(e) => NoImage(e)}
+                  />
+                </div>
+              ))}
+            </div>
+          </>
+        ) : null}
 
         <div className={pageStyle.details}
           style={{
@@ -448,7 +449,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
       ) : null
       }
 
-
+      <Twinkler />
     </div >
   );
 };
