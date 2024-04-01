@@ -8,6 +8,7 @@ import { fetchProductData } from '@/app/api/fetchProductData';
 import NoImage from '../simplifiedComponents/NoImage';
 import StopContextMenu from '../simplifiedComponents/StopContextMenu';
 import { useTheme } from '../simplifiedComponents/ContextProvider';
+import CardLoader from '../effects/CardLoader';
 
 interface Product {
   goto: string;
@@ -64,11 +65,7 @@ function MiniSlider() {
 
 
         {!productData ? (
-          <div className={minisliderstyles.WaveLoaderWrap}>
-            {[...Array(10)].map((_, idx) => (
-              <div className={minisliderstyles.WaveLoaderDiv} key={idx} />
-            ))}
-          </div>
+          <CardLoader height={100} num={10} />
         ) : (
           <div className={minisliderstyles.scrollWrap} ref={scrollWrapRef}>
             {productData?.map((content, idx) => (

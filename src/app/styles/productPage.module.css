@@ -14,6 +14,7 @@
     justify-content: flex-start;
     box-shadow: 0 0 1pc #00000052;
     margin-bottom: 20px;
+    background-color: aliceblue;
 }
 
 .head {
@@ -356,7 +357,7 @@
 }
 
 .backToPageBtn {
-    position: absolute;
+    position: fixed;
     top: 5dvh;
     left: 10px;
     box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.25);

@@ -6,6 +6,7 @@ import Link from 'next/link'
 import NoImage from './NoImage'
 import StopContextMenu from './StopContextMenu'
 import { useTheme } from './ContextProvider'
+import CardLoader from '../effects/CardLoader'
 
 interface Props {
   price?: string
@@ -40,7 +41,11 @@ const ProductTypesComponent: React.FC<any> = ({ ProductData, heading }) => {
         }}
       >
         <h3>{heading}<div /></h3>
-        <div className={StyleScript.productContainer}>
+        <div className={StyleScript.productContainer}
+          style={{ display: ProductData ? "" : "block" }}>
+
+          {!ProductData ? <CardLoader height={165} num={5} /> : null}
+
           {ProductData?.map((material: Props, idx: number) => (
             <Link href={material?.goto} key={idx}>
               <div className={StyleScript.productCard}

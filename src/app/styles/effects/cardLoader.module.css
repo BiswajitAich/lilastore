@@ -1,0 +1,29 @@
+.WaveLoaderWrap {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    white-space: nowrap;
+    gap: 5%;
+    overflow: hidden;
+}
+
+.WaveLoaderDiv {
+    width: auto;
+    aspect-ratio: 3/4;
+    border-radius: 10px;
+    background-color: grey;
+    animation: pulse 1s linear(0.88 -24.26%, 0.66 41.18%, 0.85 104.41%) infinite;;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        background-color: aquamarine;
+    }
+
+    0% {
+        opacity: 1;
+    }
+}

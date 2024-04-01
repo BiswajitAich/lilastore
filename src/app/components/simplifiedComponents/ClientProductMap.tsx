@@ -10,6 +10,7 @@ import pageStyle from '@/app/styles/productPage.module.css'
 import { useRouter } from 'next/navigation'
 import { useTheme } from './ContextProvider';
 import Twinkler from '../effects/Twinkler';
+import Footer from '../Footer';
 
 interface Props {
     price?: string
@@ -102,6 +103,7 @@ const ClientProductMap: React.FC<any> = ({ name, ProductData, path, alt }) => {
                 </div>
             </div>
             <Twinkler />
+            <Footer />
         </div>
     )
 }

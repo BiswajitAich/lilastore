@@ -8,6 +8,7 @@ import WaveLoader from '../effects/WaveLoader'
 import NoImage from '../simplifiedComponents/NoImage'
 import StopContextMenu from '../simplifiedComponents/StopContextMenu'
 import { useTheme } from '../simplifiedComponents/ContextProvider'
+import { fetchProductData } from '@/app/api/fetchProductData'
 
 interface product {
   id?: number,
@@ -33,17 +34,8 @@ const Banner: React.FC = () => {
     const fetchData = async () => {
       try {
         if (displayDiv) return;
-        const control = new AbortController();
-        const signal = control.signal
-        const response = await fetch('https://lilastore007-default-rtdb.firebaseio.com/banner/.json', {
-          signal,
-          // cache: "force-cache"
-          next: { revalidate: 3600 }
-        });
-
-        const data = await response.json();
-        setDisplayDiv(data)
-        // console.log(data);
+        const data = fetchProductData("banner/banner")
+        setDisplayDiv(await data)
       } catch (error) {
         console.error('Error:', error);
         setDisplayDiv([])
