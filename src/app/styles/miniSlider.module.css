@@ -9,7 +9,7 @@
     width: 80%;
     background: transparent;
     position: absolute;
-    top: 370px;
+    top: 500px;
 }
 
 .scrollDiv {
@@ -135,9 +135,9 @@
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 470px) {
     .miniMain {
-        top: 370px;
+        top: 469px;
     }
 
 }

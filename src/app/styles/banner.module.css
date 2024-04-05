@@ -11,7 +11,7 @@
     height: 300px;
     scroll-behavior: smooth;
     margin-bottom: 110px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     overflow: hidden;
 }
 

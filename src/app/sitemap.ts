@@ -54,7 +54,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (necklaceData) {
         necklaceData.forEach((page: { id: any; }) => {
           necklacesRoutes.push({
-            url: `${rootUrl}/products/necklace/necklaces/${file.name}/${page.id}`,
+            url: `${rootUrl}/necklaces/${file.name}/${page.id}`,
             lastModified: new Date().toISOString(),
             priority: 0.8
           });
@@ -88,7 +88,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (earringData) {
         earringData.forEach((page: { id: any; }) => {
           earringsRoutes.push({
-            url: `${rootUrl}/products/earring/earrings/${file.name}/${page.id}`,
+            url: `${rootUrl}/earrings/${file.name}/${page.id}`,
             lastModified: new Date().toISOString(),
             priority: 0.8
           });
@@ -121,7 +121,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (bangleData) {
         bangleData.forEach((page: { id: any; }) => {
           banglesRoutes.push({
-            url: `${rootUrl}/products/bangle/bangles/${file.name}/${page.id}`,
+            url: `${rootUrl}/bangles/${file.name}/${page.id}`,
             lastModified: new Date().toISOString(),
             priority: 0.8
           });
@@ -151,7 +151,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (cosmeticData) {
         cosmeticData.forEach((page: { id: any; }) => {
           cosmeticsRoutes.push({
-            url: `${rootUrl}/products/cosmetic/cosmetics/${file.name}/${page.id}`,
+            url: `${rootUrl}/cosmetics/${file.name}/${page.id}`,
             lastModified: new Date().toISOString(),
             priority: 0.8
           });
@@ -185,7 +185,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       if (otherproductData) {
         otherproductData.forEach((page: { id: any; }) => {
           otherproductsRoutes.push({
-            url: `${rootUrl}/products/otherproduct/otherproducts/${file.name}/${page.id}`,
+            url: `${rootUrl}/otherproducts/${file.name}/${page.id}`,
             lastModified: new Date().toISOString(),
             priority: 0.8
           });
@@ -196,6 +196,36 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return otherproductsRoutes;
   };
   const otherproductsPages = (await otherproductsPageRoutes()).filter((route) => route !== null);
+
+  // get all menProducts
+  const menProductsRoutes = (await fetchProductsData("menProducts/menProducts.json")).map((route: { goto: string; }) => ({
+    url: `${rootUrl}${route.goto}`,
+    lastModified: new Date().toISOString(),
+    priority: 0.9,
+  }));
+  const menProductsPageRoutes = async () => {
+    const files = [
+      { name: "chain", path: "menProducts/chain.json" },
+      { name: "bracelet", path: "menProducts/bracelet.json" },
+      { name: "ring", path: "menProducts/ring.json" },
+    ];
+    const otherproductsRoutes: { url: string; lastModified: string; priority: number; }[] = [];
+    for (const file of files) {
+      const otherproductData = await fetchProductsData(file.path);
+      if (otherproductData) {
+        otherproductData.forEach((page: { id: any; }) => {
+          otherproductsRoutes.push({
+            url: `${rootUrl}/menProducts/${file.name}/${page.id}`,
+            lastModified: new Date().toISOString(),
+            priority: 0.8
+          });
+        });
+      }
+    }
+
+    return otherproductsRoutes;
+  };
+  const menProductsPages = (await menProductsPageRoutes()).filter((route) => route !== null);
 
 
 
@@ -215,6 +245,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...cosmeticRoutes.filter((route: null) => route !== null),
     ...cosmeticsPages,
     ...otherproductRoutes.filter((route: null) => route !== null),
-    ...otherproductsPages
+    ...otherproductsPages,
+    ...menProductsRoutes.filter((route: null) => route !== null),
+    ...menProductsPages
   ]
 }

@@ -1,0 +1,126 @@
+.main_body {
+    width: 100%;
+    overflow: hidden;
+    height: 133px;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.main {
+    width: 80%;
+    height: 100%;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+}
+
+.main_women,
+.main_men {
+    height: 133px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.main_women {
+    background: radial-gradient(transparent, pink, #ff5f7d);
+    width: auto;
+}
+
+.main_man_col {
+    background: radial-gradient(transparent, rgb(255 153 170), #930101);
+    width: auto;
+}
+
+.main_men {
+    width: -webkit-fill-available;
+}
+
+
+.main_men p,
+.main_women p {
+    width: -webkit-fill-available;
+    font-weight: 800;
+    color: black;
+    font-size: x-large;
+    padding: 5px;
+}
+
+.main_women_img,
+.main_men_img {
+    height: 133px;
+    object-fit: cover;
+}
+
+.main_women_img {
+    aspect-ratio: 3 / 4;
+}
+
+.main_men_img {
+    aspect-ratio: 1 / 1;
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+
+    .main,
+    .main_body,
+    .main_women,
+    .main_men,
+    .main_women_img,
+    .main_men_img {
+        height: 100px;
+    }
+
+    .main_women_img,
+    .main_men_img {
+        object-fit: cover;
+    }
+
+    .main_men p,
+    .main_women p {
+        font-size: large;
+        word-break: break-word;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    .main_men p,
+    .main_women p {
+        font-size: small;
+    }
+}
+.hover {
+    transition: background 2s linear;
+}
+
+.hover:hover {
+    animation: gradientChange 4s infinite;
+}
+
+@keyframes gradientChange {
+    0% {
+        background: radial-gradient( #ff7f5f82, #ffaf647d, #feb47b7e);
+    }
+
+    50% {
+        background: radial-gradient( #ffaf647f, #feb47b83, #ff7f5f83);
+    }
+
+    100% {
+        background: radial-gradient( #ff7f5f82, #ffaf647d, #feb47b7e);
+    }
+}
+
