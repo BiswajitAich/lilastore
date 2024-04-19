@@ -162,7 +162,7 @@ const Banner: React.FC = () => {
   return (
     <main className={bannerstyles.main}
       style={{
-        background: theme === "moon" ? "linear-gradient(180deg, transparent, black)" : "",
+        background: theme === "moon" ? "linear-gradient(180deg,black, oklch(0 0 0 / 0.6), black)" : "",
       }}
       onContextMenu={StopContextMenu}
     >

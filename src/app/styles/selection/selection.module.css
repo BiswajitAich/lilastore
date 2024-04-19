@@ -8,6 +8,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    background-color: aliceblue;
 }
 
 .main {
@@ -26,10 +27,12 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    background: #c9c9c9;
 }
 
 .main_women {
-    background: radial-gradient(transparent, pink, #ff5f7d);
+    /* background: radial-gradient(transparent, pink, #ff5f7d); */
+    background: radial-gradient(#c5c5c5, #e58b9b, #b77149);
     width: auto;
 }
 
@@ -56,15 +59,14 @@
 .main_men_img {
     height: 133px;
     object-fit: cover;
+    mix-blend-mode: multiply;
 }
 
-.main_women_img {
+.main_women_img,
+.main_men_img {
     aspect-ratio: 3 / 4;
 }
 
-.main_men_img {
-    aspect-ratio: 1 / 1;
-}
 
 @media screen and (max-width: 600px) {
     .main {
@@ -102,6 +104,7 @@
         font-size: small;
     }
 }
+
 .hover {
     transition: background 2s linear;
 }
@@ -112,15 +115,14 @@
 
 @keyframes gradientChange {
     0% {
-        background: radial-gradient( #ff7f5f82, #ffaf647d, #feb47b7e);
+        background: radial-gradient(#ff7f5f82, #ffaf647d, #feb47b7e);
     }
 
     50% {
-        background: radial-gradient( #ffaf647f, #feb47b83, #ff7f5f83);
+        background: radial-gradient(#ffaf647f, #feb47b83, #ff7f5f83);
     }
 
     100% {
-        background: radial-gradient( #ff7f5f82, #ffaf647d, #feb47b7e);
+        background: radial-gradient(#ff7f5f82, #ffaf647d, #feb47b7e);
     }
 }
-

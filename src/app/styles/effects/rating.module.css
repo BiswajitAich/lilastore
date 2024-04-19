@@ -1,0 +1,96 @@
+.rating {
+
+    width: 100%;
+    padding: 10px 0;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+.link span {
+    font-weight: 700;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.star {
+    position: relative;
+
+    display: inline-block;
+    width: 0;
+    height: 0;
+
+    margin-left: .9em;
+    margin-right: .9em;
+    margin-bottom: 1.2em;
+
+    border-right: .3em solid transparent;
+    border-bottom: .7em solid aliceblue;
+    border-left: .3em solid transparent;
+
+    font-size: 1rem;
+}
+
+.star::before,
+.star::after {
+    content: '';
+
+    display: block;
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    top: .6em;
+    left: -1em;
+
+    border-right: 1em solid transparent;
+    border-bottom: .7em solid aliceblue;
+    border-left: 1em solid transparent;
+
+    transform: rotate(-35deg);
+}
+
+
+.star_dark {
+    border-bottom: .7em solid rgb(107 104 107);
+}
+
+.star_dark::before,
+.star_dark::after {
+    border-bottom: .7em solid rgb(107 104 107);
+}
+
+.star:hover {
+    border-bottom: .7em solid #FC0;
+    animation: rotate 1s ease 1;
+}
+
+.star:hover::before,
+.star:hover::after {
+    border-bottom: .7em solid #FC0;
+}
+
+.star::after {
+    transform: rotate(35deg);
+}
+
+@keyframes rotate {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(45deg);
+    }
+
+    75% {
+        transform: rotate(-45deg);
+    }
+}

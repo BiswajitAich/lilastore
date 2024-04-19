@@ -5,9 +5,17 @@ import men from "../../../../public/images/some/man.webp"
 import women from "../../../../public/images/some/women.webp"
 import style from "../../styles/selection/selection.module.css"
 import StopContextMenu from "../simplifiedComponents/StopContextMenu"
+import { useTheme } from "../simplifiedComponents/ContextProvider"
 const WomenSelected = () => {
+    const theme = useTheme();
     return (
-        <div className={style.main_body} onContextMenu={StopContextMenu}>
+        <div
+            className={style.main_body}
+            onContextMenu={StopContextMenu}
+            style={{
+                backgroundColor: theme === 'moon' ? 'black' : ''
+            }}
+        >
             <div className={style.main}>
                 <div className={style.main_women}>
                     <div className={style.main_women_img}>
