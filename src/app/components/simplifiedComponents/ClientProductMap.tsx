@@ -11,6 +11,8 @@ import { useRouter } from 'next/navigation'
 import { useTheme } from './ContextProvider';
 import Twinkler from '../effects/Twinkler';
 import Footer from '../Footer';
+import { usePathname } from 'next/navigation'
+import BreadCrumbs from '../BreadCrumbs';
 
 interface Props {
     price?: string
@@ -29,6 +31,7 @@ const ClientProductMap: React.FC<any> = ({ name, ProductData, path, alt }) => {
     const refs: React.RefObject<HTMLAnchorElement>[] = (productData?.map(() => UseReveal()) ?? []) as React.RefObject<HTMLAnchorElement>[];
     const router = useRouter();
     const theme = useTheme();
+    const pathName = usePathname();
 
     const handleBackToPageBtn = () => {
         try {
@@ -58,7 +61,9 @@ const ClientProductMap: React.FC<any> = ({ name, ProductData, path, alt }) => {
                         color: theme === "moon" ? "#FFD700 " : ""
                     }}
                 >{name}<div /></h3>
+                <BreadCrumbs params={pathName} />
                 <div className={StyleScript.productContainer} >
+
                     <div className={pageStyle.backToPageBtn}>
                         <button onClick={handleBackToPageBtn}>back</button>
                     </div>

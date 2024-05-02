@@ -2,12 +2,13 @@
 import { CldImage } from 'next-cloudinary';
 import React, { useState, useRef, useEffect, useContext } from 'react';
 import pageStyle from '../../styles/productPage.module.css';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Metadata, Viewport } from 'next';
 import NoImage from './NoImage';
 import StopContextMenu from './StopContextMenu';
 import { Context } from './ContextProvider';
 import Twinkler from '../effects/Twinkler';
+import BreadCrumbs from '../BreadCrumbs';
 
 interface PageDesignProps {
   selectedProduct: {
@@ -35,6 +36,8 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
   const contextValue = useContext(Context)
   if (!contextValue) return null;
   const { theme } = contextValue;
+  const pathName = usePathname();
+
   // useEffect(() => {
   //   document.addEventListener('contextmenu', function (event) {
   //     event.preventDefault();
@@ -212,6 +215,8 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
           <button type='button' onClick={() => { router.push('/') }}>Home</button>
           <p>{selectedProduct?.description}</p>
         </div>
+        <BreadCrumbs params={pathName} />
+
         <div className={pageStyle.imgcontainer}>
           <div className={`${pageStyle.imgDiv} ${loaded ? '' : pageStyle.animation}`} ref={imgContainerRef}>
             {selectedProduct?.type ? (

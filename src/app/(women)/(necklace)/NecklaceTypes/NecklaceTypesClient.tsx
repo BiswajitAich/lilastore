@@ -6,6 +6,7 @@ const NecklacesTypesClient: React.FC<any> = ({ProductData}) => {
         <ProductTypesComponent
             ProductData={ProductData}
             heading="Necklace Collection"
+            id="necklaces"
         />
     )
 }

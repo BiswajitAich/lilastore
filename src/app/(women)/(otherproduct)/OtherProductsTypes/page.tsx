@@ -1,6 +1,5 @@
 import { Suspense } from "react";
-import Loading from "../../loading";
-import OtherProductsTypesClient from "./OtherProductsTypesClient";
+import Loading from "@/app/loading";import OtherProductsTypesClient from "./OtherProductsTypesClient";
 const api = process.env.NEXT_PUBLIC_API;
 const fetchProductsData = async () => {
     try {

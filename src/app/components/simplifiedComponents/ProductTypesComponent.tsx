@@ -22,9 +22,8 @@ interface Props {
 
 
 
-const ProductTypesComponent: React.FC<any> = ({ ProductData, heading }) => {
+const ProductTypesComponent: React.FC<any> = ({ ProductData, heading, id }) => {
   const theme = useTheme();
-
 
   return (
     <main className={StyleScript.main}
@@ -32,7 +31,8 @@ const ProductTypesComponent: React.FC<any> = ({ ProductData, heading }) => {
         background: theme === "moon" ? "radial-gradient(transparent, #000000)" : "",
       }}
       onContextMenu={StopContextMenu}
-    >
+      id={id}
+      >
       <div
         className={StyleScript.productBody}
         style={{
@@ -43,7 +43,6 @@ const ProductTypesComponent: React.FC<any> = ({ ProductData, heading }) => {
         <h3>{heading}<div /></h3>
         <div className={StyleScript.productContainer}
           style={{ display: ProductData ? "" : "block" }}>
-
           {!ProductData ? <CardLoader height={165} num={5} /> : null}
 
           {ProductData?.map((material: Props, idx: number) => (
