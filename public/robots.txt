@@ -1,9 +1,15 @@
 User-agent: Googlebot
-Disallow: /nogooglebot/
+Disallow: 
 
 User-agent: bingbot
+Disallow:
+
 User-agent: DuckDuckBot
+Disallow:
+
 User-agent: archive.org_bot
+Disallow:
+
 Allow: /
 
 User-agent: *
