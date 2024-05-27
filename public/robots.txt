@@ -1,20 +1,16 @@
 User-agent: Googlebot
-Disallow: 
+Allow: /
 
 User-agent: bingbot
-Disallow:
+Allow: /
 
 User-agent: DuckDuckBot
-Disallow:
+Allow: /
 
 User-agent: archive.org_bot
-Disallow:
-
 Allow: /
 
 User-agent: *
-Allow: /
-Disallow: /uploads/
-Disallow: /downloads/
+Disallow: /
 
 Sitemap: https://lilastore.vercel.app/sitemap.xml

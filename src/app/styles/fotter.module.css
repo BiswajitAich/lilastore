@@ -3,7 +3,7 @@
     background-color: rgba(64, 0, 255, 0.2);
     min-height: 50px;
     padding: 20px 0px;
-    color: #bdbde3;
+    color: #e3d6bd;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,7 +12,7 @@
 
 .container {
     width: 80%;
-    background: linear-gradient(0deg, rgb(100, 78, 200), rgba(7, 8, 78), rgb(7, 8, 78), rgba(100, 78, 200));
+    background: linear-gradient(0deg, rgb(46 37 129), rgba(7, 8, 78), rgb(7, 8, 78), rgb(40 33 122));
     display: flex;
     padding: 10px 0;
     gap: 10px;
@@ -54,10 +54,10 @@
 
 .note {
     width: 80%;
-    background-color: rgba(100, 78, 200);
+    background-color: rgb(39 32 120);
     padding: 10px 0;
     text-align: center;
-    color: #67c7a7;
+    color: #ffd900e3;
     padding-bottom: 55px;
 }
 

@@ -1,9 +1,10 @@
 import React from 'react';
 import { PageDesign } from '../../../../../components/simplifiedComponents/PageDesign';
 import MenProductTypes from '../../../MenProductTypes/page';
-import NotFound from '@/app/not-found';
+import dynamic from 'next/dynamic';
+const NotFound = dynamic(()=>import('@/app/not-found'),{ssr: false});
 import { Metadata } from 'next';
-import Footer from '@/app/components/Footer';
+const Footer = dynamic(() => import('@/app/components/Footer'));
 import { fetchProductData } from '@/app/api/fetchProductData';
 import ContextProvider from '@/app/components/simplifiedComponents/ContextProvider';
 

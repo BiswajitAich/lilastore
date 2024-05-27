@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import style from "./../styles/marquee.module.css";
 import StopContextMenu from "./simplifiedComponents/StopContextMenu";
 
-export const Marquee: React.FC = () => {
+const Marquee: React.FC = () => {
   const data = [
     "* Elevate your style with jewelry that speaks your uniqueness. *" ,
     "* Our jewelry: Where affordability meets luxury. *",
@@ -47,3 +47,5 @@ export const Marquee: React.FC = () => {
     </div>
   );
 };
+
+export default Marquee;

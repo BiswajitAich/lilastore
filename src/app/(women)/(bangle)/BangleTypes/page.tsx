@@ -1,6 +1,7 @@
 import React, { Suspense } from "react"
 import BangleTypesClient from "./BangleTypesClient"
-import Loading from "@/app/loading"
+import dynamic from "next/dynamic";
+const Loading = dynamic(()=> import("@/app/loading"),{ssr: false})
 const api = process.env.NEXT_PUBLIC_API;
 
 const fetchProductsData = async () => {

@@ -57,9 +57,7 @@
     height: -webkit-fill-available;
     background-color: antiquewhite;
     display: inline-flex;
-    align-content: center;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
     word-wrap: break-word;
@@ -67,9 +65,8 @@
 
 .details div,
 .details p {
-    min-width: 90%;
     text-align: left;
-    padding: 10px;
+    padding: 10px 10px 10px 10%;
     border-right: 2px solid black;
     border-left: 2px solid rgb(255, 255, 255);
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));

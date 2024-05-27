@@ -1,5 +1,6 @@
 import { Suspense } from "react";
-import Loading from "@/app/loading";import EarringTypesClient from "./EarringTypesClient";
+const Loading = dynamic(()=> import("@/app/loading"),{ssr: false});import EarringTypesClient from "./EarringTypesClient";
+import dynamic from "next/dynamic";
 const api = process.env.NEXT_PUBLIC_API;
 const fetchProductsData = async () => {
     try {

@@ -1,12 +1,13 @@
 .div{
     width: 100%;
-    padding: 0px 0px 10px 5px;
+    padding: 0px 0px 10px 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     gap: 2px;
+    font-size: clamp(0.7rem, 3vw, 1rem);
 }
 
 .link:hover{

@@ -200,7 +200,7 @@ const Banner: React.FC = () => {
                         src={content?.url}
                         loading='eager'
                         priority
-                        alt={`imade${idx + 1}`}
+                        alt={`image ${content?.category}`}
                         width={300}
                         height={400}
                         onError={(e) => NoImage(e)}
