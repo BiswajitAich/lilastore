@@ -9,6 +9,7 @@ import NoImage from '../simplifiedComponents/NoImage'
 import StopContextMenu from '../simplifiedComponents/StopContextMenu'
 import { useTheme } from '../simplifiedComponents/ContextProvider'
 import { fetchProductData } from '@/app/api/fetchProductData'
+import useIntersectionObserver from '@/app/ts/useIntersectionObserver'
 
 interface product {
   id?: number,
@@ -26,8 +27,9 @@ const Banner: React.FC = () => {
   const scrollsRef = useRef<HTMLDivElement>(null);
   const [isDown, setIsDown] = useState(false);
   const [position, setPosition] = useState(0);
-  const [displayDiv, setDisplayDiv] = useState<product[]>();
+  const [displayDiv, setDisplayDiv] = useState<product[] | null>(null);
   const theme = useTheme();
+  const [intersectionRef, isIntersecting] = useIntersectionObserver({ threshold: 0.1 });
 
 
   useEffect(() => {
@@ -42,9 +44,9 @@ const Banner: React.FC = () => {
       }
     };
 
-    fetchData();
+    if (isIntersecting && !displayDiv) fetchData();
 
-  }, [displayDiv])
+  }, [isIntersecting])
 
   useEffect(() => {
 
@@ -108,7 +110,7 @@ const Banner: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setDisplayDiv((prev) => {
-        if (!prev) return;
+        if (!prev) return null;
         const [first, ...rest] = prev;
         return [...rest, first];
       });
@@ -165,6 +167,7 @@ const Banner: React.FC = () => {
         background: theme === "moon" ? "linear-gradient(180deg,black, oklch(0 0 0 / 0.6), black)" : "",
       }}
       onContextMenu={StopContextMenu}
+      ref={intersectionRef}
     >
       <div className={bannerstyles.banner} onContextMenu={StopContextMenu}>
         {displayDiv ? (<>

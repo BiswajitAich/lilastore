@@ -20,9 +20,13 @@ interface Props {
   }
 }
 
+interface ProductTypesComponent {
+  ProductData: Props[],
+  heading: string,
+  id: any
+}
 
-
-const ProductTypesComponent: React.FC<any> = ({ ProductData, heading, id }) => {
+const ProductTypesComponent: React.FC<ProductTypesComponent> = ({ ProductData, heading, id }) => {
   const theme = useTheme();
 
   return (
@@ -32,7 +36,7 @@ const ProductTypesComponent: React.FC<any> = ({ ProductData, heading, id }) => {
       }}
       onContextMenu={StopContextMenu}
       id={id}
-      >
+    >
       <div
         className={StyleScript.productBody}
         style={{

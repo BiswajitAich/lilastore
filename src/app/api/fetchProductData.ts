@@ -4,13 +4,14 @@ export async function fetchProductData(searchName: string) {
     let res: Response;
     if (base.startsWith("http://")) {
       res = await fetch(`${base}/api/fetchData?searchName=${searchName}`, {
-        cache: 'no-cache'
+        cache: 'force-cache'
       });
     } else {
       res = await fetch(`${base}/api/fetchData?searchName=${searchName}`, {
         next: { revalidate: 3600 }
       });
     }
+    console.log(searchName);
 
     if (res.ok) {
       return await res.json();

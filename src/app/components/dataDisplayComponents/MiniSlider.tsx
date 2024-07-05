@@ -9,6 +9,7 @@ import NoImage from '../simplifiedComponents/NoImage';
 import StopContextMenu from '../simplifiedComponents/StopContextMenu';
 import { useTheme } from '../simplifiedComponents/ContextProvider';
 import CardLoader from '../effects/CardLoader';
+import useIntersectionObserver from '@/app/ts/useIntersectionObserver';
 
 interface Product {
   goto: string;
@@ -17,16 +18,19 @@ interface Product {
 
 function MiniSlider() {
   const scrollWrapRef = useRef<HTMLDivElement | null>(null);
-  const [productData, setProductData] = useState<Product[]>();
+  const [productData, setProductData] = useState<Product[] | null>(null);
   const theme = useTheme();
+  const [intersectionRef, isIntersecting] = useIntersectionObserver({ threshold: 0.1 });
+
 
   useEffect(() => {
     const fetchData = async () => {
       const data = fetchProductData("miniSlider/miniSlider")
+      console.log("observed miniSlider/miniSlider");
       setProductData(await data);
     }
-    fetchData();
-  }, [])
+    if (isIntersecting && !productData) fetchData();
+  }, [isIntersecting])
 
   const handleRightBtn = () => {
     if (scrollWrapRef.current) {
@@ -46,6 +50,7 @@ function MiniSlider() {
         background: theme === "moon" ? "linear-gradient(180deg, transparent, black)" : "",
       }}
       onContextMenu={StopContextMenu}
+      ref={intersectionRef}
     >
       <div className={minisliderstyles.miniMain} onContextMenu={StopContextMenu}
         style={{
