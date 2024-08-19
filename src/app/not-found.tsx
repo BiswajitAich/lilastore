@@ -33,6 +33,7 @@ export default function NotFound() {
                         src={NotFoundImage}
                         height={1000}
                         width={600}
+                        loading="lazy"
                         alt="Not Found Image"
                     />
                 </div>
@@ -49,6 +50,7 @@ export default function NotFound() {
                                 src={FourImage}
                                 height={50}
                                 width={50}
+                                loading="lazy"
                                 alt="Not Found Image"
                             />
                         </div>
@@ -57,6 +59,7 @@ export default function NotFound() {
                                 src={ZeroImage}
                                 height={50}
                                 width={50}
+                                loading="lazy"
                                 alt="Not Found Image"
                             />
                         </div>
@@ -65,6 +68,7 @@ export default function NotFound() {
                                 src={FourImage}
                                 height={50}
                                 width={50}
+                                loading="lazy"
                                 alt="Not Found Image"
                             />
                         </div>

@@ -1,103 +1,103 @@
 [
     {
         "name": "Bracelets",
-        "link": "/products/bangle/bangles/bracelet"
+        "link": "/bangles/bracelet"
     },
     {
         "name": "Mantasa",
-        "link": "/products/bangle/bangles/mantasa"
+        "link": "/bangles/mantasa"
     },
     {
         "name": "Golden Bangle",
-        "link": "/products/bangle/bangles/golden-bangle"
+        "link": "/bangles/golden-bangle"
     },
     {
         "name": "Oxidized Bangle",
-        "link": "/products/bangle/bangles/oxydized-bangle"
+        "link": "/bangles/oxydized-bangle"
     },
     {
         "name": "cosmetics",
-        "link": "/products/cosmetic/cosmetics/makeup"
+        "link": "/cosmetics/makeup"
     },
     {
         "name": "Makeup kits",
-        "link": "/products/cosmetic/cosmetics/makeup"
+        "link": "/cosmetics/makeup"
     },
     {
         "name": "Stone Earring",
-        "link": "/products/earring/earrings/adstone-earring"
+        "link": "/earrings/adstone-earring"
     },
     {
         "name": "AD Stone Earring",
-        "link": "/products/earring/earrings/adstone-earring"
+        "link": "/earrings/adstone-earring"
     },
     {
         "name": "Fancy Earring",
-        "link": "/products/earring/earrings/fancy-earring"
+        "link": "/earrings/fancy-earring"
     },
     {
         "name": "Funky Earring",
-        "link": "/products/earring/earrings/funky-earring"
+        "link": "/earrings/funky-earring"
     },
     {
         "name": "Golden Earring",
-        "link": "/products/earring/earrings/golden-earring"
+        "link": "/earrings/golden-earring"
     },
     {
         "name": "Oxidized Earring",
-        "link": "/products/earring/earrings/oxydized-earring"
+        "link": "/earrings/oxydized-earring"
     },
     {
         "name": "Terracotta Earring",
-        "link": "/products/earring/earrings/terracotta-earring"
+        "link": "/earrings/terracotta-earring"
     },
     {
         "name": "Chemicalbead Necklace",
-        "link": "/products/necklace/necklaces/chemicalbead-necklace"
+        "link": "/necklaces/chemicalbead-necklace"
     },
     {
         "name": "Choker",
-        "link": "/products/necklace/necklaces/choker"
+        "link": "/necklaces/choker"
     },
     {
         "name": "Fancy Necklace",
-        "link": "/products/necklace/necklaces/fancy-necklace"
+        "link": "/necklaces/fancy-necklace"
     },
     {
         "name": "Golden Necklace",
-        "link": "/products/necklace/necklaces/golden-necklace"
+        "link": "/necklaces/golden-necklace"
     },
     {
         "name": "Kundan Necklace",
-        "link": "/products/necklace/necklaces/kundan-necklace"
+        "link": "/necklaces/kundan-necklace"
     },
     {
         "name": "Mangalsutra",
-        "link": "/products/necklace/necklaces/mangalsutra"
+        "link": "/necklaces/mangalsutra"
     },
     {
         "name": "Oxidized Necklace",
-        "link": "/products/necklace/necklaces/oxydized-necklace"
+        "link": "/necklaces/oxydized-necklace"
     },
     {
         "name": "Terracotta Necklace",
-        "link": "/products/necklace/necklaces/terracotta-necklace"
+        "link": "/necklaces/terracotta-necklace"
     },
     {
         "name": "Chains",
-        "link": "/products/otherproduct/otherproducts/chain"
+        "link": "/otherproducts/chain"
     },
     {
         "name": "Kamarband",
-        "link": "/products/otherproduct/otherproducts/kamarband"
+        "link": "/otherproducts/kamarband"
     },
     
     {
         "name": "Payals",
-        "link": "/products/otherproduct/otherproducts/payal"
+        "link": "/otherproducts/payal"
     },
     {
         "name": "Rings",
-        "link": "/products/otherproduct/otherproducts/ring"
+        "link": "/otherproducts/ring"
     }
 ]
