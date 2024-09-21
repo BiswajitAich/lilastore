@@ -2,7 +2,7 @@ import React from 'react';
 import { PageDesign } from '../../../../../components/simplifiedComponents/PageDesign';
 import Bangles from '../../../BangleTypes/page';
 import dynamic from 'next/dynamic';
-const NotFound = dynamic(()=>import('@/app/not-found'),{ssr: false});
+const NotFound = dynamic(()=>import('@/app/not-found') );
 import { Metadata } from 'next';
 const Footer = dynamic(() => import('@/app/components/Footer'));
 import { fetchProductData } from '@/app/api/fetchProductData';

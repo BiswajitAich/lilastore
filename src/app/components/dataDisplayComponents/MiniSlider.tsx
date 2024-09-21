@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef, useState } from 'react';
+import React, { memo, useEffect, useRef, useState } from 'react';
 import minisliderstyles from "../../styles/miniSlider.module.css";
 import { CldImage } from 'next-cloudinary';
 // import productData from "../../../public/data/miniSlider/miniSlider.json";
@@ -10,27 +10,38 @@ import StopContextMenu from '../simplifiedComponents/StopContextMenu';
 import { useTheme } from '../simplifiedComponents/ContextProvider';
 import CardLoader from '../effects/CardLoader';
 import useIntersectionObserver from '@/app/ts/useIntersectionObserver';
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
+const queryClient = new QueryClient();
 
 interface Product {
   goto: string;
   url: string;
 }
 
-function MiniSlider() {
+const MiniSliderCarousel = memo(() => {
   const scrollWrapRef = useRef<HTMLDivElement | null>(null);
-  const [productData, setProductData] = useState<Product[] | null>(null);
   const theme = useTheme();
   const [intersectionRef, isIntersecting] = useIntersectionObserver({ threshold: 0.1 });
+  const [hasFetched, setHasFetched] = useState(false);
+
+  const { data, refetch, isFetching } = useQuery(
+    "miniSlider/miniSlider",
+    () => fetchProductData("miniSlider/miniSlider"),
+    {
+      enabled: false,
+      staleTime: 1000 * 60 * 20,
+    }
+  );
 
 
   useEffect(() => {
-    const fetchData = async () => {
-      const data = fetchProductData("miniSlider/miniSlider")
-      console.log("observed miniSlider/miniSlider");
-      setProductData(await data);
+    if (isIntersecting && !hasFetched && !isFetching && !data) {
+      refetch();
+      setHasFetched(true);
+      console.log(`Observed mini slider for the first time`);
     }
-    if (isIntersecting && !productData) fetchData();
-  }, [isIntersecting])
+  }, [isIntersecting, hasFetched, isFetching, refetch]);
+
 
   const handleRightBtn = () => {
     if (scrollWrapRef.current) {
@@ -57,7 +68,7 @@ function MiniSlider() {
           backgroundColor: theme === "moon" ? "darkblue" : "",
         }}
       >
-        {productData ? (<>
+        {data ? (<>
           <button onClick={handleLeftBtn} aria-label="Previous Slide" className={minisliderstyles.leftBtn}>
             <div className={minisliderstyles.goBack1}></div>
             <div className={minisliderstyles.goBack2}></div>
@@ -69,11 +80,11 @@ function MiniSlider() {
         </>) : null}
 
 
-        {!productData ? (
+        {!data ? (
           <CardLoader height={100} num={10} />
         ) : (
           <div className={minisliderstyles.scrollWrap} ref={scrollWrapRef}>
-            {productData?.map((content, idx) => (
+            {data?.map((content:Product, idx: number) => (
               content.url && <div className={minisliderstyles.scrollDiv} key={idx}
                 style={{
                   boxShadow: theme === "moon" ? "2px 2px 5px black, -2px -2px 5px black" : "",
@@ -100,6 +111,12 @@ function MiniSlider() {
       </div>
     </main>
   );
-}
+})
+
+const MiniSlider = () => (
+  <QueryClientProvider client={queryClient}>
+    <MiniSliderCarousel />
+  </QueryClientProvider>
+);
 
 export default MiniSlider;

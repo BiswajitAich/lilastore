@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import type { Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import ContextProvider from './components/simplifiedComponents/ContextProvider'
+// import Offline from './_offline'
 // import Footer from './components/Footer'
 // import dynamic from 'next/dynamic';
 
@@ -83,6 +84,7 @@ export default function RootLayout({
           {children}
           {/* <Footer /> */}
           {/* <SplashScreen /> */}
+          {/* <Offline /> */}
         </ContextProvider>
       </body>
     </html>

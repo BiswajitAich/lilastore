@@ -6,11 +6,11 @@ const UseReveal = () => {
     const ref = useRef<HTMLAnchorElement>(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
+        const observer = new IntersectionObserver(([entry], obs) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add(Style.revealVisible);
                     entry.target.classList.remove(Style.reveal);
-                    observer.disconnect();
+                    obs.unobserve(entry.target);
                 }
             },
             {

@@ -1,57 +1,48 @@
-"use client"
-import React, { Suspense, useState, useEffect } from "react"
-import BangleTypesClient from "./BangleTypesClient"
-import dynamic from "next/dynamic";
-import useIntersectionObserver from "@/app/ts/useIntersectionObserver"; // Import the hook
-import { fetchProductData } from "@/app/api/fetchProductData";
+// "use client"
+// import React, { Suspense, useState, useEffect } from "react"
+// import BangleTypesClient from "./BangleTypesClient"
+// import dynamic from "next/dynamic";
+// import useIntersectionObserver from "@/app/ts/useIntersectionObserver"; 
+// import { fetchProductData } from "@/app/api/fetchProductData";
 
-const Loading = dynamic(() => import("@/app/loading"), { ssr: false })
-// const api = process.env.NEXT_PUBLIC_API;
+// const Loading = dynamic(() => import("@/app/loading"), { ssr: false })
 
-// const fetchProductsData = async () => {
-//     try {
-//         const path = "bangle/bangle.json";
-//         let res: Response;
-//         if (api?.startsWith("http://")) {
-//             res = await fetch(`${api}?fetchData=${path}`, {
-//                 cache: 'no-cache'
-//             });
-//         } else {
-//             res = await fetch(`${api}${path}`, {
-//                 // cache: "force-cache"
-//                 next: { revalidate: 3600 }
-//             });
+// const BangleTypes: React.FC = () => {
+//     const [intersectionRef, isIntersecting] = useIntersectionObserver({ threshold: 0.1 });
+//     const [productData, setProductData] = useState(null);
+
+//     useEffect(() => {
+//         if (isIntersecting && !productData) {
+//             fetchProductData("bangle/bangle").then(data => setProductData(data));
+//             console.log("observed");
+            
 //         }
-//         if (res.ok) {
-//             const data = await res.json();
-//             return data;
-//         } else {
-//             return null;
-//         }
-//     } catch (error) {
-//         return null;
-//     }
+//     }, [isIntersecting]);
+
+//     return (
+//         <div ref={intersectionRef}>
+//             <Suspense fallback={<Loading />}>
+//                 <BangleTypesClient ProductData={productData} />
+//             </Suspense>
+//         </div>
+//     )
 // }
 
-const BangleTypes: React.FC = () => {
-    const [intersectionRef, isIntersecting] = useIntersectionObserver({ threshold: 0.1 });
-    const [productData, setProductData] = useState(null);
+// export default BangleTypes;
 
-    useEffect(() => {
-        if (isIntersecting && !productData) {
-            fetchProductData("bangle/bangle").then(data => setProductData(data));
-            console.log("observed");
-            
-        }
-    }, [isIntersecting]);
 
-    return (
-        <div ref={intersectionRef}>
-            <Suspense fallback={<Loading />}>
-                <BangleTypesClient ProductData={productData} />
-            </Suspense>
-        </div>
-    )
-}
+
+"use client"
+import dynamic from "next/dynamic";
+import ProductType from "@/app/reuse/Type";
+
+const BangleTypesClient = dynamic(() => import("./BangleTypesClient"));
+
+const BangleTypes = () => (
+    <ProductType 
+        endpoint="bangle/bangle"
+        Component={BangleTypesClient}
+    />
+);
 
 export default BangleTypes;

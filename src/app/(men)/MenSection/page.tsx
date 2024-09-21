@@ -5,7 +5,7 @@ const MenSelected = dynamic(() => import("@/app/components/seclection/MenSelecte
 import { Header } from "@/app/components"
 const Marquee = dynamic(()=> import("@/app/components/Marquee"));
 const Footer = dynamic(()=> import("@/app/components/Footer"));
-const Loading = dynamic(()=> import("@/app/loading"),{ssr: false})
+const Loading = dynamic(()=> import("@/app/loading") )
 // import MenProducts from "../(menProduct)/MenProducts"
 const MenProducts = dynamic(() => import("../(menProduct)/MenProducts"));
 const FloatingOptions = dynamic(() => import('@/app/components/effects/FloatingOptions'), { ssr: false });

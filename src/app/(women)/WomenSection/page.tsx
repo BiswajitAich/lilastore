@@ -11,7 +11,7 @@ const WomenSelected = dynamic(()=> import("@/app/components/seclection/WomenSele
 import { Header } from "@/app/components"
 const Marquee = dynamic(() => import('@/app/components/Marquee'));
 const Footer = dynamic(() => import('@/app/components/Footer'));
-const Loading = dynamic(()=> import("@/app/loading"),{ssr: false})
+const Loading = dynamic(()=> import("@/app/loading") )
 const FloatingOptions = dynamic(() => import('@/app/components/effects/FloatingOptions'), { ssr: false });
 
 const WomenSection = () => {

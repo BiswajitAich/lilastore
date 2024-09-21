@@ -1,14 +1,15 @@
 "use client"
+import dynamic from 'next/dynamic';
 import { CldImage } from 'next-cloudinary';
-import React, { useState, useRef, useEffect, useContext } from 'react';
+import React, { useState, useRef, useEffect, useContext, memo } from 'react';
 import pageStyle from '../../styles/productPage.module.css';
 import { usePathname, useRouter } from 'next/navigation';
 import { Metadata, Viewport } from 'next';
 import NoImage from './NoImage';
 import StopContextMenu from './StopContextMenu';
 import { Context } from './ContextProvider';
-import Twinkler from '../effects/Twinkler';
-import BreadCrumbs from '../BreadCrumbs';
+const Twinkler = dynamic(() => import('../effects/Twinkler'));
+const BreadCrumbs = dynamic(()=> import('../BreadCrumbs'));
 
 interface PageDesignProps {
   selectedProduct: {
@@ -23,7 +24,7 @@ interface PageDesignProps {
   };
 }
 
-export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
+export const PageDesign: React.FC<PageDesignProps> = memo(({ selectedProduct }) => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const [zoom, setZoom] = useState<number>(1);
@@ -376,7 +377,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
             display: "flex",
             flexDirection: "column",
             gap: "10px",
-          }}>{selectedProduct?.detail?.split('\n').map((item, key) => {
+          }}>{selectedProduct?.detail?.split('\n').map((item: string , key: React.Key) => {
             return <span key={key}>{item}<br /></span>
           })}</p>
           <p
@@ -433,7 +434,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
             <div
               className={pageStyle.viewImagesImgs}
             >
-              {selectedProduct?.type?.map((type, idx: number) => (
+              {selectedProduct?.type?.map((type: { url: string; }, idx: number) => (
                 <div key={idx}>
                   <CldImage
                     src={type.url}
@@ -456,7 +457,7 @@ export const PageDesign: React.FC<PageDesignProps> = ({ selectedProduct }) => {
       <Twinkler />
     </div >
   );
-};
+});
 
 
 export async function generateMetadata({ selectedProduct }: PageDesignProps): Promise<Metadata> {

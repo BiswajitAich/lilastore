@@ -1,6 +1,6 @@
 {
-  "name": "lila-store-app-next",
-  "version": "0.1.1",
+  "name": "lila-store-app",
+  "version": "0.1.2",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,7 +14,8 @@
     "next-cloudinary": "^5.20.0",
     "next-pwa": "^5.6.0",
     "react": "^18.2.0",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-query": "^3.39.3"
   },
   "devDependencies": {
     "@types/glob": "^8.1.0",

@@ -1,4 +1,5 @@
 "use client"
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import React from 'react'
 import { CldImage } from 'next-cloudinary'
@@ -9,10 +10,10 @@ import StopContextMenu from './StopContextMenu';
 import pageStyle from '@/app/styles/productPage.module.css'
 import { useRouter } from 'next/navigation'
 import { useTheme } from './ContextProvider';
-import Twinkler from '../effects/Twinkler';
-import Footer from '../Footer';
+const Twinkler= dynamic(()=>import('../effects/Twinkler'));
+const Footer= dynamic(()=>import('../Footer'));
 import { usePathname } from 'next/navigation'
-import BreadCrumbs from '../BreadCrumbs';
+const BreadCrumbs= dynamic(()=>import('../BreadCrumbs'));
 
 interface Props {
     price?: string

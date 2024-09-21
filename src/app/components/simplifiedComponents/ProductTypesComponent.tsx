@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { memo } from 'react'
 import StyleScript from '../../styles/products.module.css'
 import { CldImage } from 'next-cloudinary'
 import Link from 'next/link'
@@ -26,7 +26,7 @@ interface ProductTypesComponent {
   id: any
 }
 
-const ProductTypesComponent: React.FC<ProductTypesComponent> = ({ ProductData, heading, id }) => {
+const ProductTypesComponent: React.FC<ProductTypesComponent> = memo(({ ProductData, heading, id }) => {
   const theme = useTheme();
 
   return (
@@ -92,5 +92,5 @@ const ProductTypesComponent: React.FC<ProductTypesComponent> = ({ ProductData, h
       </div>
     </main>
   )
-}
+})
 export default ProductTypesComponent
