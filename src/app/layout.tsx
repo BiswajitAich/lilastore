@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   authors: {
     name: 'Biswajit Aich'
   },
-  applicationName: 'Lila Store',
+  applicationName: 'LilaStore',
   appleWebApp: true,
   icons: [
     'public/images/logos/lila-store-logo.webp',
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: 'website',
-    title: 'Lila Store App',
+    title: 'LilaStore App',
     description: 'Best Jewellery & Cosmetic website with affordable price range.',
     url: 'https://lilastore.vercel.app',
-    siteName: 'Lila Store',
+    siteName: 'LilaStore',
     images: [{
       url: 'https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/LS-logo-512x512.png',
       width: 512,
