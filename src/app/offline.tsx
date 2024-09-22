@@ -1,7 +1,7 @@
 "use strict"
 // import { useEffect, useState } from 'react';
 import Image from "next/image";
-import sad from "../../public/images/some/sad.webp"
+import sad from "../../public/static/some/sad.webp"
 export default function Offline() {
   // const [isOnline, setIsOnline] = useState(true);
 

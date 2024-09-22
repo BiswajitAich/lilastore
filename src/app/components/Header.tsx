@@ -41,14 +41,14 @@ const Header = () => {
       {/* logo */}
       {logo ? (
         <img
-          src={"./images/logos/ls-logo.webp"}
+          src={"./static/logos/ls-logo.webp"}
           style={{ minWidth: "50px", maxWidth: "50px", width: "50px", height: "50px", boxShadow: "8px 0px 8px #001341", backgroundColor: "#001341" }}
           alt='logo'
           placeholder='blur'
         />
       ) : (
         <img
-          src={"./images/logos/lila-store-logo.webp"}
+          src={"./static/logos/lila-store-logo.webp"}
           style={{ minWidth: "150px", maxWidth: "150px", width: "150px", height: "50px", boxShadow: "8px 0px 8px #001341", backgroundColor: "#001341" }}
           alt='logo'
           placeholder='blur'

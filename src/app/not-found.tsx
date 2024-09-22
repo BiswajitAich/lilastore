@@ -2,9 +2,9 @@
 import Image from "next/image";
 import style from './styles/effects/not-found.module.css'
 import { useRouter } from "next/navigation";
-import NotFoundImage from "../../public/images/some/background-not-found-image.webp"
-import FourImage from "../../public/images/some/four-not-found-image.webp"
-import ZeroImage from "../../public/images/some/zero-not-found-image.webp"
+import NotFoundImage from "../../public/static/some/background-not-found-image.webp"
+import FourImage from "../../public/static/some/four-not-found-image.webp"
+import ZeroImage from "../../public/static/some/zero-not-found-image.webp"
 import { useEffect, useState } from "react";
 import Link from "next/link";
 

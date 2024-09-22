@@ -158,7 +158,7 @@ const FloatingOptions: NextPage = () => {
                         ) : null}
                         <button onClick={handleContact}>
                             <img
-                                src="https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/whatsapp-icon.webp"
+                                src="https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/static/logos/whatsapp-icon.webp"
                                 alt="WhatsApp us"
                                 onError={NoImage}
                                 loading="lazy"

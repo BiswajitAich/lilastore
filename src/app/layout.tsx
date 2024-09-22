@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   applicationName: 'LilaStore',
   appleWebApp: true,
   icons: [
-    'public/images/logos/lila-store-logo.webp',
-    'public/images/logos/ls-logo.webp',
-    'public/images/logos/LS-logo-512x512.png',
+    'public/static/logos/lila-store-logo.webp',
+    'public/static/logos/ls-logo.webp',
+    'public/static/logos/LS-logo-512x512.png',
   ],
   openGraph: {
     type: 'website',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     url: 'https://lilastore.vercel.app',
     siteName: 'LilaStore',
     images: [{
-      url: 'https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/images/logos/LS-logo-512x512.png',
+      url: 'https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/static/logos/LS-logo-512x512.png',
       width: 512,
       height: 512,
       alt: 'LS_LOGO'

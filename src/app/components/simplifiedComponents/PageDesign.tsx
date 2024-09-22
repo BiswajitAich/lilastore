@@ -277,7 +277,7 @@ export const PageDesign: React.FC<PageDesignProps> = memo(({ selectedProduct }) 
                     <button
                       onClick={() => handleSocialMedia('whatsapp')}
                     >
-                      <img src="./../../../../images/logos/whatsapp-icon.webp"
+                      <img src="./../../../../static/logos/whatsapp-icon.webp"
                         height={40}
                         width={40}
                         alt='WhatsApp share' />
@@ -285,7 +285,7 @@ export const PageDesign: React.FC<PageDesignProps> = memo(({ selectedProduct }) 
                     <button
                       onClick={() => handleSocialMedia('share-navigator')}
                     >
-                      <img src="./../../../../images/logos/share-navigator.webp"
+                      <img src="./../../../../static/logos/share-navigator.webp"
                         height={40}
                         width={40}
                         alt='Facebook share' />
@@ -293,7 +293,7 @@ export const PageDesign: React.FC<PageDesignProps> = memo(({ selectedProduct }) 
                     {/* <button
                       onClick={() => handleSocialMedia('instagram')}
                     >
-                      <img src="./../../../../images/logos/instagram-icon.webp"
+                      <img src="./../../../../static/logos/instagram-icon.webp"
                         height={40}
                         width={40}
                         alt='Instagram share' />
@@ -387,7 +387,7 @@ export const PageDesign: React.FC<PageDesignProps> = memo(({ selectedProduct }) 
       </div>
       <button type='button' className={pageStyle.contact} onClick={() => handleOrder(selectedProduct.description, selectedProduct.price, selectedProduct.url)}>
         <img
-          src='./../../../../images/logos/whatsapp-icon.webp'
+          src='./../../../../static/logos/whatsapp-icon.webp'
           style={{
             minWidth: "40px",
             minHeight: "40px",
