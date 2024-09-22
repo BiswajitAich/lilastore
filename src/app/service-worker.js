@@ -1,4 +1,6 @@
 self.addEventListener('install', (event) => {
+    console.log("-----ssssswwwwwwwww----------- ");
+    
     event.waitUntil(
         caches.open('my-cache').then((cache) => {
             return cache.addAll([

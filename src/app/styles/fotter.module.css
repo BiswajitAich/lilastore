@@ -12,13 +12,14 @@
 
 .container {
     width: 80%;
-    background: linear-gradient(0deg, rgb(46 37 129), rgba(7, 8, 78), rgb(7, 8, 78), rgb(40 33 122));
+    background: #784003;
     display: flex;
     padding: 10px 0;
-    gap: 10px;
+    gap: 25px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    text-align: -webkit-match-parent;
 }
 
 .container h4 {
@@ -57,7 +58,7 @@
     background-color: rgb(39 32 120);
     padding: 10px 0;
     text-align: center;
-    color: #ffd900e3;
+    color: #f0e9db;
     padding-bottom: 55px;
 }
 

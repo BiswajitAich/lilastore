@@ -1,5 +1,5 @@
 import Link from "next/link";
-import style from '@/app/styles/effects/rating.module.css'
+import style from '../../styles/effects/rating.module.css'
 import { useTheme } from "../simplifiedComponents/ContextProvider";
 const Rating = () => {
     const theme = useTheme();

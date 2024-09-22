@@ -57,7 +57,8 @@ const ProductTypesComponent: React.FC<ProductTypesComponent> = memo(({ ProductDa
                 }}
               >
                 <div className={StyleScript.imageDiv}
-                  style={{ backgroundImage: `url(${material.url}?quality=0.1)` }} >
+                  // style={{ backgroundImage: `url(${material.url}?quality=0.1)` }}
+                >
                   {
                     <CldImage
                       itemType='img'

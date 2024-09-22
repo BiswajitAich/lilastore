@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
                 <div>
                     <a href='https://wa.me/9038810186' target="_blank" rel="noopener noreferrer">
                         <img
-                            src="./static/logos/whatsapp-icon.webp" 
+                            src="/static/logos/whatsapp-icon.webp" 
                             // src="https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/static/logos/whatsapp-icon.webp"
                             alt='ContactWhatsApp'
                             onError={NoImage}
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
                     <div style={{ minHeight: '50px', width: '5px', backgroundColor: 'white' }} />
                     <a href='https://www.facebook.com/profile.php?id=100091896976745' target="_blank" rel="noopener noreferrer" >
                         <img
-                            src='./static/logos/facebook-icon.webp'
+                            src='/static/logos/facebook-icon.webp'
                             alt='ContactFacebook'
                             onError={NoImage}
                             loading="lazy"
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
                     </a>
                     <div style={{ minHeight: '50px', width: '5px', backgroundColor: 'white' }} />
                     <a href='https://instagram.com/suraviai?igshid=YWYwM2|1ZDdmOQ==' target="_blank" rel="noopener noreferrer">
-                        <img src='./static/logos/instagram-icon.webp'
+                        <img src='/static/logos/instagram-icon.webp'
                             alt='ContactInsta'
                             onError={NoImage}
                             loading="lazy"
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
                 <div>
                     <a href='https://www.facebook.com/profile.php?id=100091896976745' target="_blank" rel="noopener noreferrer" >
                         <img
-                            src='./static/logos/facebook-icon.webp'
+                            src='/static/logos/facebook-icon.webp'
                             alt='FollowFacebook'
                             onError={NoImage}
                             loading="lazy"
@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
                     <div style={{ minHeight: '50px', width: '5px', backgroundColor: 'white' }} />
                     <a href='https://instagram.com/suraviai?igshid=YWYwM2|1ZDdmOQ==' target="_blank" rel="noopener noreferrer">
                         <img
-                            src='./static/logos/instagram-icon.webp'
+                            src='/static/logos/instagram-icon.webp'
                             alt='FollowInsta'
                             onError={NoImage}
                             loading="lazy"

@@ -1,42 +1,19 @@
-// "use client"
-// import { useEffect, useState } from 'react';
+'use client'
 import Image from "next/image";
 import sad from "../../public/static/some/sad.webp"
-export default function Offline() {
-  // const [isOnline, setIsOnline] = useState(true);
+export default function Error() {
 
-  // useEffect(() => {
-  //   function handleOnline() {
-  //     setIsOnline(true);
-  //   }
-
-  //   function handleOffline() {
-  //     setIsOnline(false);
-  //   }
-
-  //   window.addEventListener('online', handleOnline);
-  //   window.addEventListener('offline', handleOffline);
-
-  //   return () => {
-  //     window.removeEventListener('online', handleOnline);
-  //     window.removeEventListener('offline', handleOffline);
-  //   };
-  // }, []);
-
-  // if (isOnline) {
-  //   return null;
-  // }
 
   return (
     <div className="container">
       <div className="jewelry-box">
         <div className="cover"></div>
         <div className="inner-box">
-          <h1>Looks like you're offline!</h1>
-          <p>Please check your connection.</p>
+          <h1>! Error !</h1>
+          <p>Some thing went wrong Please reload the page.</p>
         </div>
         <span>
-          <Image src={sad} height={200} width={200} loading="eager" alt=""/>
+          <Image src={sad} height={200} width={200} loading="lazy" alt=""/>
         </span>
       </div>
 

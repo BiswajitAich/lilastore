@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const withPWA = require('next-pwa')({
   dest: 'public',
-  disable: process.env.NODE_ENV === 'development',
-  // disable: false,
+  // disable: process.env.NODE_ENV === 'development',
+  disable: false,
   register: true,
   sw: '/sw.js',
   // cacheOnFrontEndNav: true,
@@ -10,7 +10,7 @@ const withPWA = require('next-pwa')({
     document: '/offline',
     image: '/static/some/sad.webp'
   },
-  customWorkerDir: 'service-worker'
+  customWorkerDir: 'service-worker',
 });
 
 module.exports = withPWA({

@@ -57,12 +57,12 @@
 
 
 .star_dark {
-    border-bottom: .7em solid rgb(107 104 107);
+    border-bottom: .7em solid hsl(51 100% 10% / 1);
 }
 
 .star_dark::before,
 .star_dark::after {
-    border-bottom: .7em solid rgb(107 104 107);
+    border-bottom: .7em solid hsl(51 100% 10% / 1);
 }
 
 .star:hover {
