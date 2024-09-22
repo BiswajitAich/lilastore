@@ -2,14 +2,12 @@
 const withPWA = require('next-pwa')({
   dest: 'public',
   disable: process.env.NODE_ENV === 'development',
-  // disable: false,
   register: true,
   sw: '/sw.js',
-  skipWaiting: true,
   cacheOnFrontEndNav: true,
   fallbacks: {
-    document: '/offline',
-  },
+    document: '/offline.html',
+  }
 });
 
 module.exports = withPWA({
@@ -17,6 +15,4 @@ module.exports = withPWA({
     NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: "di3zlyh9o"
   },
   reactStrictMode: true,
-  //output: 'export',
-  // basePath: '/lilastore',
 });

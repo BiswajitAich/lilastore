@@ -3,9 +3,9 @@ import type { Metadata } from 'next'
 import type { Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import ContextProvider from './components/simplifiedComponents/ContextProvider'
-// import Offline from './_offline'
 // import Footer from './components/Footer'
 // import dynamic from 'next/dynamic';
+// const Offline = dynamic(()=>import('./_offline'))
 
 // import SplashScreen from './components/effects/SplashScreen'
 // const SplashScreen = dynamic(() => import('./components/effects/SplashScreen'), { ssr: false });

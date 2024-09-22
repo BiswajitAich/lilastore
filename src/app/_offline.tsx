@@ -1,32 +1,31 @@
-"use client"
-import { useEffect, useState } from 'react';
-
+"use strict"
+// import { useEffect, useState } from 'react';
 import Image from "next/image";
 import sad from "../../public/images/some/sad.webp"
 export default function Offline() {
-  const [isOnline, setIsOnline] = useState(true);
+  // const [isOnline, setIsOnline] = useState(true);
 
-  useEffect(() => {
-    function handleOnline() {
-      setIsOnline(true);
-    }
+  // useEffect(() => {
+  //   function handleOnline() {
+  //     setIsOnline(true);
+  //   }
 
-    function handleOffline() {
-      setIsOnline(false);
-    }
+  //   function handleOffline() {
+  //     setIsOnline(false);
+  //   }
 
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
+  //   window.addEventListener('online', handleOnline);
+  //   window.addEventListener('offline', handleOffline);
 
-    return () => {
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('online', handleOnline);
+  //     window.removeEventListener('offline', handleOffline);
+  //   };
+  // }, []);
 
-  if (isOnline) {
-    return null;
-  }
+  // if (isOnline) {
+  //   return null;
+  // }
 
   return (
     <div className="container">
