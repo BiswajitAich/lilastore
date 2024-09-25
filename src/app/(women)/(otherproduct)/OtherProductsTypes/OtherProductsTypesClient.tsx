@@ -1,14 +1,25 @@
+import CardLoader from '@/app/components/effects/CardLoader'
+import dynamic from 'next/dynamic'
 import React from 'react'
-import ProductTypesComponent from '@/app/components/simplifiedComponents/ProductTypesComponent'
-
+const ProductTypesComponent = dynamic(
+    () => import('@/app/components/simplifiedComponents/ProductTypesComponent'),
+    {
+        loading: () => <CardLoader num={5} head={'Other Collection'} />
+    }
+)
 const OtherProductsTypesClient: React.FC<any> = ({ ProductData }) => {
-
     return (
-        <ProductTypesComponent
-            ProductData={ProductData}
-            heading="Other Collection"
-            id="otherproducts"
-        />
+        <>
+            {
+                ProductData ?
+                    <ProductTypesComponent
+                        ProductData={ProductData}
+                        heading="Other Collection"
+                        id="otherproducts"
+                    />
+                    : null
+            }
+        </>
     )
 }
 

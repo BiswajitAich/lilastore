@@ -1,14 +1,25 @@
+import CardLoader from '@/app/components/effects/CardLoader'
+import dynamic from 'next/dynamic'
 import React from 'react'
-import ProductTypesComponent from '@/app/components/simplifiedComponents/ProductTypesComponent'
-const NecklacesTypesClient: React.FC<any> = ({ProductData}) => {
-   
+const ProductTypesComponent = dynamic(
+    () => import('@/app/components/simplifiedComponents/ProductTypesComponent'),
+    {
+        loading: () => <CardLoader num={10} head={'Necklace Collection'} />
+    }
+)
+const NecklacesTypesClient: React.FC<any> = ({ ProductData }) => {
     return (
-        <ProductTypesComponent
-            ProductData={ProductData}
-            heading="Necklace Collection"
-            id="necklaces"
-        />
+        <>
+            {
+                ProductData ?
+                    <ProductTypesComponent
+                        ProductData={ProductData}
+                        heading="Necklace Collection"
+                        id="necklaces"
+                    />
+                    : null
+            }
+        </>
     )
 }
-
 export default NecklacesTypesClient

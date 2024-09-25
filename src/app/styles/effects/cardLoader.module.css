@@ -1,13 +1,36 @@
+.h{
+    padding: 15px 5px;
+    background: #8f886d;
+    color: antiquewhite;
+    margin-bottom: 15px;
+}
+
+.section{
+    width: 100vw;
+    background: transparent;
+}
+.sectionDiv{
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #77705673;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
 .WaveLoaderWrap {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    white-space: nowrap;
-    gap: 5%;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    justify-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .WaveLoaderDiv {
+    height: 230px;
     width: auto;
     aspect-ratio: 3/4;
     border-radius: 10px;
@@ -19,11 +42,48 @@
 
     0%,
     100% {
-        opacity: 0.5;
+        opacity: 0.4;
         background-color: aquamarine;
     }
 
     0% {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sectionDiv{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 414px) {
+    .WaveLoaderWrap {
+        grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}
+@media screen and (max-width: 347px) {
+    .WaveLoaderDiv {
+        height: 207px;
+    }
+}
+@media screen and (max-width: 310px) {
+    .WaveLoaderDiv {
+        height: 195px;
+    }
+}
+@media screen and (max-width: 293px) {
+    .WaveLoaderDiv {
+        height: 175px;
+    }
+}
+@media screen and (max-width: 270px) {
+    .WaveLoaderWrap {
+        grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+    }
+    .WaveLoaderDiv {
+        height: 220px;
     }
 }

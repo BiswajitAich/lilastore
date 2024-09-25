@@ -5,6 +5,7 @@ import NoImage from './simplifiedComponents/NoImage'
 import StopContextMenu from './simplifiedComponents/StopContextMenu'
 import { useTheme } from './simplifiedComponents/ContextProvider'
 import Rating from './dataDisplayComponents/Rating'
+import Image from 'next/image'
 
 const Footer: React.FC = () => {
     const theme = useTheme();
@@ -21,31 +22,37 @@ const Footer: React.FC = () => {
                 <h4>CONTACT US ON :</h4>
                 <div>
                     <a href='https://wa.me/9038810186' target="_blank" rel="noopener noreferrer">
-                        <img
-                            src="/static/logos/whatsapp-icon.webp" 
+                        <Image
+                            src="/static/logos/whatsapp-icon.webp"
                             // src="https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/static/logos/whatsapp-icon.webp"
                             alt='ContactWhatsApp'
                             onError={NoImage}
                             loading="lazy"
+                            height={40}
+                            width={40}
                         />
                         <p>WhatsApp</p>
                     </a>
                     <div style={{ minHeight: '50px', width: '5px', backgroundColor: 'white' }} />
                     <a href='https://www.facebook.com/profile.php?id=100091896976745' target="_blank" rel="noopener noreferrer" >
-                        <img
+                        <Image
                             src='/static/logos/facebook-icon.webp'
                             alt='ContactFacebook'
                             onError={NoImage}
                             loading="lazy"
+                            height={40}
+                            width={40}
                         />
                         <p>Facebook</p>
                     </a>
                     <div style={{ minHeight: '50px', width: '5px', backgroundColor: 'white' }} />
                     <a href='https://instagram.com/suraviai?igshid=YWYwM2|1ZDdmOQ==' target="_blank" rel="noopener noreferrer">
-                        <img src='/static/logos/instagram-icon.webp'
+                        <Image src='/static/logos/instagram-icon.webp'
                             alt='ContactInsta'
                             onError={NoImage}
                             loading="lazy"
+                            height={40}
+                            width={40}
                         />
                         <p>Instagram</p>
                     </a>
@@ -56,21 +63,25 @@ const Footer: React.FC = () => {
                 <h4>Follow US ON :</h4>
                 <div>
                     <a href='https://www.facebook.com/profile.php?id=100091896976745' target="_blank" rel="noopener noreferrer" >
-                        <img
+                        <Image
                             src='/static/logos/facebook-icon.webp'
                             alt='FollowFacebook'
                             onError={NoImage}
                             loading="lazy"
+                            height={40}
+                            width={40}
                         />
                         <p>Facebook</p>
                     </a>
                     <div style={{ minHeight: '50px', width: '5px', backgroundColor: 'white' }} />
                     <a href='https://instagram.com/suraviai?igshid=YWYwM2|1ZDdmOQ==' target="_blank" rel="noopener noreferrer">
-                        <img
+                        <Image
                             src='/static/logos/instagram-icon.webp'
                             alt='FollowInsta'
                             onError={NoImage}
                             loading="lazy"
+                            height={40}
+                            width={40}
                         />
                         <p>Instagram</p>
                     </a>
