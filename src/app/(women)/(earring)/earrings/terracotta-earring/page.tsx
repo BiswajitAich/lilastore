@@ -3,7 +3,7 @@ import TerracottaEarringClient from "./TerracottaEarringClient/page";
 import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider";
 
 const TerracottaEarring = async () => {
-    const productData = await fetchProductData("earring/terracotta-earring")
+    const productData = await fetchProductData("earrings/terracotta-earring")
     return (
         <ContextProvider>
             <TerracottaEarringClient ProductData={productData} />

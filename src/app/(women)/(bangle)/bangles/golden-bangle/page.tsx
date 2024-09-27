@@ -3,7 +3,7 @@ import GlodenBangleClient from "./GoldenBangleClient/page";
 import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider";
 
 const GoldenBangle = async () => {
-    const productData = await fetchProductData("bangle/golden-bangle")
+    const productData = await fetchProductData("bangles/golden-bangle")
     return (
         <ContextProvider>
             <GlodenBangleClient ProductData={productData} />

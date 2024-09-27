@@ -40,7 +40,7 @@ const CosmeticsTypesClient = dynamic(() => import("./CosmeticsTypesClient"));
 
 const CosmeticsTypes = () => (
     <ProductType 
-        endpoint="cosmetic/cosmetic"
+        endpoint="cosmetics/cosmetic"
         Component={CosmeticsTypesClient}
     />
 );

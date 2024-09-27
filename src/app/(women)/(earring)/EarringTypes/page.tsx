@@ -38,7 +38,7 @@ const EarringTypesClient = dynamic(() => import("./EarringTypesClient"));
 
 const NecklaceTypes = () => (
     <ProductType 
-        endpoint="earring/earring"
+        endpoint="earrings/earring"
         Component={EarringTypesClient}
     />
 );

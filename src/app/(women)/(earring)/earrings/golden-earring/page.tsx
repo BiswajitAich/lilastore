@@ -3,7 +3,7 @@ import GoldenEarringClient from "./GoldenEarringClient/page";
 import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider";
 
 const GoldenEarring = async () => {
-    const productData = await fetchProductData("earring/golden-earring")
+    const productData = await fetchProductData("earrings/golden-earring")
     return (
         <ContextProvider>
             <GoldenEarringClient ProductData={productData} />

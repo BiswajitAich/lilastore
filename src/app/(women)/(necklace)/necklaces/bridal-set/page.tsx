@@ -3,7 +3,7 @@ import ContextProvider from "@/app/components/simplifiedComponents/ContextProvid
 import BridalSetClient from "./BridalSetClient/page";
 
 const BridalSet = async () => {
-    const productData = await fetchProductData("necklace/bridal-set")
+    const productData = await fetchProductData("necklaces/bridal-set")
     return (
         <ContextProvider>
             <BridalSetClient ProductData={productData} />

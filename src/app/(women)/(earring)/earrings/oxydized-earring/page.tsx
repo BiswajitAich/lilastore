@@ -3,7 +3,7 @@ import OxydizedEarringClient from "./OxydizedEarringClient/page";
 import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider";
 
 const OxydizedEarring = async () => {
-    const productData = await fetchProductData("earring/oxydized-earring")
+    const productData = await fetchProductData("earrings/oxydized-earring")
     return (
         <ContextProvider>
             <OxydizedEarringClient ProductData={productData} />

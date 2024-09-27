@@ -13,13 +13,14 @@ export const GET = async (request: NextRequest) => {
                 res = await fetch(`${api}?fetchData=${searchName}.json`)
             } else {
                 res = await fetch(`${api}${searchName}.json`,
-                    // { next: { revalidate: 3600 } }
+                    { next: { revalidate: 3600 } }
                 );
             }
-
+            
             if (!res.ok) {
                 throw new Error(`Failed to fetch data: ${res.status} - ${res.statusText}`);
             }
+            console.log(`${api}?fetchData=${searchName}.json`);
 
             const data = await res.json()
             // console.log("server data fetched:", data)

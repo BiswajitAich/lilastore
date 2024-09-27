@@ -39,7 +39,7 @@ const OtherProductsTypesClient = dynamic(() => import("./OtherProductsTypesClien
 
 const OtherProductsTypes = () => (
     <ProductType 
-        endpoint="otherproduct/otherproduct"
+        endpoint="otherproducts/otherproduct"
         Component={OtherProductsTypesClient}
     />
 );

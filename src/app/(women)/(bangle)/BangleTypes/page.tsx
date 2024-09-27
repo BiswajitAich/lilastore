@@ -13,7 +13,7 @@
 
 //     useEffect(() => {
 //         if (isIntersecting && !productData) {
-//             fetchProductData("bangle/bangle").then(data => setProductData(data));
+//             fetchProductData("bangles/bangle").then(data => setProductData(data));
 //             console.log("observed");
             
 //         }
@@ -40,7 +40,7 @@ const BangleTypesClient = dynamic(() => import("./BangleTypesClient"));
 
 const BangleTypes = () => (
     <ProductType 
-        endpoint="bangle/bangle"
+        endpoint="bangles/bangle"
         Component={BangleTypesClient}
     />
 );

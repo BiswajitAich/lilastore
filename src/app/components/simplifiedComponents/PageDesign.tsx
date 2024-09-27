@@ -8,8 +8,12 @@ import { Metadata, Viewport } from 'next';
 import NoImage from './NoImage';
 import StopContextMenu from './StopContextMenu';
 import { Context } from './ContextProvider';
+import CardLoader from '../effects/CardLoader';
+const SimilarProducts = dynamic(() => import('./SimilarProducts'), {
+  loading: () => <CardLoader num={10} head={'Similar Products'} />
+});
 const Twinkler = dynamic(() => import('../effects/Twinkler'));
-const BreadCrumbs = dynamic(()=> import('../BreadCrumbs'));
+const BreadCrumbs = dynamic(() => import('../BreadCrumbs'));
 
 interface PageDesignProps {
   selectedProduct: {
@@ -377,7 +381,7 @@ export const PageDesign: React.FC<PageDesignProps> = memo(({ selectedProduct }) 
             display: "flex",
             flexDirection: "column",
             gap: "10px",
-          }}>{selectedProduct?.detail?.split('\n').map((item: string , key: React.Key) => {
+          }}>{selectedProduct?.detail?.split('\n').map((item: string, key: React.Key) => {
             return <span key={key}>{item}<br /></span>
           })}</p>
           <p
@@ -453,7 +457,7 @@ export const PageDesign: React.FC<PageDesignProps> = memo(({ selectedProduct }) 
         </div>
       ) : null
       }
-
+      <SimilarProducts />
       <Twinkler />
     </div >
   );

@@ -35,8 +35,8 @@ const Carousel: React.FC = memo(() => {
   const [carouselData, setCarouselData] = useState<product[]>([]);
 
   const { data, refetch, isFetching } = useQuery(
-    "banner/banner",
-    () => fetchProductData("banner/banner"),
+    "banners/banner",
+    () => fetchProductData("banners/banner"),
     {
       enabled: false,
       staleTime: 1000 * 60 * 20,
@@ -141,7 +141,7 @@ const Carousel: React.FC = memo(() => {
     scrollToPosition(newPosition);
     setPosition(newPosition);
   }
-
+  if (data === null) return null
   return (
     <main
       className={bannerstyles.main}
@@ -152,7 +152,7 @@ const Carousel: React.FC = memo(() => {
       ref={intersectionRef}
     >
       <div className={bannerstyles.banner} onContextMenu={StopContextMenu}>
-        {!data && !isFetching ? (
+        {isFetching ? (
           <WaveLoader />
         ) : (
           <>

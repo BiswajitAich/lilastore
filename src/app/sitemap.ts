@@ -30,23 +30,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // get all necklace
-  const neckalcesRoutes = (await fetchProductsData("necklace/necklaces.json")).map((route: { goto: string; }) => ({
+  const neckalcesRoutes = (await fetchProductsData("necklaces/necklaces.json")).map((route: { goto: string; }) => ({
     url: `${rootUrl}${route.goto}`,
     lastModified: new Date().toISOString(),
     priority: 0.9,
   }));
   const necklacesPageRoutes = async () => {
     const files = [
-      { name: "golden-necklace", path: "necklace/golden-necklace.json" },
-      { name: "terracotta-necklace", path: "necklace/terracotta-necklace.json" },
-      { name: "oxydized-necklace", path: "necklace/oxydized-necklace.json" },
-      { name: "chemicalbead-necklace", path: "necklace/chemicalbead-necklace.json" },
-      { name: "kundan-necklace", path: "necklace/kundan-necklace.json" },
-      { name: "fancy-necklace", path: "necklace/fancy-necklace.json" },
-      { name: "choker", path: "necklace/choker.json" },
-      { name: "mangalsutra", path: "necklace/mangalsutra.json" },
-      { name: "bridal-set", path: "necklace/bridal-set.json" },
-      { name: "stone-necklace", path: "necklace/stone-necklace.json" }
+      { name: "golden-necklace", path: "necklaces/golden-necklace.json" },
+      { name: "terracotta-necklace", path: "necklaces/terracotta-necklace.json" },
+      { name: "oxydized-necklace", path: "necklaces/oxydized-necklace.json" },
+      { name: "chemicalbead-necklace", path: "necklaces/chemicalbead-necklace.json" },
+      { name: "kundan-necklace", path: "necklaces/kundan-necklace.json" },
+      { name: "fancy-necklace", path: "necklaces/fancy-necklace.json" },
+      { name: "choker", path: "necklaces/choker.json" },
+      { name: "mangalsutra", path: "necklaces/mangalsutra.json" },
+      { name: "bridal-set", path: "necklaces/bridal-set.json" },
+      { name: "stone-necklace", path: "necklaces/stone-necklace.json" }
     ];
     const necklacesRoutes: { url: string; lastModified: string; priority: number; }[] = [];
     for (const file of files) {
@@ -68,19 +68,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
 
   // get all earrings
-  const earringRoutes = (await fetchProductsData("earring/earring.json")).map((route: { goto: string; }) => ({
+  const earringRoutes = (await fetchProductsData("earrings/earring.json")).map((route: { goto: string; }) => ({
     url: `${rootUrl}${route.goto}`,
     lastModified: new Date().toISOString(),
     priority: 0.9,
   }));
   const earringsPageRoutes = async () => {
     const files = [
-      { name: "golden-earring", path: "earring/golden-earring.json" },
-      { name: "terracotta-earring", path: "earring/terracotta-earring.json" },
-      { name: "oxydized-earring", path: "earring/oxydized-earring.json" },
-      { name: "adstone-earring", path: "earring/adstone-earring.json" },
-      { name: "funky-earring", path: "earring/funky-earring.json" },
-      { name: "fancy-earring", path: "earring/fancy-earring.json" }
+      { name: "golden-earring", path: "earrings/golden-earring.json" },
+      { name: "terracotta-earring", path: "earrings/terracotta-earring.json" },
+      { name: "oxydized-earring", path: "earrings/oxydized-earring.json" },
+      { name: "adstone-earring", path: "earrings/adstone-earring.json" },
+      { name: "funky-earring", path: "earrings/funky-earring.json" },
+      { name: "fancy-earring", path: "earrings/fancy-earring.json" }
     ];
     const earringsRoutes: { url: string; lastModified: string; priority: number; }[] = [];
     for (const file of files) {
@@ -103,17 +103,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
 
   // get all bangles
-  const bangleRoutes = (await fetchProductsData("bangle/bangle.json")).map((route: { goto: string; }) => ({
+  const bangleRoutes = (await fetchProductsData("bangles/bangle.json")).map((route: { goto: string; }) => ({
     url: `${rootUrl}${route.goto}`,
     lastModified: new Date().toISOString(),
     priority: 0.9,
   }));
   const banglesPageRoutes = async () => {
     const files = [
-      { name: "golden-bangle", path: "bangle/golden-bangle.json" },
-      { name: "oxydized-bangle", path: "bangle/oxydized-bangle.json" },
-      { name: "bracelet", path: "bangle/bracelet.json" },
-      { name: "mantasa", path: "bangle/mantasa.json" }
+      { name: "golden-bangle", path: "bangles/golden-bangle.json" },
+      { name: "oxydized-bangle", path: "bangles/oxydized-bangle.json" },
+      { name: "bracelet", path: "bangles/bracelet.json" },
+      { name: "mantasa", path: "bangles/mantasa.json" }
     ];
     const banglesRoutes: { url: string; lastModified: string; priority: number; }[] = [];
     for (const file of files) {
@@ -136,14 +136,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
 
   // get all cosmetics
-  const cosmeticRoutes = (await fetchProductsData("cosmetic/cosmetic.json")).map((route: { goto: string; }) => ({
+  const cosmeticRoutes = (await fetchProductsData("cosmetics/cosmetic.json")).map((route: { goto: string; }) => ({
     url: `${rootUrl}${route.goto}`,
     lastModified: new Date().toISOString(),
     priority: 0.9,
   }));
   const cosmeticsPageRoutes = async () => {
     const files = [
-      { name: "makeup", path: "cosmetic/makeup.json" }
+      { name: "makeup", path: "cosmetics/makeup.json" }
     ];
     const cosmeticsRoutes: { url: string; lastModified: string; priority: number; }[] = [];
     for (const file of files) {
@@ -166,18 +166,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
 
   // get all other products
-  const otherproductRoutes = (await fetchProductsData("otherproduct/otherproduct.json")).map((route: { goto: string; }) => ({
+  const otherproductRoutes = (await fetchProductsData("otherproducts/otherproduct.json")).map((route: { goto: string; }) => ({
     url: `${rootUrl}${route.goto}`,
     lastModified: new Date().toISOString(),
     priority: 0.9,
   }));
   const otherproductsPageRoutes = async () => {
     const files = [
-      { name: "chain", path: "otherproduct/chain.json" },
-      { name: "kamarband", path: "otherproduct/kamarband.json" },
-      { name: "ring", path: "otherproduct/ring.json" },
-      { name: "payal", path: "otherproduct/payal.json" },
-      { name: "forehead-ornament", path: "otherproduct/forehead-ornament.json" }
+      { name: "chain", path: "otherproducts/chain.json" },
+      { name: "kamarband", path: "otherproducts/kamarband.json" },
+      { name: "ring", path: "otherproducts/ring.json" },
+      { name: "payal", path: "otherproducts/payal.json" },
+      { name: "forehead-ornament", path: "otherproducts/forehead-ornament.json" }
     ];
     const otherproductsRoutes: { url: string; lastModified: string; priority: number; }[] = [];
     for (const file of files) {

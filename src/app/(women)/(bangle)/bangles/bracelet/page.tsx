@@ -3,7 +3,7 @@ import BeaceletClient from "./BraceletClient/page"
 import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider"
 
 const Bracelet = async () => {
-    const productData = await fetchProductData("bangle/bracelet")
+    const productData = await fetchProductData("bangles/bracelet")
     return (
         <ContextProvider>
             <BeaceletClient ProductData={productData} />

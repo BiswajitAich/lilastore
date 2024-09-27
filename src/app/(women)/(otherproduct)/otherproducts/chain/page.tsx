@@ -3,7 +3,7 @@ import ChainClient from "./ChainClient/page";
 import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider";
 
 const Chain = async () => {
-    const productData = await fetchProductData("otherproduct/chain")
+    const productData = await fetchProductData("otherproducts/chain")
     return (
         <ContextProvider>
             <ChainClient ProductData={productData} />

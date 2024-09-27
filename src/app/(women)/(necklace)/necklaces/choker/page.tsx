@@ -3,7 +3,7 @@ import ChokerNecklacesClient from "./CokerNecklaceClient/page";
 import ContextProvider from "@/app/components/simplifiedComponents/ContextProvider";
 
 const ChokerNecklaces = async () => {
-    const productData = await fetchProductData("necklace/choker")
+    const productData = await fetchProductData("necklaces/choker")
     return (
         <ContextProvider>
             <ChokerNecklacesClient ProductData={productData} />

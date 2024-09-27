@@ -3,7 +3,7 @@ export async function fetchProductData(searchName: string) {
   try {
     let res: Response;
     if (base.startsWith("http://")) {
-      res = await fetch(`${base}/api/fetchData?searchName=${searchName}`, {
+      res = await fetch(`${base}api/fetchData?searchName=${searchName}`, {
         cache: 'force-cache'
       });
     } else {
@@ -11,7 +11,7 @@ export async function fetchProductData(searchName: string) {
         next: { revalidate: 3600 }
       });
     }
-    console.log(searchName);
+    console.log(`${base}api/fetchData?searchName=${searchName}`);
 
     if (res.ok) {
       return await res.json();

@@ -61,7 +61,7 @@ const getPropsData = async (params: { id: string; }) => {
             console.log("\nfetchProductData not called!");
             return selectedProduct;
         } else {
-            const ProductData = await fetchProductData("otherproduct/forehead-ornament")
+            const ProductData = await fetchProductData("otherproducts/forehead-ornament")
             console.log("\nfetchProductData called!");
             productIdPrev = productId;
             selectedProduct = ProductData?.find((product: { id: number; }) => product.id === productId);

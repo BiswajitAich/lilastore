@@ -3,7 +3,7 @@ import ContextProvider from "@/app/components/simplifiedComponents/ContextProvid
 import ForeheadOrnamentClient from "./ForeheadOrnamentClient/page";
 
 const ForeheadOrnament = async () => {
-    const productData = await fetchProductData("otherproduct/forehead-ornament")
+    const productData = await fetchProductData("otherproducts/forehead-ornament")
     return (
         <ContextProvider>
             <ForeheadOrnamentClient ProductData={productData} />
