@@ -108,14 +108,15 @@ export const PageDesign: React.FC<PageDesignProps> = memo(({ selectedProduct }) 
   }
 
   function handleOrder(productName: string, productPrice: string, imageLink: string) {
-
+    console.warn("You can't Order products from this website anymore !")
+    return;
     const pageUrl = window.location.href;
 
     const whatsappMessage = `I'm interested in buying ${productName} for Rs ${productPrice}. \n\n\n Product Image: ${imageLink} . \n\n\n Product Page link: ${pageUrl} .`;
 
     const encodedMessage = encodeURIComponent(whatsappMessage);
 
-    const phoneNumber = '9038810186';
+    const phoneNumber = '';
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
@@ -239,11 +240,11 @@ export const PageDesign: React.FC<PageDesignProps> = memo(({ selectedProduct }) 
                     transition: "opacity 300ms ease",
                   }}
                   onClick={() => handleViewImages(type.url)}
-                  onLoad={(e) => {
+                  onLoad={(e: { target: HTMLImageElement; }) => {
                     const target = e.target as HTMLImageElement;
                     target.style.opacity = "1";
                   }}
-                  onError={(e) => NoImage(e)}
+                  onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => NoImage(e)}
                 />
               ))
             ) : (
@@ -258,12 +259,12 @@ export const PageDesign: React.FC<PageDesignProps> = memo(({ selectedProduct }) 
                   transition: "opacity 1s ease",
                 }}
                 onClick={() => handleViewImages(selectedProduct?.url)}
-                onLoad={(e) => {
+                onLoad={(e: { target: HTMLImageElement; }) => {
                   const target = e.target as HTMLImageElement;
                   target.style.opacity = "1";
                   setLoaded(true);
                 }}
-                onError={(e) => NoImage(e)}
+                onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => NoImage(e)}
               />
             )}
             <div
@@ -354,11 +355,11 @@ export const PageDesign: React.FC<PageDesignProps> = memo(({ selectedProduct }) 
                       transition: "opacity 300ms ease",
                     }}
                     onClick={() => handleViewImages(type.url)}
-                    onLoad={(e) => {
+                    onLoad={(e: { target: HTMLImageElement; }) => {
                       const target = e.target as HTMLImageElement;
                       target.style.opacity = "1";
                     }}
-                    onError={(e) => NoImage(e)}
+                    onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => NoImage(e)}
                   />
                 </div>
               ))}
@@ -431,7 +432,7 @@ export const PageDesign: React.FC<PageDesignProps> = memo(({ selectedProduct }) 
                 alt={'product Image'}
                 onDoubleClick={handleZoom}
                 style={{ transform: `scale(${zoom})` }}
-                onError={(e) => NoImage(e)}
+                onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => NoImage(e)}
               />
             </div>
 
@@ -448,7 +449,7 @@ export const PageDesign: React.FC<PageDesignProps> = memo(({ selectedProduct }) 
                     height={100}
                     loading='eager'
                     alt={'Img' + idx}
-                    onError={(e) => NoImage(e)}
+                    onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => NoImage(e)}
                   />
                 </div>
               ))}

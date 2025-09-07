@@ -95,7 +95,7 @@ const MiniSliderCarousel = memo(() => {
                       borderRadius: "12px",
                       transition: "all 0.3s ease-in-out",
                     }}
-                    onError={(e) => NoImage(e)}
+                    onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => NoImage(e)}
                   />
                 </Link>
               </div>

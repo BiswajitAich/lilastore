@@ -21,10 +21,9 @@ const Footer: React.FC = () => {
             <div className={Style.container}>
                 <h4>CONTACT US ON :</h4>
                 <div>
-                    <a href='https://wa.me/9038810186' target="_blank" rel="noopener noreferrer">
+                    <a href='' target="_blank" rel="noopener noreferrer">
                         <Image
                             src="/static/logos/whatsapp-icon.webp"
-                            // src="https://raw.githubusercontent.com/BiswajitAich/lilastore/main/public/static/logos/whatsapp-icon.webp"
                             alt='ContactWhatsApp'
                             onError={NoImage}
                             loading="lazy"
@@ -34,7 +33,7 @@ const Footer: React.FC = () => {
                         <p>WhatsApp</p>
                     </a>
                     <div style={{ minHeight: '50px', width: '5px', backgroundColor: 'white' }} />
-                    <a href='https://www.facebook.com/profile.php?id=100091896976745' target="_blank" rel="noopener noreferrer" >
+                    <a href='' target="_blank" rel="noopener noreferrer" >
                         <Image
                             src='/static/logos/facebook-icon.webp'
                             alt='ContactFacebook'
@@ -46,7 +45,7 @@ const Footer: React.FC = () => {
                         <p>Facebook</p>
                     </a>
                     <div style={{ minHeight: '50px', width: '5px', backgroundColor: 'white' }} />
-                    <a href='https://instagram.com/suraviai?igshid=YWYwM2|1ZDdmOQ==' target="_blank" rel="noopener noreferrer">
+                    <a href='' target="_blank" rel="noopener noreferrer">
                         <Image src='/static/logos/instagram-icon.webp'
                             alt='ContactInsta'
                             onError={NoImage}
@@ -62,7 +61,7 @@ const Footer: React.FC = () => {
             <div className={Style.container}>
                 <h4>Follow US ON :</h4>
                 <div>
-                    <a href='https://www.facebook.com/profile.php?id=100091896976745' target="_blank" rel="noopener noreferrer" >
+                    <a href='' target="_blank" rel="noopener noreferrer" >
                         <Image
                             src='/static/logos/facebook-icon.webp'
                             alt='FollowFacebook'
@@ -74,7 +73,7 @@ const Footer: React.FC = () => {
                         <p>Facebook</p>
                     </a>
                     <div style={{ minHeight: '50px', width: '5px', backgroundColor: 'white' }} />
-                    <a href='https://instagram.com/suraviai?igshid=YWYwM2|1ZDdmOQ==' target="_blank" rel="noopener noreferrer">
+                    <a href='' target="_blank" rel="noopener noreferrer">
                         <Image
                             src='/static/logos/instagram-icon.webp'
                             alt='FollowInsta'
@@ -90,10 +89,11 @@ const Footer: React.FC = () => {
 
             <div className={Style.container}>
                 <h4>STORE LOCATION :</h4>
-                <p>Find us on <a href='https://maps.app.goo.gl/D6ZnhFRcBDfce6kS9'
+                <p>Find us on <a href=''
                     target="_blank" rel="noreferrer noopener"
                     style={{ borderBottom: "1px solid cyan" }}>Google Maps</a></p>
                 <p>Lal Bahadur Road, Rammohan Place, Konnagar, Kolkata, West Bengal 712235</p>
+                <p style={{ color: "red" }}>Store is permanently closed!</p>
             </div>
 
 

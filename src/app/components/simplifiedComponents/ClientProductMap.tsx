@@ -86,7 +86,7 @@ const ClientProductMap: React.FC<any> = ({ name, ProductData, path, alt }) => {
                                             style={{
                                                 borderRadius: "12px",
                                             }}
-                                            onLoad={(e) => {
+                                            onLoad={(e: { target: HTMLImageElement; }) => {
                                                 const target = e.target as HTMLImageElement;
                                                 target.classList.remove(StyleScript.animation);
                                                 target.style.opacity = "1";

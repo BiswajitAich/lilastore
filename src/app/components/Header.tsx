@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import headerStyles from './../styles/header.module.css'
 import SearchBar from './dataDisplayComponents/SearchBar';
 import StopContextMenu from './simplifiedComponents/StopContextMenu';
+import Image from 'next/image';
 
 
 
@@ -40,18 +41,20 @@ const Header = () => {
 
       {/* logo */}
       {logo ? (
-        <img
-          src={"./static/logos/ls-logo.webp"}
+        <Image
+          src="/static/logos/ls-logo.webp"
           style={{ minWidth: "50px", maxWidth: "50px", width: "50px", height: "50px", boxShadow: "8px 0px 8px #001341", backgroundColor: "#001341" }}
           alt='logo'
-          placeholder='blur'
+          width={50}
+          height={50}
         />
       ) : (
-        <img
-          src={"./static/logos/lila-store-logo.webp"}
+        <Image
+          src="/static/logos/lila-store-logo.webp"
           style={{ minWidth: "150px", maxWidth: "150px", width: "150px", height: "50px", boxShadow: "8px 0px 8px #001341", backgroundColor: "#001341" }}
           alt='logo'
-          placeholder='blur'
+          width={150}
+          height={150}
         />
       )
       }

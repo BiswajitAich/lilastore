@@ -73,8 +73,8 @@ const ProductTypesComponent: React.FC<ProductTypesComponent> = memo(({ ProductDa
                         transition: "all 1s ease",
                       }}
                       className={StyleScript.animation}
-                      onError={(e) => NoImage(e)}
-                      onLoad={(e) => {
+                      onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => NoImage(e)}
+                      onLoad={(e: { target: HTMLImageElement }) => {
                         const target = e.target as HTMLImageElement;
                         target.classList.remove(StyleScript.animation);
                         target.style.opacity = "1";

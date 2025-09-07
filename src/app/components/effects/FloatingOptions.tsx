@@ -92,7 +92,9 @@ const FloatingOptions: NextPage = () => {
     };
 
     const handleContact = async () => {
-        const phoneNumber = '9038810186';
+        console.warn("Sorry but you can't visit our What's app anymore!");
+        return;
+        const phoneNumber = '';
         const whatsappUrl = `https://wa.me/${phoneNumber}`;
         window.open(whatsappUrl);
     };

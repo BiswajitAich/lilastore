@@ -19,9 +19,9 @@
   },
   "devDependencies": {
     "@types/glob": "^8.1.0",
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
+    "@types/node": "^24.3.1",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
     "typescript": "^5.3.3"
   }
 }
